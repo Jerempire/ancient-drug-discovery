@@ -81,25 +81,35 @@ def download_file(url: str, dest: Path, desc: str) -> Path:
 def fetch_annotation() -> pd.DataFrame:
     """Download and parse AADR sample annotation file."""
     dest = RAW_DIR / "aadr_anno.tsv"
-    download_file(AADR_ANNO_URL, dest, "AADR annotation")
+
+    # AADR files require manual download from Harvard Dataverse:
+    # https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FFIDCW
+    # Download the .anno file and place it at: data/raw/aadr_anno.tsv
+    if not dest.exists():
+        print("  AADR annotation file not found locally.")
+        print("  To download: visit https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FFIDCW")
+        print(f"  Save the .anno file as: {dest}")
+        print("  Skipping AADR annotation for now — continuing with other data sources.")
+        return pd.DataFrame()
 
     print("  Parsing annotation file ...")
-    # AADR anno files are tab-separated with a header row
     df = pd.read_csv(dest, sep="\t", low_memory=False, encoding="utf-8", on_bad_lines="skip")
     print(f"  Loaded {len(df)} samples, {len(df.columns)} columns")
-
-    # Key columns: Genetic ID, Date mean (BP), Country, Lat, Long, SNPs hit on 1240K
     return df
 
 
 def fetch_snp_list() -> pd.DataFrame:
     """Download and parse AADR SNP position list (EIGENSTRAT .snp format)."""
     dest = RAW_DIR / "aadr_snp_list.tsv"
-    download_file(AADR_SNP_URL, dest, "AADR SNP list")
+
+    if not dest.exists():
+        print("  AADR SNP list not found locally.")
+        print("  To download: visit https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FFIDCW")
+        print(f"  Save the .snp file as: {dest}")
+        print("  Skipping AADR SNP list — continuing with other data sources.")
+        return pd.DataFrame()
 
     print("  Parsing SNP list ...")
-    # EIGENSTRAT .snp format: SNP_ID  CHR  GENETIC_POS  PHYSICAL_POS  REF  ALT
-    # Space/tab delimited, no header
     df = pd.read_csv(
         dest,
         sep=r"\s+",
@@ -115,6 +125,11 @@ def fetch_snp_list() -> pd.DataFrame:
 def filter_erap2_snps(snp_df: pd.DataFrame) -> pd.DataFrame:
     """Filter SNP list for ERAP2 genomic region."""
     print(f"\nFiltering for ERAP2 region: chr{ERAP2_CHR}:{ERAP2_START:,}-{ERAP2_END:,} ...")
+    if snp_df.empty:
+        print("  SNP list is empty (AADR data not downloaded) — skipping filter.")
+        out = PROC_DIR / "aadr_erap2_snps.csv"
+        pd.DataFrame(columns=["snp_id", "chr", "genetic_pos", "physical_pos", "ref", "alt"]).to_csv(out, index=False)
+        return pd.DataFrame(columns=["snp_id", "chr", "genetic_pos", "physical_pos", "ref", "alt"])
     mask = (
         (snp_df["chr"] == ERAP2_CHR)
         & (snp_df["physical_pos"] >= ERAP2_START)

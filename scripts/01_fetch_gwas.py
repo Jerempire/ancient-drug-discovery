@@ -69,22 +69,45 @@ def _paginate_associations(url: str, params: dict | None = None, max_pages: int 
 
 
 def fetch_erap2_associations() -> list[dict]:
-    """All GWAS associations for gene ERAP2."""
-    print("Fetching ERAP2 gene associations from GWAS Catalog ...")
-    url = f"{BASE_URL}/associations/search/findByGene"
-    params = {"geneName": "ERAP2"}
-    assocs = _paginate_associations(url, params)
+    """ERAP2-related associations via known ERAP2 GWAS SNPs."""
+    print("Fetching ERAP2 associations from GWAS Catalog ...")
+    # GWAS Catalog has no findByGene endpoint — search by known ERAP2 rsIDs instead
+    erap2_snps = [
+        "rs2549794",   # Black Death → Crohn's link
+        "rs2248374",   # ERAP2 splice variant
+        "rs2910686",   # ERAP2 regulatory variant
+        "rs2287987",   # ERAP2 missense
+        "rs26653",     # ERAP2 missense
+        "rs17408150",  # ERAP2 region
+        "rs2927608",   # ERAP2 region
+    ]
+    all_assocs = []
+    for rsid in erap2_snps:
+        print(f"  Querying {rsid} ...")
+        url = f"{BASE_URL}/associations/search/findByRsId"
+        params = {"rsId": rsid}
+        try:
+            assocs = _paginate_associations(url, params, max_pages=5)
+            for a in assocs:
+                a["_query_rsid"] = rsid
+            all_assocs.extend(assocs)
+            print(f"    Found {len(assocs)} associations")
+        except Exception as e:
+            print(f"    No results or error: {e}")
+        time.sleep(0.5)  # Be polite to the API
+
     out = RAW_DIR / "gwas_erap2_associations.json"
-    out.write_text(json.dumps(assocs, indent=2), encoding="utf-8")
-    print(f"  Saved {len(assocs)} ERAP2 associations → {out.name}")
-    return assocs
+    out.write_text(json.dumps(all_assocs, indent=2), encoding="utf-8")
+    print(f"  Saved {len(all_assocs)} ERAP2 associations → {out.name}")
+    return all_assocs
 
 
 def fetch_crohns_associations() -> list[dict]:
     """GWAS associations for Crohn's disease (EFO_0000384)."""
     print("Fetching Crohn's disease associations from GWAS Catalog ...")
     url = f"{BASE_URL}/efoTraits/EFO_0000384/associations"
-    assocs = _paginate_associations(url, max_pages=50)
+    params = None
+    assocs = _paginate_associations(url, params, max_pages=50)
     out = RAW_DIR / "gwas_crohns_associations.json"
     out.write_text(json.dumps(assocs, indent=2), encoding="utf-8")
     print(f"  Saved {len(assocs)} Crohn's associations → {out.name}")
