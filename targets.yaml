@@ -1,0 +1,351 @@
+# Ancient Pathogen Selection & Cancer: Multi-Target Configuration
+# Each target was shaped by ancient pathogen pressure and is now implicated in cancer.
+#
+# Pipeline: ancient DNA evidence → GWAS/cancer literature → structure → drug design → validation
+
+targets:
+
+  # ─── PRIMARY TARGET (Proof of Concept) ───────────────────────────
+
+  ERAP2:
+    gene_symbol: ERAP2
+    ensembl_id: ENSG00000164308
+    uniprot_id: Q6P179
+    protein_name: Endoplasmic reticulum aminopeptidase 2
+    sequence_length: 960
+    immune_step: detection  # Step 1: antigen presentation
+    ancient_pathogen: Black Death (Yersinia pestis)
+    selection_event: "Klunk et al. 2022 Nature — +40% survival, strongest documented human selection"
+    selection_era: medieval  # 1346-1353
+    key_variants:
+      - rsid: rs2549794
+        context: "Black Death survival variant → Crohn's risk"
+        source: "Klunk et al. 2022 Nature"
+      - rsid: rs2248374
+        context: "Splice variant — determines transcript A vs. B"
+        source: "Andrés et al. 2010 Nature Genetics"
+      - rsid: rs2549782
+        aa_change: K392N
+        context: "Missense variant near active site, balancing selection"
+    cancer_mechanism: |
+      Controls MHC-I antigen presentation (Step 1 — detection).
+      Overexpression drives anti-PD-1 resistance (AACR 2025).
+      Inhibition disrupts NKG2A-HLA-E checkpoint — distinct from PD-1/CTLA-4 (Bhatt et al. 2024).
+      Inhibition forces cancer cells to present novel antigenic peptides (MOLT-4 leukemia, 2022).
+      Lives in ER — connects to UPR/ER stress cancer pathway.
+    cancer_types:
+      - nasopharyngeal_carcinoma  # anti-PD-1 resistance
+      - leukemia                  # MOLT-4 novel peptides
+      - pancreatic                # gemcitabine response biomarker
+      - melanoma                  # gp100/MART-1/Tyrosinase epitopes
+    autoimmune_diseases:
+      - crohns_disease
+      - inflammatory_bowel_disease
+      - ankylosing_spondylitis
+    drug_status: "No drugs exist. First selective nanomolar inhibitors discovered 2022."
+    known_compounds:
+      - name: DG013A
+        type: small_molecule
+        mechanism: "Active site inhibitor"
+        selectivity: "Dual ERAP1/ERAP2"
+        reference: "Zervoudi et al. 2013 PNAS"
+      - name: "Camberlein KTGS inhibitors"
+        type: small_molecule
+        mechanism: "Active site inhibitor"
+        selectivity: "First selective nanomolar ERAP2 inhibitors"
+        reference: "Camberlein et al. 2022 Angewandte Chemie"
+    structure:
+      alphafold_plddt: 93.31
+      pdb_id: null  # no experimental structure
+      alphafold_id: AF-Q6P179-F1
+    gwas_efo_ids:
+      - EFO_0000384  # Crohn's disease
+      - EFO_0003767  # IBD
+    drugbank_query_terms:
+      - aminopeptidase
+      - ERAP
+      - endoplasmic reticulum aminopeptidase
+    key_references:
+      - "Klunk et al. Nature 2022 — https://www.nature.com/articles/s41586-022-05349-x"
+      - "Bhatt et al. Immunity 2024 — https://www.cell.com/immunity/fulltext/S1074-7613(24)00493-X"
+      - "Camberlein et al. Angew Chem 2022 — https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202203560"
+      - "ERAP inhibitors review J Med Chem 2024 — https://pubs.acs.org/doi/10.1021/acs.jmedchem.4c00840"
+
+  # ─── EXPANSION TARGETS ───────────────────────────────────────────
+
+  G6PD:
+    gene_symbol: G6PD
+    ensembl_id: ENSG00000160211
+    uniprot_id: P11413
+    protein_name: Glucose-6-phosphate dehydrogenase
+    sequence_length: 515
+    immune_step: killing  # Step 3: oxidative stress
+    ancient_pathogen: Malaria (Plasmodium falciparum/vivax)
+    selection_event: "G6PD deficiency protects against severe malaria — 400M+ carriers worldwide"
+    selection_era: neolithic_onward  # continuous pressure
+    key_variants:
+      - rsid: rs1050828
+        aa_change: V68M
+        context: "G6PD A- variant (Africa) — malaria protection"
+      - rsid: rs1050829
+        aa_change: N126D
+        context: "G6PD A+ variant"
+      - rsid: rs5030868
+        aa_change: S188F
+        context: "G6PD Mediterranean — severe deficiency"
+    cancer_mechanism: |
+      Controls NADPH production — tumors depend on G6PD for redox balance and biosynthesis.
+      G6PD-deficient individuals have ~40% reduced GI cancer risk (endodermal origin).
+      Loss of G6PD increases oxidative stress in metastasizing melanoma (PNAS).
+      Tumors upregulate G6PD to survive — metabolic vulnerability.
+      Pentose phosphate pathway (PPP) is a validated cancer target.
+    cancer_types:
+      - colorectal       # 40% reduced risk in G6PD-deficient
+      - gastric           # endodermal origin
+      - melanoma          # oxidative stress in metastasis
+      - hepatocellular    # PPP dependency
+    autoimmune_diseases: []
+    drug_status: "No cancer-specific G6PD drugs. PPP inhibitors in early research."
+    known_compounds:
+      - name: 6-aminonicotinamide
+        type: small_molecule
+        mechanism: "PPP inhibitor (upstream)"
+        selectivity: "Non-specific"
+      - name: DHEA
+        type: small_molecule
+        mechanism: "Competitive G6PD inhibitor"
+        selectivity: "Low — many other targets"
+    structure:
+      alphafold_plddt: null
+      pdb_id: 2BH9  # human G6PD crystal structure exists
+      alphafold_id: AF-P11413-F1
+    gwas_efo_ids:
+      - EFO_0004261  # colorectal cancer
+      - EFO_0000178  # gastric cancer
+    drugbank_query_terms:
+      - glucose-6-phosphate dehydrogenase
+      - G6PD
+      - pentose phosphate
+    key_references:
+      - "G6PD deficiency reduces cancer — https://www.tandfonline.com/doi/full/10.1080/0284186X.2019.1616815"
+      - "G6PD loss in melanoma metastasis — https://www.pnas.org/doi/10.1073/pnas.2120617119"
+
+  NOD2:
+    gene_symbol: NOD2
+    ensembl_id: ENSG00000167207
+    uniprot_id: Q9HC29
+    protein_name: Nucleotide-binding oligomerization domain-containing protein 2
+    sequence_length: 1040
+    immune_step: detection  # Step 1: intracellular sensing
+    ancient_pathogen: Leprosy (Mycobacterium leprae)
+    selection_event: "NOD2 variants associated with leprosy susceptibility across populations"
+    selection_era: medieval  # leprosy endemic for centuries
+    key_variants:
+      - rsid: rs2066844
+        aa_change: R702W
+        context: "Crohn's risk variant — impairs bacterial sensing"
+      - rsid: rs2066845
+        aa_change: G908R
+        context: "Crohn's risk variant"
+      - rsid: rs2066847
+        aa_change: L1007fs
+        context: "Frameshift — strongest Crohn's risk allele"
+    cancer_mechanism: |
+      NOD2 senses muramyl dipeptide (bacterial cell wall fragment).
+      Loss-of-function → impaired innate immune surveillance in gut.
+      Crohn's disease → chronic inflammation → colorectal cancer pathway.
+      NOD2 variants associated with increased colorectal cancer risk independently of Crohn's.
+      Connects to ERAP2: both affect antigen processing/presentation.
+    cancer_types:
+      - colorectal       # Crohn's-associated + independent risk
+      - gastric           # chronic inflammation pathway
+    autoimmune_diseases:
+      - crohns_disease
+      - blau_syndrome
+    drug_status: "No drugs targeting NOD2 directly. Crohn's drugs target downstream inflammation."
+    known_compounds: []
+    structure:
+      alphafold_plddt: null
+      pdb_id: 5IRM  # NOD2 LRR domain
+      alphafold_id: AF-Q9HC29-F1
+    gwas_efo_ids:
+      - EFO_0000384  # Crohn's disease
+      - EFO_0004261  # colorectal cancer
+    drugbank_query_terms:
+      - NOD2
+      - CARD15
+      - muramyl dipeptide
+    key_references:
+      - "NOD2 and leprosy — multiple GWAS across populations"
+      - "NOD2 variants and colorectal cancer risk"
+
+  SLC11A1:
+    gene_symbol: SLC11A1
+    ensembl_id: ENSG00000018280
+    uniprot_id: P49279
+    protein_name: Natural resistance-associated macrophage protein 1
+    sequence_length: 550
+    immune_step: killing  # Step 3: macrophage function
+    ancient_pathogen: Tuberculosis (Mycobacterium tuberculosis)
+    selection_event: "SLC11A1 polymorphisms determine TB susceptibility across populations"
+    selection_era: colonial  # TB as 'White Plague' 1700s-1900s
+    key_variants:
+      - rsid: rs17235416
+        context: "5' promoter polymorphism — TB susceptibility"
+      - rsid: rs3731865
+        aa_change: D543N
+        context: "Coding variant — alters iron transport"
+    cancer_mechanism: |
+      Controls divalent metal (iron/manganese) transport in macrophage phagosomes.
+      Determines macrophage polarization: M1 (anti-tumor) vs M2 (pro-tumor).
+      Iron sequestration in tumor microenvironment modulates immune response.
+      SLC11A1 expression correlates with tumor-associated macrophage phenotype.
+    cancer_types:
+      - breast            # macrophage polarization
+      - colorectal        # tumor-associated macrophages
+      - lung              # iron metabolism
+    autoimmune_diseases:
+      - rheumatoid_arthritis
+    drug_status: "Completely undrugged. Complex biology — macrophage-specific."
+    known_compounds: []
+    structure:
+      alphafold_plddt: null
+      pdb_id: null
+      alphafold_id: AF-P49279-F1
+    gwas_efo_ids:
+      - EFO_0000685  # rheumatoid arthritis
+    drugbank_query_terms:
+      - SLC11A1
+      - NRAMP1
+      - natural resistance-associated macrophage
+    key_references:
+      - "SLC11A1 and TB susceptibility — multiple GWAS"
+      - "Macrophage polarization in tumor microenvironment"
+
+  CCR5:
+    gene_symbol: CCR5
+    ensembl_id: ENSG00000160791
+    uniprot_id: P51681
+    protein_name: C-C chemokine receptor type 5
+    sequence_length: 352
+    immune_step: activation  # Step 2: immune cell recruitment
+    ancient_pathogen: Smallpox (Variola major)
+    selection_event: "CCR5-Delta32 deletion rose to 10% in Northern Europeans — likely smallpox selection"
+    selection_era: classical_to_colonial  # 165 AD onward
+    key_variants:
+      - rsid: rs333
+        context: "CCR5-Delta32 — 32bp deletion, loss of function. HIV resistance."
+        source: "Stephens et al. 1998 / Galvani & Slatkin 2003 PNAS"
+    cancer_mechanism: |
+      CCR5 is a chemokine receptor guiding immune cell migration.
+      CCR5 expressed on breast and colorectal cancer cells — promotes metastasis.
+      CCR5-Delta32 carriers may have altered metastasis risk.
+      Maraviroc (HIV drug, CCR5 antagonist) now in cancer metastasis trials.
+    cancer_types:
+      - breast            # CCR5+ promotes metastasis
+      - colorectal        # CCR5 in tumor microenvironment
+      - prostate          # emerging data
+    autoimmune_diseases: []
+    drug_status: "Maraviroc exists (HIV). Being repurposed for cancer metastasis. Better/selective modulators needed."
+    known_compounds:
+      - name: Maraviroc
+        type: small_molecule
+        mechanism: "CCR5 antagonist"
+        selectivity: "Selective for CCR5"
+        reference: "FDA-approved for HIV"
+        repurposing: "Phase II cancer metastasis trials"
+    structure:
+      alphafold_plddt: null
+      pdb_id: 4MBS  # CCR5 + Maraviroc co-crystal
+      alphafold_id: AF-P51681-F1
+    gwas_efo_ids: []
+    drugbank_query_terms:
+      - CCR5
+      - chemokine receptor
+      - maraviroc
+    key_references:
+      - "CCR5-Delta32 and smallpox — https://www.pnas.org/doi/10.1073/pnas.2435085100"
+      - "Maraviroc in cancer — multiple Phase II trials"
+
+  DARC:
+    gene_symbol: ACKR1
+    ensembl_id: ENSG00000213088
+    uniprot_id: Q16570
+    protein_name: Atypical chemokine receptor 1 (Duffy antigen)
+    sequence_length: 338
+    immune_step: killing  # Step 3: immune cell recruitment
+    ancient_pathogen: Malaria (Plasmodium vivax)
+    selection_event: "Duffy-negative phenotype reaches near-fixation in sub-Saharan Africa — blocks P. vivax entry"
+    selection_era: neolithic_onward
+    key_variants:
+      - rsid: rs2814778
+        context: "GATA-1 binding site disruption — erythrocyte Duffy-negative"
+        source: "Tournamille et al. 1995"
+    cancer_mechanism: |
+      DARC/ACKR1 is an atypical chemokine receptor — scavenges chemokines, modulates inflammation.
+      Duffy-negative individuals (primarily African descent) have altered chemokine clearance.
+      Associated with prostate cancer disparity: African Americans have 2x incidence, 2.4x mortality.
+      DARC expression inversely correlates with tumor angiogenesis.
+      Loss of DARC increases circulating pro-angiogenic chemokines.
+    cancer_types:
+      - prostate          # racial disparity — primary target
+      - breast            # angiogenesis modulation
+    autoimmune_diseases: []
+    drug_status: "No drugs. Health equity angle — understanding disparity mechanism."
+    known_compounds: []
+    structure:
+      alphafold_plddt: null
+      pdb_id: null
+      alphafold_id: AF-Q16570-F1
+    gwas_efo_ids:
+      - EFO_0001663  # prostate cancer
+    drugbank_query_terms:
+      - Duffy
+      - DARC
+      - ACKR1
+    key_references:
+      - "Duffy antigen and prostate cancer disparity"
+      - "ACKR1/DARC and tumor angiogenesis"
+
+# ─── PIPELINE CONFIGURATION ──────────────────────────────────────
+
+pipeline:
+  stages:
+    1_data_collection:
+      description: "Fetch GWAS, ClinVar, UniProt, OpenTargets, DrugBank data for target"
+      scripts: ["01_fetch_gwas.py", "02_fetch_ancient_variants.py", "06_multi_target_fetch.py"]
+      runtime: local
+    2_cancer_evidence:
+      description: "Compile cancer-specific evidence and connections"
+      scripts: ["07_cancer_connections.py"]
+      runtime: local
+    3_variant_analysis:
+      description: "Cross-reference ancient vs modern variants, ESM-2 scoring"
+      scripts: ["03_variant_analysis.py", "05_esm_variant_effects_cpu.py"]
+      runtime: local
+    4_structure:
+      description: "AlphaFold/Boltz-2 structure prediction"
+      notebooks: ["05_alphafold_structure.ipynb"]
+      runtime: colab
+    5_drug_design:
+      description: "RFdiffusion/DrugGPT/LigandForge candidate generation"
+      notebooks: ["08_druggpt_smallmol.ipynb"]
+      runtime: colab
+    6_validation:
+      description: "DiffDock binding, Boltz-2 affinity, RDKit ADMET"
+      notebooks: ["09_validation.ipynb"]
+      runtime: colab
+
+  priority_order:
+    - ERAP2    # proof of concept — most complete
+    - G6PD     # high opportunity — natural cancer protection, clear mechanism
+    - NOD2     # high opportunity — connects to ERAP2/Crohn's work
+    - SLC11A1  # medium — complex biology
+    - CCR5     # medium — Maraviroc exists, need better modulators
+    - DARC     # medium — health equity angle, undrugged
+
+  patent_strategy:
+    filing_type: provisional
+    fee_per_application: "$75-150 (micro entity)"
+    grouping: "One provisional per target class (all ERAP2 scaffolds together, all G6PD together, etc.)"
+    deadline: "12 months from filing to convert to utility patent ($1,600 micro entity)"
