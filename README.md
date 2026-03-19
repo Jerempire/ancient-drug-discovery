@@ -4,10 +4,10 @@ AI-driven genomics-to-drug-discovery pipeline: maps genetic variants from ancien
 
 ## Pipeline Architecture
 
-1. **Disease Genomics Data Collection** — GWAS Catalog, ClinVar, AADR (ancient DNA), UniProt, OpenTargets
-2. **Variant → Disease Mapping** — V2P, ESM Cambrian, Tranception, OpenTargets
-3. **Protein Structure Prediction** — AlphaFold3/OpenFold3, Boltz-2, ESMFold
-4. **Drug Design** — LigandForge, RFdiffusion, DiffDock, DrugGPT, GenMol, RDKit
+1. **Disease Genomics Data Collection** — GWAS Catalog, ClinVar, AADR (ancient DNA), UniProt, OpenTargets, DrugBank
+2. **Variant → Disease Mapping** — ESM-2 (650M), V2P, Tranception, OpenTargets
+3. **Protein Structure** — AlphaFold DB (pre-computed, 93.31 pLDDT for ERAP2), Boltz-2, ESMFold
+4. **Drug/Binder Design** — **Proteina-Complexa** (NVIDIA, 68% hit rate), Dyno Psi-1, DiffDock, DrugGPT, LigandForge, RDKit
 5. **Validation & Filtering** — Boltz-2 binding affinity, DeltaForge, OpenADMET, AutoDock Vina
 
 ## Proof of Concept: Black Death → Crohn's Disease
