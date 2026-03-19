@@ -1,0 +1,5 @@
+complex_name,protein_path,ligand_description,protein_sequence
+Bestatin,erap2.pdb,CC(O)C(=O)NC(CC1=CC=CC=C1)C(O)=O,
+Tosedostat,erap2.pdb,CC(C)CC(NC(=O)C(CC1=CC=CC=C1)OC(=O)C(C)(C)C)B(O)O,
+Leucinethiol,erap2.pdb,CC(CC)CS,
+Phosphoramidon,erap2.pdb,CC(CC1=CC=CC=C1)C(=O)NC(CC(=O)O)C(=O)NC(CC2=CC=CC=C2)C(=O)O,
