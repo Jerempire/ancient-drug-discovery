@@ -48,18 +48,30 @@ FASTA_PATH = PROC_DIR / "erap2_Q6P179.fasta"
 # Mapped from genomic coordinates via UniProt Q6P179 annotations
 # ──────────────────────────────────────────────────────────────
 VARIANTS = {
-    "rs2549794_proxy_K528R": {
-        "position": 527,  # 0-indexed (K528 in 1-indexed)
+    "rs2549782_K392N": {
+        "position": 391,  # 0-indexed (K392 in UniProt Q6P179)
         "wt_aa": "K",
-        "mt_aa": "R",
-        "context": "Black Death survival variant — proxy effect via linkage with ERAP2 haplotype",
-        "note": "rs2549794 is intronic/regulatory; K528R is a linked coding variant on the same haplotype",
+        "mt_aa": "N",
+        "context": "ERAP2 missense variant (dbSNP:rs2549782) — near active site, linked to ERAP2 haplotype",
+        "note": "Confirmed via UniProt Q6P179 natural variant annotation at position 392",
     },
-    "rs26653_N392K": {
-        "position": 391,  # 0-indexed
-        "wt_aa": "N",
-        "mt_aa": "K",
-        "context": "ERAP2 missense variant — near active site zinc-binding residues",
+    "rs34261036_L411R": {
+        "position": 410,  # 0-indexed (L411 in UniProt Q6P179)
+        "wt_aa": "L",
+        "mt_aa": "R",
+        "context": "ERAP2 missense variant (dbSNP:rs34261036) — UniProt confirmed",
+    },
+    "rs3733905_P214L": {
+        "position": 213,  # 0-indexed (P214 in UniProt Q6P179)
+        "wt_aa": "P",
+        "mt_aa": "L",
+        "context": "ERAP2 missense variant (dbSNP:rs3733905) — UniProt confirmed",
+    },
+    "rs17408150_L669Q": {
+        "position": 668,  # 0-indexed (L669 in UniProt Q6P179)
+        "wt_aa": "L",
+        "mt_aa": "Q",
+        "context": "ERAP2 missense variant (dbSNP:rs17408150) — UniProt confirmed, GWAS association found",
     },
     "D198N_active_site": {
         "position": 197,
