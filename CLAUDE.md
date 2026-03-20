@@ -68,6 +68,33 @@ python scripts/vast_launch.py destroy
 **Scripts:** `vast_launch.py`, `gpu_setup.sh`, `run_pipeline_gpu.py`, `selectivity_screen.py`
 **Results:** `data/results/rfdiffusion/` (PDBs), `data/results/selectivity/` (CSV/JSON)
 
+## BioReason-Pro (Protein Function Reasoning)
+
+Cloned into `BioReason-Pro/` — multimodal reasoning LLM for protein function prediction (Bo Wang lab, University of Toronto).
+
+**What it does**: Takes a protein sequence → outputs GO term predictions (molecular function, biological process, cellular component), natural language functional reasoning, per-residue attention maps, and binding partner predictions.
+
+**Architecture**: ESM3 protein embeddings + Gene Ontology graph encoder + RL-optimized LLM. Trained on 133K+ proteins across 3,135 organisms. Preferred over curated UniProt entries 79% of the time by human experts.
+
+**Why we use it**: Fills the gap between evolutionary signal detection (scripts 01-07) and structural drug design (Colab/Vast.ai). Validates target mechanisms, surfaces cancer-relevant GO terms, and identifies binding sites for RFdiffusion.
+
+**Integration points**:
+| Pipeline Stage | BioReason-Pro Use |
+|---|---|
+| Script 05 (ESM-2 variant scoring) | Second opinion on variant functional effects via ESM3 embeddings |
+| Script 07 (cancer connections) | GO-based functional reasoning may surface mechanisms OpenTargets misses |
+| RFdiffusion binder design | Per-residue attention maps → optimal binding site selection |
+| Scoring (bayes_target.py) | BioReason-Pro confidence as additional Bayesian signal |
+
+**Key entry points**:
+- `BioReason-Pro/gogpt_api.py` — GO term prediction CLI/API
+- `BioReason-Pro/interpro_api.py` — InterPro domain annotation
+- HuggingFace models: `wanglab/gogpt`, `wanglab/bioreason-pro-sft`, `wanglab/bioreason-pro-rl`
+
+**Wrapper script**: `scripts/08_bioreason_targets.py` — runs all 6 targets through GO-GPT, saves results to `data/processed/<gene>/bioreason/`
+
+**Runtime**: GPU recommended (Vast.ai). Can run GO-GPT on CPU for inference (slower).
+
 ## Rules
 - Scripts 01-07 run locally (CPU, data collection/querying)
 - Notebooks 04-09 run on Colab (GPU inference)

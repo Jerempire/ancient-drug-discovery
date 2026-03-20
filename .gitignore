@@ -43,3 +43,4 @@ outputs/
 
 # GPU pipeline results (download locally, too large for git)
 data/results/
+BioReason-Pro/

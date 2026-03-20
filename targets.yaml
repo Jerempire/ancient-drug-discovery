@@ -323,6 +323,21 @@ pipeline:
       description: "Cross-reference ancient vs modern variants, ESM-2 scoring"
       scripts: ["03_variant_analysis.py", "05_esm_variant_effects_cpu.py"]
       runtime: local
+    3b_bioreason:
+      description: "BioReason-Pro GO-GPT functional reasoning for all targets"
+      scripts: ["08_bioreason_targets.py"]
+      runtime: local_gpu_or_vastai
+      depends_on: ["1_data_collection"]
+    3c_bioreason_integrate:
+      description: "GO cross-reference, Bayesian update, ERAP2 binding analysis"
+      scripts: ["09_bioreason_integrate.py"]
+      runtime: local
+      depends_on: ["3b_bioreason"]
+    3d_dashboard:
+      description: "Generate unified HTML target dashboard"
+      scripts: ["10_target_dashboard.py"]
+      runtime: local
+      depends_on: ["2_cancer_evidence", "3c_bioreason_integrate"]
     4_structure:
       description: "AlphaFold/Boltz-2 structure prediction"
       notebooks: ["05_alphafold_structure.ipynb"]
