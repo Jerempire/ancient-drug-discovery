@@ -1,0 +1,134 @@
+# Signal registry for drug target scoring dimensions.
+# Ported from alpha-engine/signals/registry.yaml pattern.
+#
+# Each signal = one scoring dimension that can be independently tracked,
+# decayed, or retired as outcome data accumulates.
+
+signals:
+
+  tumor_relevance:
+    name: "Tumor Relevance"
+    description: "Target involvement in cancer biology"
+    domain: oncology
+    status: active
+    weight: 0.25
+    sources:
+      - opentargets
+      - literature
+      - gwas
+    decay:
+      type: none  # Biology doesn't decay
+    baseline: 0.50
+
+  ancient_selection:
+    name: "Ancient Selection Pressure"
+    description: "Evolutionary evidence from pathogen-driven selection"
+    domain: genomics
+    status: active
+    weight: 0.15
+    sources:
+      - targets_yaml
+      - gwas
+      - literature
+    decay:
+      type: none
+    baseline: 0.50
+
+  druggability:
+    name: "Druggability"
+    description: "Structural and chemical feasibility of drug design"
+    domain: chemistry
+    status: active
+    weight: 0.20
+    sources:
+      - alphafold
+      - drugbank
+      - in_silico_docking
+      - esm2_score
+    decay:
+      type: linear
+      halflife_years: 5  # Structural predictions improve over time
+    baseline: 0.40
+
+  clinical_validation:
+    name: "Clinical Validation"
+    description: "Evidence from clinical trials and biomarker studies"
+    domain: clinical
+    status: active
+    weight: 0.20
+    sources:
+      - clinical_trial
+      - rct
+      - literature
+    decay:
+      type: none
+    baseline: 0.30
+
+  ip_room:
+    name: "IP Room"
+    description: "Patent landscape — room for novel intellectual property"
+    domain: commercial
+    status: active
+    weight: 0.10
+    sources:
+      - drugbank
+      - targets_yaml
+      - expert_curation
+    decay:
+      type: linear
+      halflife_years: 3  # Patent landscape changes fast
+    baseline: 0.50
+
+  commercial_viability:
+    name: "Commercial Viability"
+    description: "Market size, reimbursement, competitive landscape"
+    domain: commercial
+    status: active
+    weight: 0.10
+    sources:
+      - expert_curation
+      - clinical_trial
+    decay:
+      type: linear
+      halflife_years: 2  # Market dynamics shift quickly
+    baseline: 0.50
+
+  # --- CANDIDATE dimensions (not yet scoring, awaiting data) ---
+
+  safety_window:
+    name: "Safety Window"
+    description: "Predicted therapeutic index and off-target liability"
+    domain: safety
+    status: candidate
+    weight: 0.0
+    sources:
+      - in_silico_docking
+      - faers
+      - literature
+    decay:
+      type: none
+    baseline: 0.50
+    notes: "Activate when ADMET predictions or FAERS signals are integrated"
+
+  manufacturing_feasibility:
+    name: "Manufacturing Feasibility"
+    description: "Synthetic accessibility and formulation complexity"
+    domain: chemistry
+    status: candidate
+    weight: 0.0
+    sources:
+      - expert_curation
+    decay:
+      type: none
+    baseline: 0.50
+    notes: "Activate when lead compounds are selected"
+
+# Pairwise correlation estimates between dimensions.
+# Used to penalize double-counting in composite score.
+# Values are Pearson-r estimates from domain knowledge.
+correlations:
+  - [tumor_relevance, clinical_validation, 0.60]
+  - [tumor_relevance, druggability, 0.25]
+  - [druggability, ip_room, -0.30]         # More druggable → more patents → less IP room
+  - [clinical_validation, commercial_viability, 0.45]
+  - [ip_room, commercial_viability, 0.35]
