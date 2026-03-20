@@ -37,3 +37,9 @@ Thumbs.db
 # Outputs
 outputs/
 *.png
+
+# Vast.ai instance state
+.vast_instance.json
+
+# GPU pipeline results (download locally, too large for git)
+data/results/
