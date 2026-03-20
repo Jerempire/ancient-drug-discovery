@@ -1,0 +1,202 @@
+[
+  {
+    "design": "erap2_sel_channel_1",
+    "binder_sequence": "SEELVKKLLDETTAKFATPEMKKKLEEVKKIYEEELK",
+    "binder_length": 37,
+    "mpnn_score": 1.2963,
+    "erap2_scores": {
+      "ptm": 0.7173233032226562,
+      "iptm": 0.2210053950548172,
+      "ranking_score": null,
+      "complex_plddt": 0.7593293190002441,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.8632292151451111,
+          "1": 0.1538742184638977
+        },
+        "1": {
+          "0": 0.2210053950548172,
+          "1": 0.682498574256897
+        }
+      }
+    },
+    "erap1_scores": {
+      "ptm": 0.5348461866378784,
+      "iptm": 0.11082129180431366,
+      "ranking_score": null,
+      "complex_plddt": 0.6173214912414551,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.6550778150558472,
+          "1": 0.10353083908557892
+        },
+        "1": {
+          "0": 0.11082129180431366,
+          "1": 0.6566744446754456
+        }
+      }
+    },
+    "iptm_selectivity": 1.994,
+    "iptm_delta": 0.1102
+  },
+  {
+    "design": "erap2_sel_channel_19",
+    "binder_sequence": "AAAAALAARLAALAAAAAAGIAAAVAAILAAAAAAAA",
+    "binder_length": 37,
+    "mpnn_score": 1.1987,
+    "erap2_scores": {
+      "ptm": 0.6932578682899475,
+      "iptm": 0.16388078033924103,
+      "ranking_score": null,
+      "complex_plddt": 0.7279776334762573,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.8437923192977905,
+          "1": 0.10768399387598038
+        },
+        "1": {
+          "0": 0.16388078033924103,
+          "1": 0.5371378660202026
+        }
+      }
+    },
+    "erap1_scores": {
+      "ptm": 0.5185150504112244,
+      "iptm": 0.0902821347117424,
+      "ranking_score": null,
+      "complex_plddt": 0.5727617144584656,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.6407540440559387,
+          "1": 0.0902821347117424
+        },
+        "1": {
+          "0": 0.0880647748708725,
+          "1": 0.6321151256561279
+        }
+      }
+    },
+    "iptm_selectivity": 1.815,
+    "iptm_delta": 0.0736
+  },
+  {
+    "design": "erap2_sel_channel_13",
+    "binder_sequence": "GLAALEAAYAEVRAKAAEIKAKLPETKKKAAETLAKVAEALAG",
+    "binder_length": 43,
+    "mpnn_score": 1.3909,
+    "erap2_scores": {
+      "ptm": 0.6591855883598328,
+      "iptm": 0.12334924191236496,
+      "ranking_score": null,
+      "complex_plddt": 0.7607123851776123,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.8406060338020325,
+          "1": 0.12334924191236496
+        },
+        "1": {
+          "0": 0.11102882027626038,
+          "1": 0.6148545742034912
+        }
+      }
+    },
+    "erap1_scores": {
+      "ptm": 0.5302135944366455,
+      "iptm": 0.14363041520118713,
+      "ranking_score": null,
+      "complex_plddt": 0.6051148772239685,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.6617316603660583,
+          "1": 0.14363041520118713
+        },
+        "1": {
+          "0": 0.14205916225910187,
+          "1": 0.5849702954292297
+        }
+      }
+    },
+    "iptm_selectivity": 0.859,
+    "iptm_delta": -0.0203
+  },
+  {
+    "design": "erap2_sel_channel_0",
+    "binder_sequence": "EELTKKLTELAEKIAKKLKEEIEKDTERLKKAAALAAAAAKAAGL",
+    "binder_length": 45,
+    "mpnn_score": 1.3206,
+    "erap2_scores": {
+      "ptm": 0.6548087000846863,
+      "iptm": 0.09346083551645279,
+      "ranking_score": null,
+      "complex_plddt": 0.7372998595237732,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.8485865592956543,
+          "1": 0.0933135449886322
+        },
+        "1": {
+          "0": 0.09346083551645279,
+          "1": 0.5564389228820801
+        }
+      }
+    },
+    "erap1_scores": {
+      "ptm": 0.5506691932678223,
+      "iptm": 0.15020529925823212,
+      "ranking_score": null,
+      "complex_plddt": 0.6059450507164001,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.6918644905090332,
+          "1": 0.1388227641582489
+        },
+        "1": {
+          "0": 0.15020529925823212,
+          "1": 0.5628893971443176
+        }
+      }
+    },
+    "iptm_selectivity": 0.622,
+    "iptm_delta": -0.0567
+  },
+  {
+    "design": "erap2_sel_channel_7",
+    "binder_sequence": "SLLKLLAALARKALFAAAAAAAAAARAAAAAAAAAAA",
+    "binder_length": 37,
+    "mpnn_score": 1.3123,
+    "erap2_scores": {
+      "ptm": 0.7054426074028015,
+      "iptm": 0.0801953449845314,
+      "ranking_score": null,
+      "complex_plddt": 0.7992264032363892,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.8835391402244568,
+          "1": 0.0780477225780487
+        },
+        "1": {
+          "0": 0.0801953449845314,
+          "1": 0.8204123973846436
+        }
+      }
+    },
+    "erap1_scores": {
+      "ptm": 0.5665679574012756,
+      "iptm": 0.09372846782207489,
+      "ranking_score": null,
+      "complex_plddt": 0.6692147254943848,
+      "pair_chains_iptm": {
+        "0": {
+          "0": 0.7006980776786804,
+          "1": 0.0845659002661705
+        },
+        "1": {
+          "0": 0.09372846782207489,
+          "1": 0.8166381120681763
+        }
+      }
+    },
+    "iptm_selectivity": 0.856,
+    "iptm_delta": -0.0135
+  }
+]
