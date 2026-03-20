@@ -9,13 +9,16 @@ For each target in targets.yaml, queries:
 Builds a unified cancer evidence matrix showing:
   - Which immune step each target controls (detection/activation/killing)
   - Cancer types affected
-  - Drug opportunity score
-  - Evidence strength ranking
+  - Drug opportunity score (legacy 15-point + Bayesian BetaEstimator)
+  - Evidence strength ranking with Crawford-Sobel tiers
+  - Commercial viability assessment
 
 Outputs:
   data/processed/cancer_evidence_matrix.csv
   data/processed/cancer_evidence_matrix.json
   data/processed/cancer_trials_<gene>.json (per target)
+  data/target_priors.json (Bayesian posterior state)
+  data/processed/bayesian_rankings.json
 """
 import sys
 try:
@@ -35,6 +38,12 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 TARGETS_PATH = PROJECT_DIR / "targets.yaml"
 PROC_DIR = PROJECT_DIR / "data" / "processed"
 PROC_DIR.mkdir(parents=True, exist_ok=True)
+
+# Add scoring module to path
+sys.path.insert(0, str(PROJECT_DIR))
+from scoring.bayes_target import TargetScorer, score_targets_from_yaml
+from scoring.commercial import score_commercial, CommercialScore
+from scoring.evidence_tiers import classify_evidence, TIERS
 
 OPENTARGETS_URL = "https://api.platform.opentargets.org/api/v4/graphql"
 CTGOV_BASE = "https://clinicaltrials.gov/api/v2/studies"
@@ -301,14 +310,18 @@ def score_drug_opportunity(target_cfg: dict, cancer_assocs: list, trials: list) 
     return scores
 
 
-def build_evidence_matrix(targets: dict) -> pd.DataFrame:
-    """Build the unified cancer evidence matrix."""
+def build_evidence_matrix(targets: dict) -> tuple[pd.DataFrame, TargetScorer]:
+    """Build the unified cancer evidence matrix with Bayesian scoring."""
     print("\n" + "=" * 70)
     print("Building Cancer Evidence Matrix")
     print("=" * 70)
 
+    # Initialize Bayesian scorer from targets.yaml (seeds priors)
+    scorer = score_targets_from_yaml(targets)
+
     rows = []
     all_evidence = {}
+    commercial_scores: dict[str, CommercialScore] = {}
 
     for gene, cfg in targets.items():
         ensembl_id = cfg.get("ensembl_id", "")
@@ -320,8 +333,52 @@ def build_evidence_matrix(targets: dict) -> pd.DataFrame:
         trials = fetch_cancer_trials(gene)
         time.sleep(0.3)
 
-        # Score opportunity
+        # --- Layer OpenTargets evidence into Bayesian scorer ---
+        for assoc in cancer_assocs:
+            ot_score = assoc.get("score", 0)
+            if ot_score > 0:
+                tier = classify_evidence(source_type="cohort", text="OpenTargets disease association")
+                scorer.update(
+                    gene, "tumor_relevance", "opentargets",
+                    probability=min(0.95, 0.4 + ot_score * 0.5),
+                    confidence=min(0.8, ot_score),
+                    evidence_tier=tier,
+                )
+
+        # --- Layer clinical trials into Bayesian scorer ---
+        active_statuses = {"RECRUITING", "ACTIVE_NOT_RECRUITING", "ENROLLING_BY_INVITATION"}
+        active_trials = [t for t in trials if t.get("status") in active_statuses]
+        if active_trials:
+            for trial in active_trials[:5]:  # Cap updates
+                phases = trial.get("phase", [])
+                phase_str = " ".join(phases).lower()
+                tier = classify_evidence(text=phase_str)
+                prob = 0.55
+                if "phase 3" in phase_str or "phase iii" in phase_str:
+                    prob = 0.80
+                elif "phase 2" in phase_str or "phase ii" in phase_str:
+                    prob = 0.70
+                scorer.update(
+                    gene, "clinical_validation", "clinical_trial",
+                    probability=prob, confidence=0.60, evidence_tier=tier,
+                )
+
+        # --- Commercial scoring ---
+        commercial = score_commercial(cfg, trials)
+        commercial_scores[gene] = commercial
+
+        # Feed commercial composite into Bayesian scorer
+        scorer.update(
+            gene, "commercial_viability", "expert_curation",
+            probability=commercial.composite,
+            confidence=0.55,
+        )
+
+        # Legacy scoring (kept for comparison)
         opportunity = score_drug_opportunity(cfg, cancer_assocs, trials)
+
+        # Bayesian score
+        bayes_result = scorer.score_target(gene)
 
         row = {
             "gene": gene,
@@ -334,12 +391,23 @@ def build_evidence_matrix(targets: dict) -> pd.DataFrame:
             "n_cancer_trials": len(trials),
             "drug_status": cfg.get("drug_status", "")[:80],
             "n_known_compounds": len(cfg.get("known_compounds", [])),
+            # Legacy score
             "opportunity_score": opportunity["total"],
             "score_ancient": opportunity["ancient_selection"],
             "score_mechanism": opportunity["cancer_mechanism"],
             "score_drug_gap": opportunity["drug_gap"],
             "score_structure": opportunity["structural_data"],
             "score_clinical": opportunity["clinical_validation"],
+            # Bayesian score
+            "bayes_composite": bayes_result["composite_score"],
+            "bayes_confidence": bayes_result["confidence"],
+            "bayes_strength": bayes_result["total_strength"],
+            "bayes_verdict": bayes_result["verdict"],
+            # Commercial score
+            "commercial_composite": commercial.composite,
+            "commercial_unmet_need": commercial.unmet_need,
+            "commercial_market_size": commercial.market_size,
+            "commercial_ip_room": commercial.ip_room,
         }
         rows.append(row)
 
@@ -347,6 +415,8 @@ def build_evidence_matrix(targets: dict) -> pd.DataFrame:
             "cancer_associations": cancer_assocs,
             "trials": trials,
             "opportunity_scores": opportunity,
+            "bayesian_scores": bayes_result,
+            "commercial_scores": commercial.to_dict(),
             "config": {
                 "immune_step": cfg.get("immune_step"),
                 "ancient_pathogen": cfg.get("ancient_pathogen"),
@@ -356,9 +426,9 @@ def build_evidence_matrix(targets: dict) -> pd.DataFrame:
             },
         }
 
-    # Build DataFrame
+    # Build DataFrame — sort by Bayesian composite (primary), legacy (secondary)
     df = pd.DataFrame(rows)
-    df = df.sort_values("opportunity_score", ascending=False)
+    df = df.sort_values(["bayes_composite", "opportunity_score"], ascending=[False, False])
 
     # Save
     csv_out = PROC_DIR / "cancer_evidence_matrix.csv"
@@ -369,13 +439,24 @@ def build_evidence_matrix(targets: dict) -> pd.DataFrame:
     json_out.write_text(json.dumps(all_evidence, indent=2), encoding="utf-8")
     print(f"Saved evidence: {json_out.name}")
 
-    return df
+    # Save Bayesian priors for persistence
+    scorer.save()
+    print(f"Saved Bayesian priors: target_priors.json")
+
+    # Save ranked Bayesian results
+    rankings = scorer.rank_targets()
+    rank_out = PROC_DIR / "bayesian_rankings.json"
+    rank_out.write_text(json.dumps(rankings, indent=2), encoding="utf-8")
+    print(f"Saved Bayesian rankings: {rank_out.name}")
+
+    return df, scorer
 
 
-def print_matrix_report(df: pd.DataFrame):
+def print_matrix_report(df: pd.DataFrame, scorer: TargetScorer | None = None):
     """Print a formatted report of the evidence matrix."""
+    # --- Legacy scoring ---
     print("\n" + "=" * 70)
-    print("CANCER EVIDENCE MATRIX — RANKED BY DRUG OPPORTUNITY")
+    print("CANCER EVIDENCE MATRIX — LEGACY SCORING (15-point)")
     print("=" * 70)
     print(f"\n{'Gene':12s} {'Step':12s} {'Pathogen':25s} {'Cancer Assocs':>13s} {'Trials':>6s} {'Score':>5s}/15")
     print("-" * 80)
@@ -388,33 +469,71 @@ def print_matrix_report(df: pd.DataFrame):
             f"{row['opportunity_score']:>4d}"
         )
 
-    print(f"\n{'Scoring Breakdown':}")
-    print(f"{'Gene':12s} {'Ancient':>7s} {'Mechanism':>9s} {'Drug Gap':>8s} {'Structure':>9s} {'Clinical':>8s} {'TOTAL':>5s}")
+    # --- Bayesian scoring ---
+    print(f"\n{'='*70}")
+    print("BAYESIAN TARGET RANKING (BetaEstimator + Crawford-Sobel tiers)")
+    print(f"{'='*70}")
+    print(f"\n{'Gene':12s} {'Composite':>9s} {'Confidence':>10s} {'Strength':>8s}  {'Verdict'}")
     print("-" * 65)
     for _, row in df.iterrows():
         print(
             f"  {row['gene']:10s} "
-            f"{row['score_ancient']:>5d}/3  "
-            f"{row['score_mechanism']:>5d}/3    "
-            f"{row['score_drug_gap']:>5d}/3  "
-            f"{row['score_structure']:>5d}/3    "
-            f"{row['score_clinical']:>5d}/3  "
-            f"{row['opportunity_score']:>4d}"
+            f"{row['bayes_composite']:>8.1%}  "
+            f"{row['bayes_confidence']:>8.1%}   "
+            f"{row['bayes_strength']:>7.1f}   "
+            f"{row['bayes_verdict']}"
         )
 
-    # Recommendations
+    # --- Per-target Bayesian detail ---
+    if scorer:
+        print(f"\n{'='*70}")
+        print("PER-DIMENSION BAYESIAN BREAKDOWN")
+        print(f"{'='*70}")
+        for _, row in df.iterrows():
+            gene = row["gene"]
+            result = scorer.score_target(gene)
+            print(f"\n  {gene}:")
+            for dim, est in result["dimensions"].items():
+                ci_w = est["ci_high"] - est["ci_low"]
+                bar = "#" * int(est["mean"] * 20)
+                print(
+                    f"    {dim:25s} {est['mean']:5.1%} "
+                    f"[{est['ci_low']:.0%}-{est['ci_high']:.0%}] "
+                    f"str={est['strength']:4.1f}  {bar}"
+                )
+
+    # --- Commercial scoring ---
     print(f"\n{'='*70}")
-    print("PIPELINE RECOMMENDATIONS")
+    print("COMMERCIAL VIABILITY")
+    print(f"{'='*70}")
+    print(f"\n{'Gene':12s} {'Composite':>9s} {'Unmet':>6s} {'Market':>7s} {'IP':>5s}")
+    print("-" * 50)
+    for _, row in df.iterrows():
+        print(
+            f"  {row['gene']:10s} "
+            f"{row['commercial_composite']:>8.1%}  "
+            f"{row['commercial_unmet_need']:>5.0%} "
+            f"{row['commercial_market_size']:>6.0%}  "
+            f"{row['commercial_ip_room']:>4.0%}"
+        )
+
+    # --- Recommendations ---
+    print(f"\n{'='*70}")
+    print("PIPELINE RECOMMENDATIONS (Bayesian-ranked)")
     print(f"{'='*70}")
     top = df.iloc[0]
-    print(f"\n  Priority 1: {top['gene']} (score {top['opportunity_score']}/15)")
-    print(f"    {top['ancient_pathogen']} → {top['top_cancer_types']}")
+    print(f"\n  Priority 1: {top['gene']} "
+          f"(Bayes={top['bayes_composite']:.0%}, Legacy={top['opportunity_score']}/15)")
+    print(f"    {top['ancient_pathogen']} -> {top['top_cancer_types']}")
+    print(f"    Verdict: {top['bayes_verdict']}")
     print(f"    Drug status: {top['drug_status']}")
 
     if len(df) > 1:
         second = df.iloc[1]
-        print(f"\n  Priority 2: {second['gene']} (score {second['opportunity_score']}/15)")
-        print(f"    {second['ancient_pathogen']} → {second['top_cancer_types']}")
+        print(f"\n  Priority 2: {second['gene']} "
+              f"(Bayes={second['bayes_composite']:.0%}, Legacy={second['opportunity_score']}/15)")
+        print(f"    {second['ancient_pathogen']} -> {second['top_cancer_types']}")
+        print(f"    Verdict: {second['bayes_verdict']}")
         print(f"    Drug status: {second['drug_status']}")
 
 
@@ -426,8 +545,8 @@ def main():
     targets = load_targets()
     print(f"\nLoaded {len(targets)} targets from targets.yaml")
 
-    df = build_evidence_matrix(targets)
-    print_matrix_report(df)
+    df, scorer = build_evidence_matrix(targets)
+    print_matrix_report(df, scorer)
 
     print("\nDone.")
 
