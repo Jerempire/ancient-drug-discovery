@@ -7,6 +7,8 @@ from .markov_pipeline import CandidateState, create_candidates_from_targets
 from .ev_decision import EVEstimate, Portfolio, compute_ev, rank_targets_by_ev, select_portfolio
 from .calibration import CalibrationTracker, Prediction
 from .experiment_optimizer import recommend_experiments
+from .candidate_scorer import CandidateScore, score_candidates, export_results
+from .developability import DevelopabilityProfile, assess_developability
 
 __all__ = [
     "TargetScorer", "TargetBetaEstimator", "score_targets_from_yaml",
@@ -16,4 +18,6 @@ __all__ = [
     "EVEstimate", "Portfolio", "compute_ev", "rank_targets_by_ev", "select_portfolio",
     "CalibrationTracker", "Prediction",
     "recommend_experiments",
+    "CandidateScore", "score_candidates", "export_results",
+    "DevelopabilityProfile", "assess_developability",
 ]

@@ -244,9 +244,20 @@ def cmd_upload():
         subprocess.run(f'scp -P {port} "{src}" root@{host}:/workspace/data/ligands/', shell=True)
         print(f"  Uploaded {f}")
 
+    # Upload MPNN V2 FASTA files
+    mpnn_v2_dir = os.path.join(data_dir, "results", "mpnn_v2")
+    if os.path.isdir(mpnn_v2_dir):
+        subprocess.run(f'{ssh_cmd} "mkdir -p /workspace/results/mpnn_v2"', shell=True)
+        fa_files = [f for f in os.listdir(mpnn_v2_dir) if f.endswith(".fa")]
+        for f in fa_files:
+            src = os.path.join(mpnn_v2_dir, f)
+            subprocess.run(f'scp -P {port} "{src}" root@{host}:/workspace/results/mpnn_v2/', shell=True)
+        print(f"  Uploaded {len(fa_files)} MPNN V2 FASTA files")
+
     # Upload pipeline scripts
     scripts_dir = os.path.join(PROJECT_DIR, "scripts")
-    for script in ["gpu_setup.sh", "run_pipeline_gpu.py"]:
+    for script in ["gpu_setup.sh", "run_pipeline_gpu.py", "boltz2_validate_v2_batch.py",
+                    "selectivity_screen_v2.py", "boltz2_validate_selective.py"]:
         src = os.path.join(scripts_dir, script)
         if os.path.exists(src):
             subprocess.run(f'scp -P {port} "{src}" root@{host}:/workspace/scripts/', shell=True)
