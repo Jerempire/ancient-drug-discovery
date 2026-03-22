@@ -12,6 +12,7 @@ AI-driven pipeline mining evolutionary immune selection for undrugged cancer/aut
 4. Protein structure prediction (AlphaFold3/Boltz-2) — Colab
 5. Drug design (RFdiffusion, DiffDock, DrugGPT) — Colab
 6. Validation (Boltz-2 affinity, RDKit ADMET) — Colab + local
+7. Physics-based interface analysis (PyRosetta) — local CPU
 
 ## Multi-Target Architecture
 All targets defined in `targets.yaml`. Three immune defense steps:
@@ -58,10 +59,12 @@ ssh -p <PORT> root@<HOST> "cd /app/RFdiffusion && python scripts/run_inference.p
 # 4. Run selectivity screen
 ssh -p <PORT> root@<HOST> "python3 /workspace/scripts/selectivity_screen.py"
 
-# 5. Download + destroy
+# 5. Download results + CIF files + destroy
 python scripts/vast_launch.py download
 python scripts/vast_launch.py destroy
 ```
+
+**MANDATORY: Always download CIF files** from Boltz-2 predictions (not just JSON scores). CIF files are needed for PyRosetta interface analysis. Save to `data/results/boltz2_complexes/`.
 
 **Cost:** First full run (40 binders + selectivity): $0.50 total (18 min on RTX 4090 at $0.37/hr).
 **Instance state:** saved to `.vast_instance.json` (gitignored).
@@ -94,6 +97,25 @@ Cloned into `BioReason-Pro/` — multimodal reasoning LLM for protein function p
 **Wrapper script**: `scripts/08_bioreason_targets.py` — runs all 6 targets through GO-GPT, saves results to `data/processed/<gene>/bioreason/`
 
 **Runtime**: GPU recommended (Vast.ai). Can run GO-GPT on CPU for inference (slower).
+
+## PyRosetta (Physics-Based Interface Analysis)
+
+Post-Boltz-2 validation step using Rosetta energy functions. Runs locally on CPU.
+
+**License**: Academic (free via graylab.jhu.edu). Installed in `ancient-drug-discovery` conda env.
+
+**Script**: `scoring/rosetta_interface_analysis.py` — takes Boltz-2 CIF files, runs:
+- **FastRelax** — energy minimization (~90 sec/complex)
+- **InterfaceAnalyzer** — real dG_separated, BSA, packstat, shape complementarity, H-bonds
+- **Alanine scan** — hotspot residue identification (seconds on CPU vs minutes on GPU)
+- **Residue energy breakdown** — per-residue interaction energy for cross-reactivity analysis
+- **flex_ddg** — point mutation ΔΔG (V3 K392N variant discrimination)
+
+**Output**: JSON in `data/results/rosetta/`, SQLite `rosetta_metrics` table in `candidates.db`
+
+**When to run**: After every Boltz-2 validation batch, before synthesis decisions.
+
+**Key thresholds**: dG_separated < -15 REU = strong, > -5 = weak, positive = do not synthesize.
 
 ## Rules
 - Scripts 01-07 run locally (CPU, data collection/querying)
