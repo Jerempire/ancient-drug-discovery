@@ -1,0 +1,730 @@
+[
+  {
+    "peptide": "pep_glu_long_01",
+    "p1_residue": "E",
+    "p1_name": "Glutamate",
+    "score_type": "score",
+    "k392_score": -272.2,
+    "n392_score": -207.3,
+    "delta": -64.9,
+    "verdict": "K392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 315,
+      "avg_contacts": 272.2,
+      "best_min_dist": 0.53,
+      "avg_min_dist": 0.5,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 277,
+      "avg_contacts": 207.3,
+      "best_min_dist": 0.56,
+      "avg_min_dist": 0.66,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_asp_long_01",
+    "p1_residue": "D",
+    "p1_name": "Aspartate",
+    "score_type": "score",
+    "k392_score": -251.5,
+    "n392_score": -188.7,
+    "delta": -62.8,
+    "verdict": "K392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 312,
+      "avg_contacts": 251.5,
+      "best_min_dist": 0.59,
+      "avg_min_dist": 0.56,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 256,
+      "avg_contacts": 188.7,
+      "best_min_dist": 0.39,
+      "avg_min_dist": 0.79,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_leu_long_01",
+    "p1_residue": "L",
+    "p1_name": "Leucine",
+    "score_type": "score",
+    "k392_score": -245.3,
+    "n392_score": -206.4,
+    "delta": -38.9,
+    "verdict": "K392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 300,
+      "avg_contacts": 245.3,
+      "best_min_dist": 0.59,
+      "avg_min_dist": 0.61,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 281,
+      "avg_contacts": 206.4,
+      "best_min_dist": 0.38,
+      "avg_min_dist": 0.67,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_asp_d3_01",
+    "p1_residue": "D",
+    "p1_name": "Aspartate",
+    "score_type": "score",
+    "k392_score": -265.1,
+    "n392_score": -233.1,
+    "delta": -32.0,
+    "verdict": "K392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 320,
+      "avg_contacts": 265.1,
+      "best_min_dist": 0.29,
+      "avg_min_dist": 0.61,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 301,
+      "avg_contacts": 233.1,
+      "best_min_dist": 0.48,
+      "avg_min_dist": 0.64,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_glu_e3_01",
+    "p1_residue": "E",
+    "p1_name": "Glutamate",
+    "score_type": "score",
+    "k392_score": -264.2,
+    "n392_score": -235.6,
+    "delta": -28.6,
+    "verdict": "K392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 321,
+      "avg_contacts": 264.2,
+      "best_min_dist": 0.33,
+      "avg_min_dist": 0.69,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 318,
+      "avg_contacts": 235.6,
+      "best_min_dist": 0.44,
+      "avg_min_dist": 0.65,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_glu_e5_01",
+    "p1_residue": "E",
+    "p1_name": "Glutamate",
+    "score_type": "score",
+    "k392_score": -288.0,
+    "n392_score": -269.1,
+    "delta": -18.9,
+    "verdict": "K392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 326,
+      "avg_contacts": 288.0,
+      "best_min_dist": 0.54,
+      "avg_min_dist": 0.63,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 308,
+      "avg_contacts": 269.1,
+      "best_min_dist": 0.35,
+      "avg_min_dist": 0.55,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_asp_short_01",
+    "p1_residue": "D",
+    "p1_name": "Aspartate",
+    "score_type": "score",
+    "k392_score": -162.2,
+    "n392_score": -180.6,
+    "delta": 18.4,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 169,
+      "avg_contacts": 162.2,
+      "best_min_dist": 0.44,
+      "avg_min_dist": 0.47,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 186,
+      "avg_contacts": 180.6,
+      "best_min_dist": 0.58,
+      "avg_min_dist": 0.77,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_glu_short_01",
+    "p1_residue": "E",
+    "p1_name": "Glutamate",
+    "score_type": "score",
+    "k392_score": -163.5,
+    "n392_score": -182.3,
+    "delta": 18.8,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 173,
+      "avg_contacts": 163.5,
+      "best_min_dist": 0.34,
+      "avg_min_dist": 0.47,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 186,
+      "avg_contacts": 182.3,
+      "best_min_dist": 0.57,
+      "avg_min_dist": 0.72,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_lys_01",
+    "p1_residue": "K",
+    "p1_name": "Lysine",
+    "score_type": "score",
+    "k392_score": -188.5,
+    "n392_score": -220.8,
+    "delta": 32.3,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "NEUTRAL",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 225,
+      "avg_contacts": 188.5,
+      "best_min_dist": 0.45,
+      "avg_min_dist": 0.75,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 262,
+      "avg_contacts": 220.8,
+      "best_min_dist": 0.74,
+      "avg_min_dist": 0.56,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_arg_02",
+    "p1_residue": "R",
+    "p1_name": "Arginine",
+    "score_type": "score",
+    "k392_score": -188.4,
+    "n392_score": -222.1,
+    "delta": 33.7,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "NEUTRAL",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 228,
+      "avg_contacts": 188.4,
+      "best_min_dist": 0.88,
+      "avg_min_dist": 0.77,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 250,
+      "avg_contacts": 222.1,
+      "best_min_dist": 0.87,
+      "avg_min_dist": 0.66,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_asp_03",
+    "p1_residue": "D",
+    "p1_name": "Aspartate",
+    "score_type": "score",
+    "k392_score": -182.6,
+    "n392_score": -218.7,
+    "delta": 36.1,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 219,
+      "avg_contacts": 182.6,
+      "best_min_dist": 0.85,
+      "avg_min_dist": 0.77,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 244,
+      "avg_contacts": 218.7,
+      "best_min_dist": 0.56,
+      "avg_min_dist": 0.69,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_arg_01",
+    "p1_residue": "R",
+    "p1_name": "Arginine",
+    "score_type": "score",
+    "k392_score": -188.0,
+    "n392_score": -224.4,
+    "delta": 36.4,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "NEUTRAL",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 215,
+      "avg_contacts": 188.0,
+      "best_min_dist": 0.71,
+      "avg_min_dist": 0.77,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 265,
+      "avg_contacts": 224.4,
+      "best_min_dist": 0.82,
+      "avg_min_dist": 0.64,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_asp_02",
+    "p1_residue": "D",
+    "p1_name": "Aspartate",
+    "score_type": "score",
+    "k392_score": -185.6,
+    "n392_score": -224.1,
+    "delta": 38.5,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 213,
+      "avg_contacts": 185.6,
+      "best_min_dist": 0.33,
+      "avg_min_dist": 0.73,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 253,
+      "avg_contacts": 224.1,
+      "best_min_dist": 0.46,
+      "avg_min_dist": 0.7,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_asp_01",
+    "p1_residue": "D",
+    "p1_name": "Aspartate",
+    "score_type": "score",
+    "k392_score": -190.6,
+    "n392_score": -229.4,
+    "delta": 38.8,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 231,
+      "avg_contacts": 190.6,
+      "best_min_dist": 0.83,
+      "avg_min_dist": 0.69,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 262,
+      "avg_contacts": 229.4,
+      "best_min_dist": 0.63,
+      "avg_min_dist": 0.57,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_tyr_01",
+    "p1_residue": "Y",
+    "p1_name": "Tyrosine",
+    "score_type": "score",
+    "k392_score": -189.3,
+    "n392_score": -229.0,
+    "delta": 39.7,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 226,
+      "avg_contacts": 189.3,
+      "best_min_dist": 0.53,
+      "avg_min_dist": 0.75,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 264,
+      "avg_contacts": 229.0,
+      "best_min_dist": 0.9,
+      "avg_min_dist": 0.65,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_glu_01",
+    "p1_residue": "E",
+    "p1_name": "Glutamate",
+    "score_type": "score",
+    "k392_score": -188.9,
+    "n392_score": -231.4,
+    "delta": 42.5,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 240,
+      "avg_contacts": 188.9,
+      "best_min_dist": 0.97,
+      "avg_min_dist": 0.77,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 253,
+      "avg_contacts": 231.4,
+      "best_min_dist": 0.45,
+      "avg_min_dist": 0.54,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_leu_01",
+    "p1_residue": "L",
+    "p1_name": "Leucine",
+    "score_type": "score",
+    "k392_score": -191.7,
+    "n392_score": -234.8,
+    "delta": 43.1,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 225,
+      "avg_contacts": 191.7,
+      "best_min_dist": 0.84,
+      "avg_min_dist": 0.77,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 268,
+      "avg_contacts": 234.8,
+      "best_min_dist": 0.8,
+      "avg_min_dist": 0.66,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_ala_02",
+    "p1_residue": "A",
+    "p1_name": "Alanine",
+    "score_type": "score",
+    "k392_score": -193.0,
+    "n392_score": -236.8,
+    "delta": 43.8,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "NEUTRAL",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 219,
+      "avg_contacts": 193.0,
+      "best_min_dist": 0.65,
+      "avg_min_dist": 0.74,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 268,
+      "avg_contacts": 236.8,
+      "best_min_dist": 0.91,
+      "avg_min_dist": 0.64,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_phe_02",
+    "p1_residue": "F",
+    "p1_name": "Phenylalanine",
+    "score_type": "score",
+    "k392_score": -182.8,
+    "n392_score": -227.0,
+    "delta": 44.2,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 217,
+      "avg_contacts": 182.8,
+      "best_min_dist": 0.94,
+      "avg_min_dist": 0.74,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 250,
+      "avg_contacts": 227.0,
+      "best_min_dist": 0.56,
+      "avg_min_dist": 0.72,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_ala_01",
+    "p1_residue": "A",
+    "p1_name": "Alanine",
+    "score_type": "score",
+    "k392_score": -191.4,
+    "n392_score": -235.8,
+    "delta": 44.4,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "NEUTRAL",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 233,
+      "avg_contacts": 191.4,
+      "best_min_dist": 1.0,
+      "avg_min_dist": 0.68,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 263,
+      "avg_contacts": 235.8,
+      "best_min_dist": 0.92,
+      "avg_min_dist": 0.61,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_val_01",
+    "p1_residue": "V",
+    "p1_name": "Valine",
+    "score_type": "score",
+    "k392_score": -188.9,
+    "n392_score": -233.7,
+    "delta": 44.8,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 232,
+      "avg_contacts": 188.9,
+      "best_min_dist": 0.93,
+      "avg_min_dist": 0.81,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 261,
+      "avg_contacts": 233.7,
+      "best_min_dist": 0.87,
+      "avg_min_dist": 0.65,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_trp_01",
+    "p1_residue": "W",
+    "p1_name": "Tryptophan",
+    "score_type": "score",
+    "k392_score": -178.6,
+    "n392_score": -223.5,
+    "delta": 44.9,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 214,
+      "avg_contacts": 178.6,
+      "best_min_dist": 0.58,
+      "avg_min_dist": 0.78,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 263,
+      "avg_contacts": 223.5,
+      "best_min_dist": 0.63,
+      "avg_min_dist": 0.71,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_gly_01",
+    "p1_residue": "G",
+    "p1_name": "Glycine",
+    "score_type": "score",
+    "k392_score": -181.9,
+    "n392_score": -229.0,
+    "delta": 47.1,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "NEUTRAL",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 215,
+      "avg_contacts": 181.9,
+      "best_min_dist": 0.74,
+      "avg_min_dist": 0.78,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 262,
+      "avg_contacts": 229.0,
+      "best_min_dist": 0.83,
+      "avg_min_dist": 0.66,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_glu_03",
+    "p1_residue": "E",
+    "p1_name": "Glutamate",
+    "score_type": "score",
+    "k392_score": -178.3,
+    "n392_score": -225.9,
+    "delta": 47.6,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 216,
+      "avg_contacts": 178.3,
+      "best_min_dist": 0.83,
+      "avg_min_dist": 0.8,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 248,
+      "avg_contacts": 225.9,
+      "best_min_dist": 0.6,
+      "avg_min_dist": 0.61,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_ile_01",
+    "p1_residue": "I",
+    "p1_name": "Isoleucine",
+    "score_type": "score",
+    "k392_score": -181.9,
+    "n392_score": -230.2,
+    "delta": 48.3,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 214,
+      "avg_contacts": 181.9,
+      "best_min_dist": 0.82,
+      "avg_min_dist": 0.72,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 263,
+      "avg_contacts": 230.2,
+      "best_min_dist": 0.57,
+      "avg_min_dist": 0.68,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_leu_02",
+    "p1_residue": "L",
+    "p1_name": "Leucine",
+    "score_type": "score",
+    "k392_score": -186.7,
+    "n392_score": -235.0,
+    "delta": 48.3,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 234,
+      "avg_contacts": 186.7,
+      "best_min_dist": 0.96,
+      "avg_min_dist": 0.76,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 261,
+      "avg_contacts": 235.0,
+      "best_min_dist": 0.69,
+      "avg_min_dist": 0.72,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_phe_01",
+    "p1_residue": "F",
+    "p1_name": "Phenylalanine",
+    "score_type": "score",
+    "k392_score": -181.5,
+    "n392_score": -230.4,
+    "delta": 48.9,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "N392",
+    "model_validates": true,
+    "k392_extra": {
+      "best_contacts": 228,
+      "avg_contacts": 181.5,
+      "best_min_dist": 0.94,
+      "avg_min_dist": 0.76,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 261,
+      "avg_contacts": 230.4,
+      "best_min_dist": 0.8,
+      "avg_min_dist": 0.71,
+      "n_samples": 32
+    }
+  },
+  {
+    "peptide": "pep_glu_02",
+    "p1_residue": "E",
+    "p1_name": "Glutamate",
+    "score_type": "score",
+    "k392_score": -182.6,
+    "n392_score": -232.2,
+    "delta": 49.6,
+    "verdict": "N392-SELECT",
+    "electrostatic_prediction": "K392",
+    "model_validates": false,
+    "k392_extra": {
+      "best_contacts": 218,
+      "avg_contacts": 182.6,
+      "best_min_dist": 0.44,
+      "avg_min_dist": 0.73,
+      "n_samples": 32
+    },
+    "n392_extra": {
+      "best_contacts": 280,
+      "avg_contacts": 232.2,
+      "best_min_dist": 0.58,
+      "avg_min_dist": 0.71,
+      "n_samples": 32
+    }
+  }
+]
