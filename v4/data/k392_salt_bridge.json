@@ -1,0 +1,275 @@
+{
+  "k392_coordinates": {
+    "NZ": [
+      -3.366,
+      1.379,
+      -12.615
+    ],
+    "CE": [
+      -4.403,
+      0.436,
+      -13.045
+    ],
+    "CA": [
+      -9.049,
+      -0.285,
+      -14.385
+    ]
+  },
+  "channel_residues": [
+    200,
+    201,
+    336,
+    337,
+    374,
+    378,
+    389,
+    393
+  ],
+  "p1_scoring": [
+    {
+      "aa": "R",
+      "name": "Arginine",
+      "charge": 1,
+      "salt_bridge": 0.143,
+      "hbond_diff": -1.0,
+      "hydrophobic": 1.0,
+      "total_score": 0.429,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "P",
+      "name": "Proline",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": 0.356,
+      "total_score": 0.356,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "K",
+      "name": "Lysine",
+      "charge": 1,
+      "salt_bridge": 0.159,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.867,
+      "total_score": 0.343,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "E",
+      "name": "Glutamate",
+      "charge": -1,
+      "salt_bridge": -0.204,
+      "hbond_diff": 0.0,
+      "hydrophobic": 0.778,
+      "total_score": 0.166,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "G",
+      "name": "Glycine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": 0.089,
+      "total_score": 0.089,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "D",
+      "name": "Aspartate",
+      "charge": -1,
+      "salt_bridge": -0.286,
+      "hbond_diff": 0.0,
+      "hydrophobic": 0.778,
+      "total_score": -0.079,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "N",
+      "name": "Asparagine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.778,
+      "total_score": -0.222,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "Q",
+      "name": "Glutamine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.778,
+      "total_score": -0.222,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "H",
+      "name": "Histidine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.711,
+      "total_score": -0.289,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "A",
+      "name": "Alanine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": -0.4,
+      "total_score": -0.4,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "M",
+      "name": "Methionine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": -0.422,
+      "total_score": -0.422,
+      "verdict": "NEUTRAL"
+    },
+    {
+      "aa": "C",
+      "name": "Cysteine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": -0.556,
+      "total_score": -0.556,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "F",
+      "name": "Phenylalanine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": -0.622,
+      "total_score": -0.622,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "Y",
+      "name": "Tyrosine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.289,
+      "total_score": -0.711,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "W",
+      "name": "Tryptophan",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.2,
+      "total_score": -0.8,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "S",
+      "name": "Serine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.178,
+      "total_score": -0.822,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "L",
+      "name": "Leucine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": -0.844,
+      "total_score": -0.844,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "T",
+      "name": "Threonine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": -1.0,
+      "hydrophobic": 0.156,
+      "total_score": -0.844,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "V",
+      "name": "Valine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": -0.933,
+      "total_score": -0.933,
+      "verdict": "N392-SELECT"
+    },
+    {
+      "aa": "I",
+      "name": "Isoleucine",
+      "charge": 0,
+      "salt_bridge": 0.0,
+      "hbond_diff": 0.0,
+      "hydrophobic": -1.0,
+      "total_score": -1.0,
+      "verdict": "N392-SELECT"
+    }
+  ],
+  "published_specificity": {
+    "hydrophobic": {
+      "examples": "L, F, Y, W, I, V",
+      "n392_preference": 165,
+      "note": "N392 excises hydrophobic P1 up to 165x faster than K392"
+    },
+    "charged_pos": {
+      "examples": "R, K",
+      "n392_preference": 1,
+      "note": "Both alleles similar for positively charged P1"
+    },
+    "charged_neg": {
+      "examples": "D, E",
+      "n392_preference": null,
+      "note": "Not directly tested; predicted K392-selective via salt bridge"
+    },
+    "polar": {
+      "examples": "N, Q, S, T",
+      "n392_preference": 2,
+      "note": "Modest N392 preference for small polar residues"
+    }
+  },
+  "peptide_candidates": [
+    {
+      "sequence": "d-Glu-Ala-Leu-Val-Ala-Ala-Gly-Leu",
+      "rationale": "D-Glu P1 salt bridge to K392 NH3+ (strongest electrostatic discrimination). Ala/Leu body for channel fit. D-amino acid at P1 prevents ERAP2 cleavage.",
+      "selectivity": "K392"
+    },
+    {
+      "sequence": "d-Asp-Ala-Leu-Val-Ala-Ala-Gly-Leu",
+      "rationale": "D-Asp P1 shorter sidechain, tighter salt bridge geometry. May have better fit in the partially-buried pocket.",
+      "selectivity": "K392"
+    },
+    {
+      "sequence": "d-Leu-Ala-Leu-Val-Ala-Ala-Gly-Leu",
+      "rationale": "D-Leu P1 exploits N392's 165x hydrophobic preference. This would be an N392-selective probe/control.",
+      "selectivity": "N392"
+    },
+    {
+      "sequence": "d-Ala-Ala-Leu-Val-Ala-Ala-Gly-Leu",
+      "rationale": "D-Ala P1 neutral control. Small, no charge, minimal hydrophobicity. Should bind both variants equally.",
+      "selectivity": "neutral"
+    }
+  ]
+}

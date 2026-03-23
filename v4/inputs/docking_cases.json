@@ -1,0 +1,12 @@
+{
+    "erap2_k392": {
+        "pdb": "erap2_k392.pdb",
+        "binding_site_residues": "388-410",
+        "description": "ERAP2 wildtype K392 substrate channel"
+    },
+    "erap2_n392": {
+        "pdb": "erap2_n392.pdb",
+        "binding_site_residues": "388-410",
+        "description": "ERAP2 plague-variant N392 substrate channel"
+    }
+}
