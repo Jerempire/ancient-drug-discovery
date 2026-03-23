@@ -1,0 +1,434 @@
+[
+  {
+    "name": "hybrid_D_ATSKSK_K392",
+    "file": "confidence_hybrid_D_ATSKSK_K392_model_0.json",
+    "ipTM": 0.6513333320617676,
+    "pTM": 0.8168922662734985
+  },
+  {
+    "name": "hybrid_D_ATSKSK_K392",
+    "file": "confidence_hybrid_D_ATSKSK_K392_model_1.json",
+    "ipTM": 0.4410211443901062,
+    "pTM": 0.7026396989822388
+  },
+  {
+    "name": "hybrid_D_ATSKSK_K392",
+    "file": "confidence_hybrid_D_ATSKSK_K392_model_2.json",
+    "ipTM": 0.4296180009841919,
+    "pTM": 0.7659661769866943
+  },
+  {
+    "name": "hybrid_D_ATSKSK_N392",
+    "file": "confidence_hybrid_D_ATSKSK_N392_model_0.json",
+    "ipTM": 0.6736466288566589,
+    "pTM": 0.818568229675293
+  },
+  {
+    "name": "hybrid_D_ATSKSK_N392",
+    "file": "confidence_hybrid_D_ATSKSK_N392_model_1.json",
+    "ipTM": 0.6925544738769531,
+    "pTM": 0.7928140163421631
+  },
+  {
+    "name": "hybrid_D_ATSKSK_N392",
+    "file": "confidence_hybrid_D_ATSKSK_N392_model_2.json",
+    "ipTM": 0.5963905453681946,
+    "pTM": 0.7253369092941284
+  },
+  {
+    "name": "hybrid_D_IKLKLL_K392",
+    "file": "confidence_hybrid_D_IKLKLL_K392_model_0.json",
+    "ipTM": 0.4836574196815491,
+    "pTM": 0.7073564529418945
+  },
+  {
+    "name": "hybrid_D_IKLKLL_K392",
+    "file": "confidence_hybrid_D_IKLKLL_K392_model_1.json",
+    "ipTM": 0.4919296205043793,
+    "pTM": 0.713069498538971
+  },
+  {
+    "name": "hybrid_D_IKLKLL_K392",
+    "file": "confidence_hybrid_D_IKLKLL_K392_model_2.json",
+    "ipTM": 0.477565199136734,
+    "pTM": 0.6812921166419983
+  },
+  {
+    "name": "hybrid_D_IKLKLL_N392",
+    "file": "confidence_hybrid_D_IKLKLL_N392_model_0.json",
+    "ipTM": 0.7992861270904541,
+    "pTM": 0.8262144923210144
+  },
+  {
+    "name": "hybrid_D_IKLKLL_N392",
+    "file": "confidence_hybrid_D_IKLKLL_N392_model_1.json",
+    "ipTM": 0.6576482057571411,
+    "pTM": 0.809954822063446
+  },
+  {
+    "name": "hybrid_D_IKLKLL_N392",
+    "file": "confidence_hybrid_D_IKLKLL_N392_model_2.json",
+    "ipTM": 0.4728807508945465,
+    "pTM": 0.7617439031600952
+  },
+  {
+    "name": "hybrid_D_KKILNS_K392",
+    "file": "confidence_hybrid_D_KKILNS_K392_model_0.json",
+    "ipTM": 0.8461180925369263,
+    "pTM": 0.825514018535614
+  },
+  {
+    "name": "hybrid_D_KKILNS_K392",
+    "file": "confidence_hybrid_D_KKILNS_K392_model_1.json",
+    "ipTM": 0.7516862750053406,
+    "pTM": 0.8170386552810669
+  },
+  {
+    "name": "hybrid_D_KKILNS_K392",
+    "file": "confidence_hybrid_D_KKILNS_K392_model_2.json",
+    "ipTM": 0.6049004197120667,
+    "pTM": 0.8455886244773865
+  },
+  {
+    "name": "hybrid_D_KKILNS_N392",
+    "file": "confidence_hybrid_D_KKILNS_N392_model_0.json",
+    "ipTM": 0.7947194576263428,
+    "pTM": 0.8596532940864563
+  },
+  {
+    "name": "hybrid_D_KKILNS_N392",
+    "file": "confidence_hybrid_D_KKILNS_N392_model_1.json",
+    "ipTM": 0.821125864982605,
+    "pTM": 0.8635921478271484
+  },
+  {
+    "name": "hybrid_D_KKILNS_N392",
+    "file": "confidence_hybrid_D_KKILNS_N392_model_2.json",
+    "ipTM": 0.6908999085426331,
+    "pTM": 0.8085169196128845
+  },
+  {
+    "name": "hybrid_D_KKTPST_K392",
+    "file": "confidence_hybrid_D_KKTPST_K392_model_0.json",
+    "ipTM": 0.60831618309021,
+    "pTM": 0.7511288523674011
+  },
+  {
+    "name": "hybrid_D_KKTPST_K392",
+    "file": "confidence_hybrid_D_KKTPST_K392_model_1.json",
+    "ipTM": 0.583375871181488,
+    "pTM": 0.721228837966919
+  },
+  {
+    "name": "hybrid_D_KKTPST_K392",
+    "file": "confidence_hybrid_D_KKTPST_K392_model_2.json",
+    "ipTM": 0.5937890410423279,
+    "pTM": 0.7155466675758362
+  },
+  {
+    "name": "hybrid_D_KKTPST_N392",
+    "file": "confidence_hybrid_D_KKTPST_N392_model_0.json",
+    "ipTM": 0.806868851184845,
+    "pTM": 0.8252255916595459
+  },
+  {
+    "name": "hybrid_D_KKTPST_N392",
+    "file": "confidence_hybrid_D_KKTPST_N392_model_1.json",
+    "ipTM": 0.4879397749900818,
+    "pTM": 0.6811696887016296
+  },
+  {
+    "name": "hybrid_D_KKTPST_N392",
+    "file": "confidence_hybrid_D_KKTPST_N392_model_2.json",
+    "ipTM": 0.3246287405490875,
+    "pTM": 0.6981748342514038
+  },
+  {
+    "name": "hybrid_D_SRTLKK_K392",
+    "file": "confidence_hybrid_D_SRTLKK_K392_model_0.json",
+    "ipTM": 0.7619589567184448,
+    "pTM": 0.8052830696105957
+  },
+  {
+    "name": "hybrid_D_SRTLKK_K392",
+    "file": "confidence_hybrid_D_SRTLKK_K392_model_1.json",
+    "ipTM": 0.49563369154930115,
+    "pTM": 0.6902153491973877
+  },
+  {
+    "name": "hybrid_D_SRTLKK_K392",
+    "file": "confidence_hybrid_D_SRTLKK_K392_model_2.json",
+    "ipTM": 0.49386391043663025,
+    "pTM": 0.7349659204483032
+  },
+  {
+    "name": "hybrid_D_SRTLKK_N392",
+    "file": "confidence_hybrid_D_SRTLKK_N392_model_0.json",
+    "ipTM": 0.7656445503234863,
+    "pTM": 0.844262421131134
+  },
+  {
+    "name": "hybrid_D_SRTLKK_N392",
+    "file": "confidence_hybrid_D_SRTLKK_N392_model_1.json",
+    "ipTM": 0.720125675201416,
+    "pTM": 0.8272027969360352
+  },
+  {
+    "name": "hybrid_D_SRTLKK_N392",
+    "file": "confidence_hybrid_D_SRTLKK_N392_model_2.json",
+    "ipTM": 0.2737717926502228,
+    "pTM": 0.6231585741043091
+  },
+  {
+    "name": "hybrid_D_VKLLLL_K392",
+    "file": "confidence_hybrid_D_VKLLLL_K392_model_0.json",
+    "ipTM": 0.796532154083252,
+    "pTM": 0.8498371243476868
+  },
+  {
+    "name": "hybrid_D_VKLLLL_K392",
+    "file": "confidence_hybrid_D_VKLLLL_K392_model_1.json",
+    "ipTM": 0.7495940923690796,
+    "pTM": 0.9004089832305908
+  },
+  {
+    "name": "hybrid_D_VKLLLL_K392",
+    "file": "confidence_hybrid_D_VKLLLL_K392_model_2.json",
+    "ipTM": 0.8898547291755676,
+    "pTM": 0.8587361574172974
+  },
+  {
+    "name": "hybrid_D_VKLLLL_N392",
+    "file": "confidence_hybrid_D_VKLLLL_N392_model_0.json",
+    "ipTM": 0.7445892095565796,
+    "pTM": 0.8588565587997437
+  },
+  {
+    "name": "hybrid_D_VKLLLL_N392",
+    "file": "confidence_hybrid_D_VKLLLL_N392_model_1.json",
+    "ipTM": 0.6641998887062073,
+    "pTM": 0.8751699924468994
+  },
+  {
+    "name": "hybrid_D_VKLLLL_N392",
+    "file": "confidence_hybrid_D_VKLLLL_N392_model_2.json",
+    "ipTM": 0.8718496561050415,
+    "pTM": 0.8731375336647034
+  },
+  {
+    "name": "hybrid_E_ATSKSK_K392",
+    "file": "confidence_hybrid_E_ATSKSK_K392_model_0.json",
+    "ipTM": 0.7543569207191467,
+    "pTM": 0.79374760389328
+  },
+  {
+    "name": "hybrid_E_ATSKSK_K392",
+    "file": "confidence_hybrid_E_ATSKSK_K392_model_1.json",
+    "ipTM": 0.5134438872337341,
+    "pTM": 0.7452348470687866
+  },
+  {
+    "name": "hybrid_E_ATSKSK_K392",
+    "file": "confidence_hybrid_E_ATSKSK_K392_model_2.json",
+    "ipTM": 0.5132056474685669,
+    "pTM": 0.7442777752876282
+  },
+  {
+    "name": "hybrid_E_ATSKSK_N392",
+    "file": "confidence_hybrid_E_ATSKSK_N392_model_0.json",
+    "ipTM": 0.6007229089736938,
+    "pTM": 0.7299981713294983
+  },
+  {
+    "name": "hybrid_E_ATSKSK_N392",
+    "file": "confidence_hybrid_E_ATSKSK_N392_model_1.json",
+    "ipTM": 0.482225626707077,
+    "pTM": 0.7509907484054565
+  },
+  {
+    "name": "hybrid_E_ATSKSK_N392",
+    "file": "confidence_hybrid_E_ATSKSK_N392_model_2.json",
+    "ipTM": 0.4209911823272705,
+    "pTM": 0.7267687916755676
+  },
+  {
+    "name": "hybrid_E_IKLKLL_K392",
+    "file": "confidence_hybrid_E_IKLKLL_K392_model_0.json",
+    "ipTM": 0.601078987121582,
+    "pTM": 0.7742253541946411
+  },
+  {
+    "name": "hybrid_E_IKLKLL_K392",
+    "file": "confidence_hybrid_E_IKLKLL_K392_model_1.json",
+    "ipTM": 0.6275626420974731,
+    "pTM": 0.7451034784317017
+  },
+  {
+    "name": "hybrid_E_IKLKLL_K392",
+    "file": "confidence_hybrid_E_IKLKLL_K392_model_2.json",
+    "ipTM": 0.6085378527641296,
+    "pTM": 0.7577782869338989
+  },
+  {
+    "name": "hybrid_E_IKLKLL_N392",
+    "file": "confidence_hybrid_E_IKLKLL_N392_model_0.json",
+    "ipTM": 0.5931797623634338,
+    "pTM": 0.7600767016410828
+  },
+  {
+    "name": "hybrid_E_IKLKLL_N392",
+    "file": "confidence_hybrid_E_IKLKLL_N392_model_1.json",
+    "ipTM": 0.610119640827179,
+    "pTM": 0.7118039727210999
+  },
+  {
+    "name": "hybrid_E_IKLKLL_N392",
+    "file": "confidence_hybrid_E_IKLKLL_N392_model_2.json",
+    "ipTM": 0.5316771864891052,
+    "pTM": 0.7529956698417664
+  },
+  {
+    "name": "hybrid_E_KKILNS_K392",
+    "file": "confidence_hybrid_E_KKILNS_K392_model_0.json",
+    "ipTM": 0.6174861788749695,
+    "pTM": 0.7781389355659485
+  },
+  {
+    "name": "hybrid_E_KKILNS_K392",
+    "file": "confidence_hybrid_E_KKILNS_K392_model_1.json",
+    "ipTM": 0.5767407417297363,
+    "pTM": 0.7220140695571899
+  },
+  {
+    "name": "hybrid_E_KKILNS_K392",
+    "file": "confidence_hybrid_E_KKILNS_K392_model_2.json",
+    "ipTM": 0.3538142144680023,
+    "pTM": 0.5917653441429138
+  },
+  {
+    "name": "hybrid_E_KKILNS_N392",
+    "file": "confidence_hybrid_E_KKILNS_N392_model_0.json",
+    "ipTM": 0.5241305232048035,
+    "pTM": 0.810697078704834
+  },
+  {
+    "name": "hybrid_E_KKILNS_N392",
+    "file": "confidence_hybrid_E_KKILNS_N392_model_1.json",
+    "ipTM": 0.5007615089416504,
+    "pTM": 0.7981101274490356
+  },
+  {
+    "name": "hybrid_E_KKILNS_N392",
+    "file": "confidence_hybrid_E_KKILNS_N392_model_2.json",
+    "ipTM": 0.5593839287757874,
+    "pTM": 0.7871063947677612
+  },
+  {
+    "name": "hybrid_E_KKTPST_K392",
+    "file": "confidence_hybrid_E_KKTPST_K392_model_0.json",
+    "ipTM": 0.6055848598480225,
+    "pTM": 0.7837222814559937
+  },
+  {
+    "name": "hybrid_E_KKTPST_K392",
+    "file": "confidence_hybrid_E_KKTPST_K392_model_1.json",
+    "ipTM": 0.6854120492935181,
+    "pTM": 0.7578165531158447
+  },
+  {
+    "name": "hybrid_E_KKTPST_K392",
+    "file": "confidence_hybrid_E_KKTPST_K392_model_2.json",
+    "ipTM": 0.35960492491722107,
+    "pTM": 0.5816079378128052
+  },
+  {
+    "name": "hybrid_E_KKTPST_N392",
+    "file": "confidence_hybrid_E_KKTPST_N392_model_0.json",
+    "ipTM": 0.7135400772094727,
+    "pTM": 0.7877672910690308
+  },
+  {
+    "name": "hybrid_E_KKTPST_N392",
+    "file": "confidence_hybrid_E_KKTPST_N392_model_1.json",
+    "ipTM": 0.42729058861732483,
+    "pTM": 0.6941768527030945
+  },
+  {
+    "name": "hybrid_E_KKTPST_N392",
+    "file": "confidence_hybrid_E_KKTPST_N392_model_2.json",
+    "ipTM": 0.4331240952014923,
+    "pTM": 0.7302502393722534
+  },
+  {
+    "name": "hybrid_E_SRTLKK_K392",
+    "file": "confidence_hybrid_E_SRTLKK_K392_model_0.json",
+    "ipTM": 0.8230481147766113,
+    "pTM": 0.8539062142372131
+  },
+  {
+    "name": "hybrid_E_SRTLKK_K392",
+    "file": "confidence_hybrid_E_SRTLKK_K392_model_1.json",
+    "ipTM": 0.7440617680549622,
+    "pTM": 0.7790908813476562
+  },
+  {
+    "name": "hybrid_E_SRTLKK_K392",
+    "file": "confidence_hybrid_E_SRTLKK_K392_model_2.json",
+    "ipTM": 0.4214240610599518,
+    "pTM": 0.7688021659851074
+  },
+  {
+    "name": "hybrid_E_SRTLKK_N392",
+    "file": "confidence_hybrid_E_SRTLKK_N392_model_0.json",
+    "ipTM": 0.7673846483230591,
+    "pTM": 0.8156810402870178
+  },
+  {
+    "name": "hybrid_E_SRTLKK_N392",
+    "file": "confidence_hybrid_E_SRTLKK_N392_model_1.json",
+    "ipTM": 0.525447428226471,
+    "pTM": 0.7926759719848633
+  },
+  {
+    "name": "hybrid_E_SRTLKK_N392",
+    "file": "confidence_hybrid_E_SRTLKK_N392_model_2.json",
+    "ipTM": 0.5060133337974548,
+    "pTM": 0.7628098130226135
+  },
+  {
+    "name": "hybrid_E_VKLLLL_K392",
+    "file": "confidence_hybrid_E_VKLLLL_K392_model_0.json",
+    "ipTM": 0.7483166456222534,
+    "pTM": 0.8823606967926025
+  },
+  {
+    "name": "hybrid_E_VKLLLL_K392",
+    "file": "confidence_hybrid_E_VKLLLL_K392_model_1.json",
+    "ipTM": 0.8184735178947449,
+    "pTM": 0.8850858211517334
+  },
+  {
+    "name": "hybrid_E_VKLLLL_K392",
+    "file": "confidence_hybrid_E_VKLLLL_K392_model_2.json",
+    "ipTM": 0.8182529211044312,
+    "pTM": 0.875011682510376
+  },
+  {
+    "name": "hybrid_E_VKLLLL_N392",
+    "file": "confidence_hybrid_E_VKLLLL_N392_model_0.json",
+    "ipTM": 0.8039447069168091,
+    "pTM": 0.9031880497932434
+  },
+  {
+    "name": "hybrid_E_VKLLLL_N392",
+    "file": "confidence_hybrid_E_VKLLLL_N392_model_1.json",
+    "ipTM": 0.7285811901092529,
+    "pTM": 0.8862804174423218
+  },
+  {
+    "name": "hybrid_E_VKLLLL_N392",
+    "file": "confidence_hybrid_E_VKLLLL_N392_model_2.json",
+    "ipTM": 0.5937337279319763,
+    "pTM": 0.8605453968048096
+  }
+]

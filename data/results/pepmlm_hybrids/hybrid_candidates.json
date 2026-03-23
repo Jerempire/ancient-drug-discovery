@@ -1,0 +1,620 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-22T19:47:16.313857",
+    "source": "pepmlm_candidates.json",
+    "num_scaffolds": 8,
+    "p1_substitutions": {
+      "E": "D-Glu",
+      "D": "D-Asp",
+      "L": "D-Leu",
+      "A": "D-Ala"
+    },
+    "total_hybrids": 32
+  },
+  "scaffolds": [
+    {
+      "sequence": "PILKLLSK",
+      "length": 8,
+      "variant": "K392",
+      "p1_residue": "P",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": false,
+      "charge_class": "polar"
+    },
+    {
+      "sequence": "KVLLLLSK",
+      "length": 8,
+      "variant": "K392",
+      "p1_residue": "K",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": false,
+      "charge_class": "positive"
+    },
+    {
+      "sequence": "KKILNSSIHQ",
+      "length": 10,
+      "variant": "K392",
+      "p1_residue": "K",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": false,
+      "charge_class": "positive"
+    },
+    {
+      "sequence": "VKLLLLSIGK",
+      "length": 10,
+      "variant": "K392",
+      "p1_residue": "V",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": true,
+      "charge_class": "hydrophobic"
+    },
+    {
+      "sequence": "IKLKLLSSSGQG",
+      "length": 12,
+      "variant": "K392",
+      "p1_residue": "I",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": true,
+      "charge_class": "hydrophobic"
+    },
+    {
+      "sequence": "SRTLKKSSLKGN",
+      "length": 12,
+      "variant": "K392",
+      "p1_residue": "S",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": false,
+      "charge_class": "polar"
+    },
+    {
+      "sequence": "ATSKSKSSRSSTVKK",
+      "length": 15,
+      "variant": "K392",
+      "p1_residue": "A",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": false,
+      "charge_class": "polar"
+    },
+    {
+      "sequence": "KKTPSTSLRLSTLKN",
+      "length": 15,
+      "variant": "K392",
+      "p1_residue": "K",
+      "salt_bridge_candidate": false,
+      "hydrophobic_p1": false,
+      "charge_class": "positive"
+    }
+  ],
+  "hybrids": [
+    {
+      "sequence": "EILKLLSK",
+      "original_scaffold": "PILKLLSK",
+      "original_p1": "P",
+      "new_p1": "E",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DILKLLSK",
+      "original_scaffold": "PILKLLSK",
+      "original_p1": "P",
+      "new_p1": "D",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LILKLLSK",
+      "original_scaffold": "PILKLLSK",
+      "original_p1": "P",
+      "new_p1": "L",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "AILKLLSK",
+      "original_scaffold": "PILKLLSK",
+      "original_p1": "P",
+      "new_p1": "A",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    },
+    {
+      "sequence": "EVLLLLSK",
+      "original_scaffold": "KVLLLLSK",
+      "original_p1": "K",
+      "new_p1": "E",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DVLLLLSK",
+      "original_scaffold": "KVLLLLSK",
+      "original_p1": "K",
+      "new_p1": "D",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LVLLLLSK",
+      "original_scaffold": "KVLLLLSK",
+      "original_p1": "K",
+      "new_p1": "L",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "AVLLLLSK",
+      "original_scaffold": "KVLLLLSK",
+      "original_p1": "K",
+      "new_p1": "A",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    },
+    {
+      "sequence": "EKILNSSIHQ",
+      "original_scaffold": "KKILNSSIHQ",
+      "original_p1": "K",
+      "new_p1": "E",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKILNSSIHQ",
+      "original_scaffold": "KKILNSSIHQ",
+      "original_p1": "K",
+      "new_p1": "D",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LKILNSSIHQ",
+      "original_scaffold": "KKILNSSIHQ",
+      "original_p1": "K",
+      "new_p1": "L",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "AKILNSSIHQ",
+      "original_scaffold": "KKILNSSIHQ",
+      "original_p1": "K",
+      "new_p1": "A",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    },
+    {
+      "sequence": "EKLLLLSIGK",
+      "original_scaffold": "VKLLLLSIGK",
+      "original_p1": "V",
+      "new_p1": "E",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKLLLLSIGK",
+      "original_scaffold": "VKLLLLSIGK",
+      "original_p1": "V",
+      "new_p1": "D",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LKLLLLSIGK",
+      "original_scaffold": "VKLLLLSIGK",
+      "original_p1": "V",
+      "new_p1": "L",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "AKLLLLSIGK",
+      "original_scaffold": "VKLLLLSIGK",
+      "original_p1": "V",
+      "new_p1": "A",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    },
+    {
+      "sequence": "EKLKLLSSSGQG",
+      "original_scaffold": "IKLKLLSSSGQG",
+      "original_p1": "I",
+      "new_p1": "E",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKLKLLSSSGQG",
+      "original_scaffold": "IKLKLLSSSGQG",
+      "original_p1": "I",
+      "new_p1": "D",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LKLKLLSSSGQG",
+      "original_scaffold": "IKLKLLSSSGQG",
+      "original_p1": "I",
+      "new_p1": "L",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "AKLKLLSSSGQG",
+      "original_scaffold": "IKLKLLSSSGQG",
+      "original_p1": "I",
+      "new_p1": "A",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    },
+    {
+      "sequence": "ERTLKKSSLKGN",
+      "original_scaffold": "SRTLKKSSLKGN",
+      "original_p1": "S",
+      "new_p1": "E",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DRTLKKSSLKGN",
+      "original_scaffold": "SRTLKKSSLKGN",
+      "original_p1": "S",
+      "new_p1": "D",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LRTLKKSSLKGN",
+      "original_scaffold": "SRTLKKSSLKGN",
+      "original_p1": "S",
+      "new_p1": "L",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "ARTLKKSSLKGN",
+      "original_scaffold": "SRTLKKSSLKGN",
+      "original_p1": "S",
+      "new_p1": "A",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    },
+    {
+      "sequence": "ETSKSKSSRSSTVKK",
+      "original_scaffold": "ATSKSKSSRSSTVKK",
+      "original_p1": "A",
+      "new_p1": "E",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DTSKSKSSRSSTVKK",
+      "original_scaffold": "ATSKSKSSRSSTVKK",
+      "original_p1": "A",
+      "new_p1": "D",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LTSKSKSSRSSTVKK",
+      "original_scaffold": "ATSKSKSSRSSTVKK",
+      "original_p1": "A",
+      "new_p1": "L",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "ATSKSKSSRSSTVKK",
+      "original_scaffold": "ATSKSKSSRSSTVKK",
+      "original_p1": "A",
+      "new_p1": "A",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    },
+    {
+      "sequence": "EKTPSTSLRLSTLKN",
+      "original_scaffold": "KKTPSTSLRLSTLKN",
+      "original_p1": "K",
+      "new_p1": "E",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKTPSTSLRLSTLKN",
+      "original_scaffold": "KKTPSTSLRLSTLKN",
+      "original_p1": "K",
+      "new_p1": "D",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "LKTPSTSLRLSTLKN",
+      "original_scaffold": "KKTPSTSLRLSTLKN",
+      "original_p1": "K",
+      "new_p1": "L",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Leu",
+      "hypothesis": "N392-selective control (hydrophobic)",
+      "priority": 2
+    },
+    {
+      "sequence": "AKTPSTSLRLSTLKN",
+      "original_scaffold": "KKTPSTSLRLSTLKN",
+      "original_p1": "K",
+      "new_p1": "A",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Ala",
+      "hypothesis": "neutral control",
+      "priority": 3
+    }
+  ],
+  "priority_1_salt_bridge": [
+    {
+      "sequence": "EILKLLSK",
+      "original_scaffold": "PILKLLSK",
+      "original_p1": "P",
+      "new_p1": "E",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DILKLLSK",
+      "original_scaffold": "PILKLLSK",
+      "original_p1": "P",
+      "new_p1": "D",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "EVLLLLSK",
+      "original_scaffold": "KVLLLLSK",
+      "original_p1": "K",
+      "new_p1": "E",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DVLLLLSK",
+      "original_scaffold": "KVLLLLSK",
+      "original_p1": "K",
+      "new_p1": "D",
+      "length": 8,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "EKILNSSIHQ",
+      "original_scaffold": "KKILNSSIHQ",
+      "original_p1": "K",
+      "new_p1": "E",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKILNSSIHQ",
+      "original_scaffold": "KKILNSSIHQ",
+      "original_p1": "K",
+      "new_p1": "D",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "EKLLLLSIGK",
+      "original_scaffold": "VKLLLLSIGK",
+      "original_p1": "V",
+      "new_p1": "E",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKLLLLSIGK",
+      "original_scaffold": "VKLLLLSIGK",
+      "original_p1": "V",
+      "new_p1": "D",
+      "length": 10,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "EKLKLLSSSGQG",
+      "original_scaffold": "IKLKLLSSSGQG",
+      "original_p1": "I",
+      "new_p1": "E",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKLKLLSSSGQG",
+      "original_scaffold": "IKLKLLSSSGQG",
+      "original_p1": "I",
+      "new_p1": "D",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "ERTLKKSSLKGN",
+      "original_scaffold": "SRTLKKSSLKGN",
+      "original_p1": "S",
+      "new_p1": "E",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DRTLKKSSLKGN",
+      "original_scaffold": "SRTLKKSSLKGN",
+      "original_p1": "S",
+      "new_p1": "D",
+      "length": 12,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "ETSKSKSSRSSTVKK",
+      "original_scaffold": "ATSKSKSSRSSTVKK",
+      "original_p1": "A",
+      "new_p1": "E",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DTSKSKSSRSSTVKK",
+      "original_scaffold": "ATSKSKSSRSSTVKK",
+      "original_p1": "A",
+      "new_p1": "D",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "EKTPSTSLRLSTLKN",
+      "original_scaffold": "KKTPSTSLRLSTLKN",
+      "original_p1": "K",
+      "new_p1": "E",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Glu",
+      "hypothesis": "K392-selective (salt bridge)",
+      "priority": 1
+    },
+    {
+      "sequence": "DKTPSTSLRLSTLKN",
+      "original_scaffold": "KKTPSTSLRLSTLKN",
+      "original_p1": "K",
+      "new_p1": "D",
+      "length": 15,
+      "variant_target": "K392",
+      "label": "D-Asp",
+      "hypothesis": "K392-selective (shorter salt bridge)",
+      "priority": 1
+    }
+  ]
+}

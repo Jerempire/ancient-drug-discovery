@@ -1,0 +1,471 @@
+{
+  "metadata": {
+    "model": "TianlaiChen/PepMLM-650M",
+    "generated_at": "2026-03-22T19:45:17.493120",
+    "device": "cpu",
+    "channel_region": "350-430",
+    "variant_position": 392,
+    "num_peptides_requested": 24,
+    "peptide_lengths": [
+      8,
+      10,
+      12,
+      15
+    ],
+    "temperature": 1.2,
+    "top_k": 3
+  },
+  "variants": {
+    "K392": {
+      "channel_sequence": "LFDPKTSSASDKLWVTRVIAHELAHQWFGNLVTMEWWNDIWLKEGFAKYMELIAVNATYPELQFDDYFLNVCFEVITKDSL",
+      "peptides": [
+        {
+          "sequence": "PILKLLSK",
+          "length": 8,
+          "variant": "K392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "PILKSSLN",
+          "length": 8,
+          "variant": "K392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "PILTSLSK",
+          "length": 8,
+          "variant": "K392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "PVLLSTQS",
+          "length": 8,
+          "variant": "K392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "KVLLLLSK",
+          "length": 8,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "PIQKLLLS",
+          "length": 8,
+          "variant": "K392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "KKILNSSIHQ",
+          "length": 10,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "VKLLLLSIGK",
+          "length": 10,
+          "variant": "K392",
+          "p1_residue": "V",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "KNLKLLSIGK",
+          "length": 10,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KKLKNLSKHK",
+          "length": 10,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KKLKLSSKGQ",
+          "length": 10,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "VKLKLQLLGQ",
+          "length": 10,
+          "variant": "K392",
+          "p1_residue": "V",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "IKLKLLSSSGQG",
+          "length": 12,
+          "variant": "K392",
+          "p1_residue": "I",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "ISTKKLSSSGGN",
+          "length": 12,
+          "variant": "K392",
+          "p1_residue": "I",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "SRTLKKSSLKGN",
+          "length": 12,
+          "variant": "K392",
+          "p1_residue": "S",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "KKTILLLLLQQK",
+          "length": 12,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "ISTKKKSLSQSN",
+          "length": 12,
+          "variant": "K392",
+          "p1_residue": "I",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "IKLKKKSSLKSG",
+          "length": 12,
+          "variant": "K392",
+          "p1_residue": "I",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "ATSKSKSSRSSTVKK",
+          "length": 15,
+          "variant": "K392",
+          "p1_residue": "A",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "KKTPSTSLRLSTLKN",
+          "length": 15,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KKVPKLLLLKLGVKK",
+          "length": 15,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KRTGKKSKRKLGVLH",
+          "length": 15,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KKSKKTSSLLLGGKK",
+          "length": 15,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KRTGQTSSRLLLVKN",
+          "length": 15,
+          "variant": "K392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        }
+      ]
+    },
+    "N392": {
+      "channel_sequence": "LFDPKTSSASDKLWVTRVIAHELAHQWFGNLVTMEWWNDIWLNEGFAKYMELIAVNATYPELQFDDYFLNVCFEVITKDSL",
+      "peptides": [
+        {
+          "sequence": "PILTLLSG",
+          "length": 8,
+          "variant": "N392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "PSLKNLSG",
+          "length": 8,
+          "variant": "N392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "KILTLSQK",
+          "length": 8,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "PILLNSSS",
+          "length": 8,
+          "variant": "N392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "PILTNLLK",
+          "length": 8,
+          "variant": "N392",
+          "p1_residue": "P",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "KVLKSSSS",
+          "length": 8,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "SKLKSSLIHK",
+          "length": 10,
+          "variant": "N392",
+          "p1_residue": "S",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "SKLKLSSIGK",
+          "length": 10,
+          "variant": "N392",
+          "p1_residue": "S",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "VKLKNLSIGK",
+          "length": 10,
+          "variant": "N392",
+          "p1_residue": "V",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "SKIKLLSKGQ",
+          "length": 10,
+          "variant": "N392",
+          "p1_residue": "S",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "VKYKSLSKHK",
+          "length": 10,
+          "variant": "N392",
+          "p1_residue": "V",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "STYILLSKGQ",
+          "length": 10,
+          "variant": "N392",
+          "p1_residue": "S",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "IKTKLKSLLGGN",
+          "length": 12,
+          "variant": "N392",
+          "p1_residue": "I",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "ISTKKKSLLKKN",
+          "length": 12,
+          "variant": "N392",
+          "p1_residue": "I",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": true,
+          "charge_class": "hydrophobic"
+        },
+        {
+          "sequence": "SRTKKKSLSGSN",
+          "length": 12,
+          "variant": "N392",
+          "p1_residue": "S",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "polar"
+        },
+        {
+          "sequence": "KSTKKKLSSQGK",
+          "length": 12,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KSIKLSLLLKSG",
+          "length": 12,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KRYKKLSGLQKK",
+          "length": 12,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KSSPQKSLRLSSIKK",
+          "length": 15,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KSTGSKSKRKSLGKN",
+          "length": 15,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KKTKSTKSRLKTGKK",
+          "length": 15,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KKTKKTLKRSSLVKK",
+          "length": 15,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KRTKSLLLLLLLGHN",
+          "length": 15,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        },
+        {
+          "sequence": "KKSPSKKKLLLLIKH",
+          "length": 15,
+          "variant": "N392",
+          "p1_residue": "K",
+          "salt_bridge_candidate": false,
+          "hydrophobic_p1": false,
+          "charge_class": "positive"
+        }
+      ]
+    }
+  },
+  "salt_bridge_candidates": [],
+  "p1_distribution": {
+    "K": 22,
+    "P": 9,
+    "I": 6,
+    "S": 6,
+    "V": 4,
+    "A": 1
+  }
+}

@@ -257,7 +257,8 @@ def cmd_upload():
     # Upload pipeline scripts
     scripts_dir = os.path.join(PROJECT_DIR, "scripts")
     for script in ["gpu_setup.sh", "run_pipeline_gpu.py", "boltz2_validate_v2_batch.py",
-                    "selectivity_screen_v2.py", "boltz2_validate_selective.py"]:
+                    "selectivity_screen_v2.py", "boltz2_validate_selective.py",
+                    "rosetta_setup.sh", "run_rosetta_pipeline.py"]:
         src = os.path.join(scripts_dir, script)
         if os.path.exists(src):
             subprocess.run(f'scp -P {port} "{src}" root@{host}:/workspace/scripts/', shell=True)
