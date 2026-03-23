@@ -1,0 +1,282 @@
+[
+  {
+    "name": "sar_VKLLLL_E_8aa",
+    "sequence": "EKLLLLSI",
+    "scaffold": "VKLLLL",
+    "p1": "E",
+    "length": 8
+  },
+  {
+    "name": "sar_VKLLLL_E_9aa",
+    "sequence": "EKLLLLSIG",
+    "scaffold": "VKLLLL",
+    "p1": "E",
+    "length": 9
+  },
+  {
+    "name": "sar_VKLLLL_E_10aa",
+    "sequence": "EKLLLLSIGK",
+    "scaffold": "VKLLLL",
+    "p1": "E",
+    "length": 10
+  },
+  {
+    "name": "sar_VKLLLL_E_11aa",
+    "sequence": "EKLLLLSIGKL",
+    "scaffold": "VKLLLL",
+    "p1": "E",
+    "length": 11
+  },
+  {
+    "name": "sar_VKLLLL_D_8aa",
+    "sequence": "DKLLLLSI",
+    "scaffold": "VKLLLL",
+    "p1": "D",
+    "length": 8
+  },
+  {
+    "name": "sar_VKLLLL_D_9aa",
+    "sequence": "DKLLLLSIG",
+    "scaffold": "VKLLLL",
+    "p1": "D",
+    "length": 9
+  },
+  {
+    "name": "sar_VKLLLL_D_10aa",
+    "sequence": "DKLLLLSIGK",
+    "scaffold": "VKLLLL",
+    "p1": "D",
+    "length": 10
+  },
+  {
+    "name": "sar_VKLLLL_D_11aa",
+    "sequence": "DKLLLLSIGKL",
+    "scaffold": "VKLLLL",
+    "p1": "D",
+    "length": 11
+  },
+  {
+    "name": "sar_VKLLLL_A_8aa",
+    "sequence": "AKLLLLSI",
+    "scaffold": "VKLLLL",
+    "p1": "A",
+    "length": 8
+  },
+  {
+    "name": "sar_VKLLLL_A_9aa",
+    "sequence": "AKLLLLSIG",
+    "scaffold": "VKLLLL",
+    "p1": "A",
+    "length": 9
+  },
+  {
+    "name": "sar_VKLLLL_A_10aa",
+    "sequence": "AKLLLLSIGK",
+    "scaffold": "VKLLLL",
+    "p1": "A",
+    "length": 10
+  },
+  {
+    "name": "sar_VKLLLL_A_11aa",
+    "sequence": "AKLLLLSIGKL",
+    "scaffold": "VKLLLL",
+    "p1": "A",
+    "length": 11
+  },
+  {
+    "name": "sar_VKLLLL_L_8aa",
+    "sequence": "LKLLLLSI",
+    "scaffold": "VKLLLL",
+    "p1": "L",
+    "length": 8
+  },
+  {
+    "name": "sar_VKLLLL_L_9aa",
+    "sequence": "LKLLLLSIG",
+    "scaffold": "VKLLLL",
+    "p1": "L",
+    "length": 9
+  },
+  {
+    "name": "sar_VKLLLL_L_10aa",
+    "sequence": "LKLLLLSIGK",
+    "scaffold": "VKLLLL",
+    "p1": "L",
+    "length": 10
+  },
+  {
+    "name": "sar_VKLLLL_L_11aa",
+    "sequence": "LKLLLLSIGKL",
+    "scaffold": "VKLLLL",
+    "p1": "L",
+    "length": 11
+  },
+  {
+    "name": "sar_VKLLLL_V_8aa",
+    "sequence": "VKLLLLSI",
+    "scaffold": "VKLLLL",
+    "p1": "V",
+    "length": 8
+  },
+  {
+    "name": "sar_VKLLLL_V_9aa",
+    "sequence": "VKLLLLSIG",
+    "scaffold": "VKLLLL",
+    "p1": "V",
+    "length": 9
+  },
+  {
+    "name": "sar_VKLLLL_V_10aa",
+    "sequence": "VKLLLLSIGK",
+    "scaffold": "VKLLLL",
+    "p1": "V",
+    "length": 10
+  },
+  {
+    "name": "sar_VKLLLL_V_11aa",
+    "sequence": "VKLLLLSIGKL",
+    "scaffold": "VKLLLL",
+    "p1": "V",
+    "length": 11
+  },
+  {
+    "name": "sar_ATSKSK_E_8aa",
+    "sequence": "ETSKSKSS",
+    "scaffold": "ATSKSK",
+    "p1": "E",
+    "length": 8
+  },
+  {
+    "name": "sar_ATSKSK_E_9aa",
+    "sequence": "ETSKSKSSR",
+    "scaffold": "ATSKSK",
+    "p1": "E",
+    "length": 9
+  },
+  {
+    "name": "sar_ATSKSK_E_10aa",
+    "sequence": "ETSKSKSSRS",
+    "scaffold": "ATSKSK",
+    "p1": "E",
+    "length": 10
+  },
+  {
+    "name": "sar_ATSKSK_E_11aa",
+    "sequence": "ETSKSKSSRSS",
+    "scaffold": "ATSKSK",
+    "p1": "E",
+    "length": 11
+  },
+  {
+    "name": "sar_ATSKSK_D_8aa",
+    "sequence": "DTSKSKSS",
+    "scaffold": "ATSKSK",
+    "p1": "D",
+    "length": 8
+  },
+  {
+    "name": "sar_ATSKSK_D_9aa",
+    "sequence": "DTSKSKSSR",
+    "scaffold": "ATSKSK",
+    "p1": "D",
+    "length": 9
+  },
+  {
+    "name": "sar_ATSKSK_D_10aa",
+    "sequence": "DTSKSKSSRS",
+    "scaffold": "ATSKSK",
+    "p1": "D",
+    "length": 10
+  },
+  {
+    "name": "sar_ATSKSK_D_11aa",
+    "sequence": "DTSKSKSSRSS",
+    "scaffold": "ATSKSK",
+    "p1": "D",
+    "length": 11
+  },
+  {
+    "name": "sar_ATSKSK_A_8aa",
+    "sequence": "ATSKSKSS",
+    "scaffold": "ATSKSK",
+    "p1": "A",
+    "length": 8
+  },
+  {
+    "name": "sar_ATSKSK_A_9aa",
+    "sequence": "ATSKSKSSR",
+    "scaffold": "ATSKSK",
+    "p1": "A",
+    "length": 9
+  },
+  {
+    "name": "sar_ATSKSK_A_10aa",
+    "sequence": "ATSKSKSSRS",
+    "scaffold": "ATSKSK",
+    "p1": "A",
+    "length": 10
+  },
+  {
+    "name": "sar_ATSKSK_A_11aa",
+    "sequence": "ATSKSKSSRSS",
+    "scaffold": "ATSKSK",
+    "p1": "A",
+    "length": 11
+  },
+  {
+    "name": "sar_ATSKSK_L_8aa",
+    "sequence": "LTSKSKSS",
+    "scaffold": "ATSKSK",
+    "p1": "L",
+    "length": 8
+  },
+  {
+    "name": "sar_ATSKSK_L_9aa",
+    "sequence": "LTSKSKSSR",
+    "scaffold": "ATSKSK",
+    "p1": "L",
+    "length": 9
+  },
+  {
+    "name": "sar_ATSKSK_L_10aa",
+    "sequence": "LTSKSKSSRS",
+    "scaffold": "ATSKSK",
+    "p1": "L",
+    "length": 10
+  },
+  {
+    "name": "sar_ATSKSK_L_11aa",
+    "sequence": "LTSKSKSSRSS",
+    "scaffold": "ATSKSK",
+    "p1": "L",
+    "length": 11
+  },
+  {
+    "name": "sar_ATSKSK_V_8aa",
+    "sequence": "VTSKSKSS",
+    "scaffold": "ATSKSK",
+    "p1": "V",
+    "length": 8
+  },
+  {
+    "name": "sar_ATSKSK_V_9aa",
+    "sequence": "VTSKSKSSR",
+    "scaffold": "ATSKSK",
+    "p1": "V",
+    "length": 9
+  },
+  {
+    "name": "sar_ATSKSK_V_10aa",
+    "sequence": "VTSKSKSSRS",
+    "scaffold": "ATSKSK",
+    "p1": "V",
+    "length": 10
+  },
+  {
+    "name": "sar_ATSKSK_V_11aa",
+    "sequence": "VTSKSKSSRSS",
+    "scaffold": "ATSKSK",
+    "p1": "V",
+    "length": 11
+  }
+]
