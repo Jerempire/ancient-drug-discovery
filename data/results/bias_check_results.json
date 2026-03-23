@@ -1,0 +1,75 @@
+{
+  "bias_controls": {
+    "random_10mer": {
+      "K392": 0.6563114722569784,
+      "N392": 0.7061382532119751
+    },
+    "random_11mer": {
+      "K392": 0.7411369880040487,
+      "N392": 0.7246300180753072
+    },
+    "random_9mer": {
+      "K392": 0.7093410690625509,
+      "N392": 0.7210926016171774
+    },
+    "scramble_glu_long": {
+      "K392": 0.7944110830624899,
+      "N392": 0.8406458497047424
+    },
+    "scramble_VKLLLL": {
+      "K392": 0.764336884021759,
+      "N392": 0.7691675424575806
+    },
+    "scramble_leu_9mer": {
+      "K392": 0.7933416962623596,
+      "N392": 0.7339235742886862
+    },
+    "polyala_10mer": {
+      "K392": 0.392240434885025,
+      "N392": 0.33947697281837463
+    },
+    "polyala_11mer": {
+      "K392": 0.38155317306518555,
+      "N392": 0.30454851190249127
+    }
+  },
+  "p1_scan": {
+    "vkllll_P1_E": {
+      "K392": 0.7960625688234965,
+      "N392": 0.7087432742118835
+    },
+    "vkllll_P1_D": {
+      "K392": 0.8123292724291483,
+      "N392": 0.7602129181226095
+    },
+    "vkllll_P1_A": {
+      "K392": 0.847058117389679,
+      "N392": 0.7979897061983744
+    },
+    "vkllll_P1_L": {
+      "K392": 0.8081795771916708,
+      "N392": 0.7348247567812601
+    },
+    "vkllll_P1_V": {
+      "K392": 0.8014864126841227,
+      "N392": 0.6647375822067261
+    }
+  },
+  "average_bias": 0.01163118456800779,
+  "bias_interpretation": "NO_BIAS",
+  "all_sequences": {
+    "random_10mer": "EAKIIFEVDW",
+    "random_11mer": "QCADHITYAVH",
+    "random_9mer": "VQIRWKAGQ",
+    "scramble_glu_long": "LGALAGEAVLAA",
+    "scramble_VKLLLL": "LSKIGLLELK",
+    "scramble_leu_9mer": "ALVLLAGAA",
+    "polyala_10mer": "AAAAAAAAAA",
+    "polyala_11mer": "AAAAAAAAAAA",
+    "vkllll_P1_E": "EKLLLLSIGK",
+    "vkllll_P1_D": "DKLLLLSIGK",
+    "vkllll_P1_A": "AKLLLLSIGK",
+    "vkllll_P1_L": "LKLLLLSIGK",
+    "vkllll_P1_V": "VKLLLLSIGK"
+  }
+}
