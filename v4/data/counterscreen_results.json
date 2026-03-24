@@ -1,0 +1,112 @@
+[
+  {
+    "peptide": "pep_ala_01",
+    "variant": "erap1",
+    "target": "erap1",
+    "best_contacts": 101,
+    "avg_contacts": 82.0,
+    "best_min_dist": 1.85,
+    "avg_min_dist": 1.15,
+    "n_samples": 32,
+    "score": -82.0
+  },
+  {
+    "peptide": "pep_asp_long_01",
+    "variant": "erap1",
+    "target": "erap1",
+    "best_contacts": 145,
+    "avg_contacts": 112.6,
+    "best_min_dist": 0.92,
+    "avg_min_dist": 1.12,
+    "n_samples": 32,
+    "score": -112.6
+  },
+  {
+    "peptide": "pep_glu_e3_01",
+    "variant": "erap1",
+    "target": "erap1",
+    "best_contacts": 146,
+    "avg_contacts": 128.3,
+    "best_min_dist": 1.32,
+    "avg_min_dist": 1.05,
+    "n_samples": 32,
+    "score": -128.3
+  },
+  {
+    "peptide": "pep_glu_long_01",
+    "variant": "erap1",
+    "target": "erap1",
+    "best_contacts": 134,
+    "avg_contacts": 112.3,
+    "best_min_dist": 1.13,
+    "avg_min_dist": 1.14,
+    "n_samples": 32,
+    "score": -112.3
+  },
+  {
+    "peptide": "pep_leu_01",
+    "variant": "erap1",
+    "target": "erap1",
+    "best_contacts": 114,
+    "avg_contacts": 86.0,
+    "best_min_dist": 0.85,
+    "avg_min_dist": 1.11,
+    "n_samples": 32,
+    "score": -86.0
+  },
+  {
+    "peptide": "pep_ala_01",
+    "variant": "irap",
+    "target": "irap",
+    "best_contacts": 516,
+    "avg_contacts": 492.8,
+    "best_min_dist": 0.52,
+    "avg_min_dist": 0.44,
+    "n_samples": 32,
+    "score": -492.8
+  },
+  {
+    "peptide": "pep_asp_long_01",
+    "variant": "irap",
+    "target": "irap",
+    "best_contacts": 549,
+    "avg_contacts": 524.3,
+    "best_min_dist": 0.55,
+    "avg_min_dist": 0.51,
+    "n_samples": 32,
+    "score": -524.3
+  },
+  {
+    "peptide": "pep_glu_e3_01",
+    "variant": "irap",
+    "target": "irap",
+    "best_contacts": 529,
+    "avg_contacts": 489.2,
+    "best_min_dist": 0.51,
+    "avg_min_dist": 0.59,
+    "n_samples": 32,
+    "score": -489.2
+  },
+  {
+    "peptide": "pep_glu_long_01",
+    "variant": "irap",
+    "target": "irap",
+    "best_contacts": 618,
+    "avg_contacts": 527.2,
+    "best_min_dist": 0.33,
+    "avg_min_dist": 0.46,
+    "n_samples": 32,
+    "score": -527.2
+  },
+  {
+    "peptide": "pep_leu_01",
+    "variant": "irap",
+    "target": "irap",
+    "best_contacts": 521,
+    "avg_contacts": 490.2,
+    "best_min_dist": 0.44,
+    "avg_min_dist": 0.39,
+    "n_samples": 32,
+    "score": -490.2
+  }
+]

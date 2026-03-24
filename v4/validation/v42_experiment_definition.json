@@ -1,0 +1,162 @@
+[
+  {
+    "name": "v42_base_E",
+    "seq": "EKLLLLSIGK",
+    "family": "F1_P1scan",
+    "p1": "E",
+    "handles": "392 only",
+    "rationale": "Original VKLLLL scaffold, P1=E (K392-leaning from V4)"
+  },
+  {
+    "name": "v42_base_V",
+    "seq": "VKLLLLSIGK",
+    "family": "F1_P1scan",
+    "p1": "V",
+    "handles": "392 only",
+    "rationale": "P1=V, hydrophobic, K392-leaning from published data"
+  },
+  {
+    "name": "v42_base_D",
+    "seq": "DKLLLLSIGK",
+    "family": "F1_P1scan",
+    "p1": "D",
+    "handles": "392 only",
+    "rationale": "P1=D, negative charge, contrast to E"
+  },
+  {
+    "name": "v42_base_A",
+    "seq": "AKLLLLSIGK",
+    "family": "F1_P1scan",
+    "p1": "A",
+    "handles": "392 only",
+    "rationale": "P1=A, small/neutral, N392-leaning control"
+  },
+  {
+    "name": "v42_base_L",
+    "seq": "LKLLLLSIGK",
+    "family": "F1_P1scan",
+    "p1": "L",
+    "handles": "392 only",
+    "rationale": "P1=L, hydrophobic, N392-leaning control"
+  },
+  {
+    "name": "v42_y398_S",
+    "seq": "EKSLLLSIGK",
+    "family": "F2_Y398",
+    "p1": "E",
+    "handles": "392+398",
+    "rationale": "P3=S, hydroxyl H-bonds Y398; penalized by F398 in off-targets"
+  },
+  {
+    "name": "v42_y398_T",
+    "seq": "EKTLLLSIGK",
+    "family": "F2_Y398",
+    "p1": "E",
+    "handles": "392+398",
+    "rationale": "P3=T, hydroxyl H-bonds Y398; methyl adds van der Waals"
+  },
+  {
+    "name": "v42_y398_T_V",
+    "seq": "VKTLLLSIGK",
+    "family": "F2_Y398",
+    "p1": "V",
+    "handles": "392+398",
+    "rationale": "P1=V (K392) + P3=T (Y398), two-handle design"
+  },
+  {
+    "name": "v42_y398_T_D",
+    "seq": "DKTLLLSIGK",
+    "family": "F2_Y398",
+    "p1": "D",
+    "handles": "392+398",
+    "rationale": "P1=D (contrast) + P3=T (Y398)"
+  },
+  {
+    "name": "v42_k406_E",
+    "seq": "EKLLELSIGK",
+    "family": "F3_antiIRAP",
+    "p1": "E",
+    "handles": "392+406",
+    "rationale": "P5=E, charge-charge repulsion with IRAP K406, neutral to ERAP2 A406"
+  },
+  {
+    "name": "v42_k406_D",
+    "seq": "EKLLDLSIGK",
+    "family": "F3_antiIRAP",
+    "p1": "E",
+    "handles": "392+406",
+    "rationale": "P5=D, charge-charge repulsion with IRAP K406"
+  },
+  {
+    "name": "v42_k406_E_V",
+    "seq": "VKLLELSIGK",
+    "family": "F3_antiIRAP",
+    "p1": "V",
+    "handles": "392+406",
+    "rationale": "P1=V (K392) + P5=E (anti-IRAP K406)"
+  },
+  {
+    "name": "v42_multi_TE",
+    "seq": "EKTLELSIGK",
+    "family": "F4_multi",
+    "p1": "E",
+    "handles": "392+398+406",
+    "rationale": "P3=T (Y398 H-bond) + P5=E (anti-IRAP K406), two ERAP2-specific handles"
+  },
+  {
+    "name": "v42_multi_TVL",
+    "seq": "EKTVLLSIGK",
+    "family": "F4_multi",
+    "p1": "E",
+    "handles": "392+398+403",
+    "rationale": "P3=T (Y398) + P4=V (fits A403, penalized by S403 in off-targets)"
+  },
+  {
+    "name": "v42_multi_TVE",
+    "seq": "EKTVELSIGK",
+    "family": "F4_multi",
+    "p1": "E",
+    "handles": "392+398+403+406",
+    "rationale": "Triple handle: P3=T (Y398) + P4=V (A403) + P5=E (anti-K406)"
+  },
+  {
+    "name": "v42_multi_TVE_V",
+    "seq": "VKTVELSIGK",
+    "family": "F4_multi",
+    "p1": "V",
+    "handles": "392+398+403+406",
+    "rationale": "Quad handle: P1=V (K392) + P3=T + P4=V + P5=E"
+  },
+  {
+    "name": "v42_multi_TVE_D",
+    "seq": "DKTVELSIGK",
+    "family": "F4_multi",
+    "p1": "D",
+    "handles": "392+398+403+406",
+    "rationale": "Triple+contrast: P1=D + P3=T + P4=V + P5=E"
+  },
+  {
+    "name": "v42_multi_TVEK",
+    "seq": "EKTVELKIGK",
+    "family": "F4_multi",
+    "p1": "E",
+    "handles": "392+398+403+406+414",
+    "rationale": "Five handles: P3=T + P4=V + P5=E + P7=K (salt-bridge D414)"
+  },
+  {
+    "name": "v42_multi_TVER",
+    "seq": "EKTVELRIGK",
+    "family": "F4_multi",
+    "p1": "E",
+    "handles": "392+398+403+406+414",
+    "rationale": "Five handles: P3=T + P4=V + P5=E + P7=R (salt-bridge D414, longer reach)"
+  },
+  {
+    "name": "v42_max_VTVEK",
+    "seq": "VKTVELKIGK",
+    "family": "F4_multi",
+    "p1": "V",
+    "handles": "392+398+403+406+414",
+    "rationale": "Maximum stack: P1=V + P3=T + P4=V + P5=E + P7=K, 5 ERAP2-specific handles"
+  }
+]
