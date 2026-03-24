@@ -1,0 +1,146 @@
+[
+  {
+    "name": "lead_pep_glu_long_01",
+    "sequence": "EALVAAGLAGLA",
+    "p1": "E",
+    "arm": "K392",
+    "group": "lead",
+    "source": "Hand-designed"
+  },
+  {
+    "name": "lead_hybrid_E_VKLLLL",
+    "sequence": "EKLLLLSIGK",
+    "p1": "E",
+    "arm": "K392",
+    "group": "lead",
+    "source": "PepMLM hybrid"
+  },
+  {
+    "name": "lead_pep_ala_01",
+    "sequence": "AALVAAGLA",
+    "p1": "A",
+    "arm": "N392",
+    "group": "lead",
+    "source": "Hand-designed"
+  },
+  {
+    "name": "lead_pep_leu_01",
+    "sequence": "LALVAAGLA",
+    "p1": "L",
+    "arm": "N392",
+    "group": "lead",
+    "source": "Hand-designed"
+  },
+  {
+    "name": "ctrl_hydro_leu_long",
+    "sequence": "LALVAAGLAGLA",
+    "p1": "L",
+    "arm": "N392-expected",
+    "group": "hydrophobic",
+    "source": "L at P1, same scaffold as lead #1"
+  },
+  {
+    "name": "ctrl_hydro_val",
+    "sequence": "VALVAAGLA",
+    "p1": "V",
+    "arm": "N392-expected",
+    "group": "hydrophobic",
+    "source": "V at P1, same scaffold as leads #3-4"
+  },
+  {
+    "name": "ctrl_iso_gln_long",
+    "sequence": "QALVAAGLAGLA",
+    "p1": "Q",
+    "arm": "neutral-expected",
+    "group": "isostere",
+    "source": "E->Q on lead #1 (charge removal)"
+  },
+  {
+    "name": "ctrl_iso_gln_hybrid",
+    "sequence": "QKLLLLSIGK",
+    "p1": "Q",
+    "arm": "neutral-expected",
+    "group": "isostere",
+    "source": "E->Q on lead #2 (charge removal)"
+  },
+  {
+    "name": "ctrl_random_00",
+    "sequence": "QALNHKWQG",
+    "p1": "Q",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 9-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_01",
+    "sequence": "NEQKVGYVG",
+    "p1": "N",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 9-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_02",
+    "sequence": "NDTQWTGFH",
+    "p1": "N",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 9-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_03",
+    "sequence": "DHMMARMATQ",
+    "p1": "D",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 10-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_04",
+    "sequence": "AAGWGLEQEW",
+    "p1": "A",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 10-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_05",
+    "sequence": "GPITYMCIES",
+    "p1": "G",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 10-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_06",
+    "sequence": "HVGKWQTFCGL",
+    "p1": "H",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 11-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_07",
+    "sequence": "AFINVMGPMAC",
+    "p1": "A",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 11-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_08",
+    "sequence": "CRDPGANHTES",
+    "p1": "C",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 11-mer (seed=12345)"
+  },
+  {
+    "name": "ctrl_random_09",
+    "sequence": "YCASMYQVHN",
+    "p1": "Y",
+    "arm": "unknown",
+    "group": "random",
+    "source": "Random 10-mer (seed=12345)"
+  }
+]
