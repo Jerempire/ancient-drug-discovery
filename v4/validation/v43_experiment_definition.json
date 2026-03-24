@@ -1,0 +1,191 @@
+[
+  {
+    "name": "kilk_multiseed",
+    "seq": "KILKLYSSKKY",
+    "experiment": "E1_multiseed",
+    "rationale": "KILKLYSSKKY multi-seed confirmation (single-sample: K392=0.892, delta=+0.427)"
+  },
+  {
+    "name": "kilk_p1_V",
+    "seq": "VILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "V",
+    "rationale": "P1=Val, branched hydrophobic \u2014 predicted best by steric model"
+  },
+  {
+    "name": "kilk_p1_I",
+    "seq": "IILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "I",
+    "rationale": "P1=Ile, branched hydrophobic \u2014 should match Val if steric model holds"
+  },
+  {
+    "name": "kilk_p1_E",
+    "seq": "EILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "E",
+    "rationale": "P1=Glu, salt bridge candidate \u2014 should underperform V/I if steric > electrostatic"
+  },
+  {
+    "name": "kilk_p1_D",
+    "seq": "DILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "D",
+    "rationale": "P1=Asp, shorter salt bridge \u2014 contrast to E"
+  },
+  {
+    "name": "kilk_p1_L",
+    "seq": "LILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "L",
+    "rationale": "P1=Leu, linear hydrophobic \u2014 should be slightly worse than branched V/I"
+  },
+  {
+    "name": "kilk_p1_A",
+    "seq": "AILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "A",
+    "rationale": "P1=Ala, baseline neutral \u2014 this is the original PepMLM scaffold"
+  },
+  {
+    "name": "kilk_p1_F",
+    "seq": "FILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "F",
+    "rationale": "P1=Phe, aromatic \u2014 can stack with K392 NH3+ tip (cation-pi)"
+  },
+  {
+    "name": "kilk_p1_W",
+    "seq": "WILKLYSSKKY",
+    "experiment": "E2_p1scan",
+    "p1": "W",
+    "rationale": "P1=Trp, large aromatic \u2014 strongest cation-pi potential"
+  },
+  {
+    "name": "kky_graft_TSYYW",
+    "seq": "TSYYWSPSSKKY",
+    "experiment": "E3_kky",
+    "rationale": "TSYYWSPLHK Bucket A scaffold with SSKKY graft (replace LHK)"
+  },
+  {
+    "name": "kky_graft_SVLLL",
+    "seq": "SVLLLLSSKKY",
+    "experiment": "E3_kky",
+    "rationale": "SVLLLLKFKY Bucket A scaffold with SSKKY graft (replace KFKY)"
+  },
+  {
+    "name": "kky_graft_VTLKL",
+    "seq": "VTLKLYSSKKY",
+    "experiment": "E3_kky",
+    "rationale": "VTLKLYSIFHG Bucket A scaffold with SSKKY graft (replace IFHG)"
+  },
+  {
+    "name": "kky_knockout_AAA",
+    "seq": "KILKLYSSAAA",
+    "experiment": "E3_kky",
+    "rationale": "KILKLYSSKKY with KKY->AAA knockout \u2014 tests KKY necessity"
+  },
+  {
+    "name": "kky_knockout_GGG",
+    "seq": "KILKLYSSGGG",
+    "experiment": "E3_kky",
+    "rationale": "KILKLYSSKKY with KKY->GGG knockout \u2014 flexible linker control"
+  },
+  {
+    "name": "ss_tvl_EKTVKY",
+    "seq": "EKTVKY",
+    "experiment": "E4_shortstack",
+    "family": "A_TVL",
+    "rationale": "6-mer core: P1=E(392) + T(398) + V(403) + KY(anchor)"
+  },
+  {
+    "name": "ss_tvl_EKTVLKY",
+    "seq": "EKTVLKY",
+    "experiment": "E4_shortstack",
+    "family": "A_TVL",
+    "rationale": "7-mer: adds Leu spacer between V(403) and KY anchor"
+  },
+  {
+    "name": "ss_tvl_DKTVKY",
+    "seq": "DKTVKY",
+    "experiment": "E4_shortstack",
+    "family": "A_TVL",
+    "rationale": "6-mer Asp variant: shorter salt bridge at P1"
+  },
+  {
+    "name": "ss_tvl_VKTVKY",
+    "seq": "VKTVKY",
+    "experiment": "E4_shortstack",
+    "family": "A_TVL",
+    "rationale": "6-mer steric P1: Val packs K392 aliphatic stem"
+  },
+  {
+    "name": "ss_tvl_IKTVKY",
+    "seq": "IKTVKY",
+    "experiment": "E4_shortstack",
+    "family": "A_TVL",
+    "rationale": "6-mer branched steric: Ile for maximum K392 stem packing"
+  },
+  {
+    "name": "ss_kky_KILKKY",
+    "seq": "KILKKY",
+    "experiment": "E4_shortstack",
+    "family": "B_KKY",
+    "rationale": "6-mer: compress KILKLYSSKKY, keep KIL- head + KKY tail"
+  },
+  {
+    "name": "ss_kky_KILKKYA",
+    "seq": "KILKKYA",
+    "experiment": "E4_shortstack",
+    "family": "B_KKY",
+    "rationale": "7-mer: adds Ala spacer for flexibility"
+  },
+  {
+    "name": "ss_kky_VILKKY",
+    "seq": "VILKKY",
+    "experiment": "E4_shortstack",
+    "family": "B_KKY",
+    "rationale": "6-mer steric P1: Val replaces Lys at P1"
+  },
+  {
+    "name": "ss_kky_IILKKY",
+    "seq": "IILKKY",
+    "experiment": "E4_shortstack",
+    "family": "B_KKY",
+    "rationale": "6-mer double branched: Ile at P1 + Ile at P2"
+  },
+  {
+    "name": "ss_kky_EILKKY",
+    "seq": "EILKKY",
+    "experiment": "E4_shortstack",
+    "family": "B_KKY",
+    "rationale": "6-mer charged P1: Glu salt bridge + KKY motif"
+  },
+  {
+    "name": "ss_ctrl_polyA",
+    "seq": "AAAAAK",
+    "experiment": "E4_shortstack",
+    "family": "ctrl",
+    "rationale": "6-mer poly-Ala negative control \u2014 no specific interactions"
+  },
+  {
+    "name": "ss_ctrl_scramble",
+    "seq": "KVTKEY",
+    "experiment": "E4_shortstack",
+    "family": "ctrl",
+    "rationale": "6-mer scrambled EKTVKY \u2014 same composition, wrong order"
+  },
+  {
+    "name": "ss_ctrl_trunc",
+    "seq": "EKLLLL",
+    "experiment": "E4_shortstack",
+    "family": "ctrl",
+    "rationale": "6-mer truncated VKLLLL scaffold \u2014 no handles, no anchor"
+  },
+  {
+    "name": "tvl_multiseed",
+    "seq": "EKTVLLSIGK",
+    "experiment": "E5_multiseed",
+    "rationale": "v42_multi_TVL multi-seed: V4.2 winner (K392=0.721, selE1=+0.150, selIR=+0.154)"
+  }
+]
