@@ -1,0 +1,1984 @@
+{
+  "summary": {
+    "total_screened": 120,
+    "k392_mean": 0.6395200123389562,
+    "n392_mean": 0.6373949946214755,
+    "delta_mean": 0.0021250177174806594,
+    "bucket_b_count": 24,
+    "bucket_a_count": 24,
+    "n392_leaning_count": 52
+  },
+  "all_scaffolds": [
+    {
+      "idx": 45,
+      "scaffold": "KILKLYSSKKY",
+      "ala_version": "AILKLYSSKKY",
+      "length": 11,
+      "K392": 0.8915140628814697,
+      "N392": 0.4648073613643646,
+      "delta": 0.4267067015171051,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 16,
+      "scaffold": "TSYYWSPLHK",
+      "ala_version": "ASYYWSPLHK",
+      "length": 10,
+      "K392": 0.8909516334533691,
+      "N392": 0.8724318742752075,
+      "delta": 0.01851975917816162,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 31,
+      "scaffold": "VVLVWIFPKKK",
+      "ala_version": "AVLVWIFPKKK",
+      "length": 11,
+      "K392": 0.8820160031318665,
+      "N392": 0.6818451881408691,
+      "delta": 0.20017081499099731,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 5,
+      "scaffold": "SVLLLLKFKY",
+      "ala_version": "AVLLLLKFKY",
+      "length": 10,
+      "K392": 0.8814910054206848,
+      "N392": 0.9223216772079468,
+      "delta": -0.04083067178726196,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 110,
+      "scaffold": "SVSIKYYARQKVSNK",
+      "ala_version": "AVSIKYYARQKVSNK",
+      "length": 15,
+      "K392": 0.87613844871521,
+      "N392": 0.8259186148643494,
+      "delta": 0.050219833850860596,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 27,
+      "scaffold": "VRLPWVSSKKY",
+      "ala_version": "ARLPWVSSKKY",
+      "length": 11,
+      "K392": 0.874156653881073,
+      "N392": 0.6729612946510315,
+      "delta": 0.2011953592300415,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 88,
+      "scaffold": "SISLYIDRRLPGK",
+      "ala_version": "AISLYIDRRLPGK",
+      "length": 13,
+      "K392": 0.8737906813621521,
+      "N392": 0.8587218523025513,
+      "delta": 0.01506882905960083,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 46,
+      "scaffold": "VTLKLYSIFHG",
+      "ala_version": "ATLKLYSIFHG",
+      "length": 11,
+      "K392": 0.869756817817688,
+      "N392": 0.8744100332260132,
+      "delta": -0.004653215408325195,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 60,
+      "scaffold": "SRVKIYLDIIKP",
+      "ala_version": "ARVKIYLDIIKP",
+      "length": 12,
+      "K392": 0.8664820194244385,
+      "N392": 0.5808920860290527,
+      "delta": 0.28558993339538574,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 26,
+      "scaffold": "SSTPWLSPISG",
+      "ala_version": "ASTPWLSPISG",
+      "length": 11,
+      "K392": 0.8528996706008911,
+      "N392": 0.8245344758033752,
+      "delta": 0.02836519479751587,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 119,
+      "scaffold": "KIVVIIYARSLTKIK",
+      "ala_version": "AIVVIIYARSLTKIK",
+      "length": 15,
+      "K392": 0.8519870638847351,
+      "N392": 0.6924188733100891,
+      "delta": 0.159568190574646,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 98,
+      "scaffold": "SIVVKLLALQAKSKK",
+      "ala_version": "AIVVKLLALQAKSKK",
+      "length": 15,
+      "K392": 0.8511552214622498,
+      "N392": 0.8514922857284546,
+      "delta": -0.000337064266204834,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 24,
+      "scaffold": "ASLVLYSPKSK",
+      "ala_version": "ASLVLYSPKSK",
+      "length": 11,
+      "K392": 0.8457711338996887,
+      "N392": 0.7924947142601013,
+      "delta": 0.0532764196395874,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 42,
+      "scaffold": "SSSKVYSSKKY",
+      "ala_version": "ASSKVYSSKKY",
+      "length": 11,
+      "K392": 0.8368229866027832,
+      "N392": 0.5460102558135986,
+      "delta": 0.29081273078918457,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 76,
+      "scaffold": "PITYYYSRRSSPT",
+      "ala_version": "AITYYYSRRSSPT",
+      "length": 13,
+      "K392": 0.8322154879570007,
+      "N392": 0.3772813379764557,
+      "delta": 0.45493414998054504,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 6,
+      "scaffold": "KVKKHSPIHK",
+      "ala_version": "AVKKHSPIHK",
+      "length": 10,
+      "K392": 0.8286546468734741,
+      "N392": 0.770331084728241,
+      "delta": 0.058323562145233154,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 117,
+      "scaffold": "SRSPVKKKSSSAIAK",
+      "ala_version": "ARSPVKKKSSSAIAK",
+      "length": 15,
+      "K392": 0.8272132873535156,
+      "N392": 0.4208415150642395,
+      "delta": 0.4063717722892761,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 11,
+      "scaffold": "SSTKLLSLKK",
+      "ala_version": "ASTKLLSLKK",
+      "length": 10,
+      "K392": 0.8259990215301514,
+      "N392": 0.30975592136383057,
+      "delta": 0.5162431001663208,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 25,
+      "scaffold": "SVSVWYAPKLG",
+      "ala_version": "AVSVWYAPKLG",
+      "length": 11,
+      "K392": 0.8224675059318542,
+      "N392": 0.805157482624054,
+      "delta": 0.017310023307800293,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 38,
+      "scaffold": "VSLTLKSPKKG",
+      "ala_version": "ASLTLKSPKKG",
+      "length": 11,
+      "K392": 0.8179627060890198,
+      "N392": 0.8289259672164917,
+      "delta": -0.010963261127471924,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 63,
+      "scaffold": "KILIWKFSSSPN",
+      "ala_version": "AILIWKFSSSPN",
+      "length": 12,
+      "K392": 0.8069918155670166,
+      "N392": 0.5204696655273438,
+      "delta": 0.28652215003967285,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 14,
+      "scaffold": "KVYPWDSIIY",
+      "ala_version": "AVYPWDSIIY",
+      "length": 10,
+      "K392": 0.8061432838439941,
+      "N392": 0.6826013326644897,
+      "delta": 0.1235419511795044,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 66,
+      "scaffold": "SSYVVYFSFLKT",
+      "ala_version": "ASYVVYFSFLKT",
+      "length": 12,
+      "K392": 0.8044256567955017,
+      "N392": 0.6885402798652649,
+      "delta": 0.11588537693023682,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 64,
+      "scaffold": "SRSIWLKPAISK",
+      "ala_version": "ARSIWLKPAISK",
+      "length": 12,
+      "K392": 0.8036112785339355,
+      "N392": 0.8298166990280151,
+      "delta": -0.02620542049407959,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 1,
+      "scaffold": "SVLVLKSVSK",
+      "ala_version": "AVLVLKSVSK",
+      "length": 10,
+      "K392": 0.8011072278022766,
+      "N392": 0.620485246181488,
+      "delta": 0.18062198162078857,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 8,
+      "scaffold": "TITVLLSIHK",
+      "ala_version": "AITVLLSIHK",
+      "length": 10,
+      "K392": 0.8010112643241882,
+      "N392": 0.753578782081604,
+      "delta": 0.04743248224258423,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 114,
+      "scaffold": "ARNVIYARKLLKILQ",
+      "ala_version": "ARNVIYARKLLKILQ",
+      "length": 15,
+      "K392": 0.7999193668365479,
+      "N392": 0.7129014730453491,
+      "delta": 0.08701789379119873,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 56,
+      "scaffold": "EVLKVVKPRIKK",
+      "ala_version": "AVLKVVKPRIKK",
+      "length": 12,
+      "K392": 0.7978958487510681,
+      "N392": 0.7865795493125916,
+      "delta": 0.011316299438476562,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 65,
+      "scaffold": "SSLVLVFLFPKY",
+      "ala_version": "ASLVLVFLFPKY",
+      "length": 12,
+      "K392": 0.7893311977386475,
+      "N392": 0.8077029585838318,
+      "delta": -0.018371760845184326,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 13,
+      "scaffold": "VRYKHLPIPY",
+      "ala_version": "ARYKHLPIPY",
+      "length": 10,
+      "K392": 0.7852763533592224,
+      "N392": 0.884705662727356,
+      "delta": -0.09942930936813354,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 34,
+      "scaffold": "VSYKWLLLIKK",
+      "ala_version": "ASYKWLLLIKK",
+      "length": 11,
+      "K392": 0.784555196762085,
+      "N392": 0.830342710018158,
+      "delta": -0.045787513256073,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 92,
+      "scaffold": "RSTVLKSLRLLPK",
+      "ala_version": "ASTVLKSLRLLPK",
+      "length": 13,
+      "K392": 0.781603217124939,
+      "N392": 0.8072964549064636,
+      "delta": -0.025693237781524658,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 67,
+      "scaffold": "KRSVKIKARQKP",
+      "ala_version": "ARSVKIKARQKP",
+      "length": 12,
+      "K392": 0.7772189974784851,
+      "N392": 0.6952759623527527,
+      "delta": 0.08194303512573242,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 28,
+      "scaffold": "AVLVLKSSPSG",
+      "ala_version": "AVLVLKSSPSG",
+      "length": 11,
+      "K392": 0.7728894352912903,
+      "N392": 0.47199746966362,
+      "delta": 0.3008919656276703,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 109,
+      "scaffold": "KRVGKIYIRLAAIIK",
+      "ala_version": "ARVGKIYIRLAAIIK",
+      "length": 15,
+      "K392": 0.7512368559837341,
+      "N392": 0.7148271203041077,
+      "delta": 0.036409735679626465,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 99,
+      "scaffold": "SRVPVYKRSQSAKKK",
+      "ala_version": "ARVPVYKRSQSAKKK",
+      "length": 15,
+      "K392": 0.7458985447883606,
+      "N392": 0.5497728586196899,
+      "delta": 0.19612568616867065,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 43,
+      "scaffold": "ASSVLKFPVSK",
+      "ala_version": "ASSVLKFPVSK",
+      "length": 11,
+      "K392": 0.7401843070983887,
+      "N392": 0.8395304083824158,
+      "delta": -0.0993461012840271,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 118,
+      "scaffold": "ARVGRVYKRQKAAIK",
+      "ala_version": "ARVGRVYKRQKAAIK",
+      "length": 15,
+      "K392": 0.7310937643051147,
+      "N392": 0.4863564074039459,
+      "delta": 0.24473735690116882,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 19,
+      "scaffold": "VSYYWVSIHK",
+      "ala_version": "ASYYWVSIHK",
+      "length": 10,
+      "K392": 0.7279664278030396,
+      "N392": 0.8833783268928528,
+      "delta": -0.15541189908981323,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 51,
+      "scaffold": "SRYVVVFAIIST",
+      "ala_version": "ARYVVVFAIIST",
+      "length": 12,
+      "K392": 0.7235260009765625,
+      "N392": 0.8928210139274597,
+      "delta": -0.16929501295089722,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 75,
+      "scaffold": "RSSKVIDSSSSIK",
+      "ala_version": "ASSKVIDSSSSIK",
+      "length": 13,
+      "K392": 0.7210373282432556,
+      "N392": 0.6993709206581116,
+      "delta": 0.021666407585144043,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 68,
+      "scaffold": "SVTVKISPFIKP",
+      "ala_version": "AVTVKISPFIKP",
+      "length": 12,
+      "K392": 0.7203077077865601,
+      "N392": 0.6760499477386475,
+      "delta": 0.0442577600479126,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 18,
+      "scaffold": "VVSKHLSFKK",
+      "ala_version": "AVSKHLSFKK",
+      "length": 10,
+      "K392": 0.7179434895515442,
+      "N392": 0.8067384362220764,
+      "delta": -0.08879494667053223,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 61,
+      "scaffold": "KRLVIIFSIPSK",
+      "ala_version": "ARLVIIFSIPSK",
+      "length": 12,
+      "K392": 0.7135913968086243,
+      "N392": 0.5227834582328796,
+      "delta": 0.19080793857574463,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 4,
+      "scaffold": "EKKVHKSIPK",
+      "ala_version": "AKKVHKSIPK",
+      "length": 10,
+      "K392": 0.7084851264953613,
+      "N392": 0.7269296646118164,
+      "delta": -0.018444538116455078,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 58,
+      "scaffold": "SRTILKSLFSPK",
+      "ala_version": "ARTILKSLFSPK",
+      "length": 12,
+      "K392": 0.7039582133293152,
+      "N392": 0.6082808375358582,
+      "delta": 0.09567737579345703,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 57,
+      "scaffold": "KVTIIYKLRPKN",
+      "ala_version": "AVTIIYKLRPKN",
+      "length": 12,
+      "K392": 0.7037388682365417,
+      "N392": 0.7086760997772217,
+      "delta": -0.004937231540679932,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 97,
+      "scaffold": "KVNIVLALSLSALKK",
+      "ala_version": "AVNIVLALSLSALKK",
+      "length": 15,
+      "K392": 0.7015723586082458,
+      "N392": 0.5994992852210999,
+      "delta": 0.102073073387146,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 49,
+      "scaffold": "SRSKVVSASLSN",
+      "ala_version": "ARSKVVSASLSN",
+      "length": 12,
+      "K392": 0.693830668926239,
+      "N392": 0.37898024916648865,
+      "delta": 0.31485041975975037,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 10,
+      "scaffold": "KSLKLLSIPK",
+      "ala_version": "ASLKLLSIPK",
+      "length": 10,
+      "K392": 0.6932461857795715,
+      "N392": 0.6984710097312927,
+      "delta": -0.005224823951721191,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 20,
+      "scaffold": "SSTLVVDFHK",
+      "ala_version": "ASTLVVDFHK",
+      "length": 10,
+      "K392": 0.6871211528778076,
+      "N392": 0.7218142151832581,
+      "delta": -0.03469306230545044,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 30,
+      "scaffold": "AVSPVYSPPKG",
+      "ala_version": "AVSPVYSPPKG",
+      "length": 11,
+      "K392": 0.6831785440444946,
+      "N392": 0.5184526443481445,
+      "delta": 0.1647258996963501,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 48,
+      "scaffold": "ERTVKISARSSK",
+      "ala_version": "ARTVKISARSSK",
+      "length": 12,
+      "K392": 0.6736335158348083,
+      "N392": 0.6516605615615845,
+      "delta": 0.021972954273223877,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 0,
+      "scaffold": "VKLLVLSIPY",
+      "ala_version": "AKLLVLSIPY",
+      "length": 10,
+      "K392": 0.668768584728241,
+      "N392": 0.6338938474655151,
+      "delta": 0.03487473726272583,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 77,
+      "scaffold": "RRILLKSSLSSKK",
+      "ala_version": "ARILLKSSLSSKK",
+      "length": 13,
+      "K392": 0.668046772480011,
+      "N392": 0.7498530745506287,
+      "delta": -0.08180630207061768,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 15,
+      "scaffold": "KSLKLSSFSK",
+      "ala_version": "ASLKLSSFSK",
+      "length": 10,
+      "K392": 0.6624360680580139,
+      "N392": 0.3572987914085388,
+      "delta": 0.3051372766494751,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 103,
+      "scaffold": "SKIVVLLKLQSVKKK",
+      "ala_version": "AKIVVLLKLQSVKKK",
+      "length": 15,
+      "K392": 0.661678671836853,
+      "N392": 0.5903671383857727,
+      "delta": 0.07131153345108032,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 36,
+      "scaffold": "VVYPKYALFKK",
+      "ala_version": "AVYPKYALFKK",
+      "length": 11,
+      "K392": 0.658815860748291,
+      "N392": 0.46671631932258606,
+      "delta": 0.19209954142570496,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 69,
+      "scaffold": "PSSYWKSLFSKP",
+      "ala_version": "ASSYWKSLFSKP",
+      "length": 12,
+      "K392": 0.6582100987434387,
+      "N392": 0.7703425288200378,
+      "delta": -0.11213243007659912,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 21,
+      "scaffold": "KSSKLDSPPS",
+      "ala_version": "ASSKLDSPPS",
+      "length": 10,
+      "K392": 0.6571555733680725,
+      "N392": 0.6295970678329468,
+      "delta": 0.027558505535125732,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 86,
+      "scaffold": "SITVYKNLSISPT",
+      "ala_version": "AITVYKNLSISPT",
+      "length": 13,
+      "K392": 0.6564265489578247,
+      "N392": 0.6332035064697266,
+      "delta": 0.023223042488098145,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 53,
+      "scaffold": "ERYVVIKLRLYN",
+      "ala_version": "ARYVVIKLRLYN",
+      "length": 12,
+      "K392": 0.6551570296287537,
+      "N392": 0.6822208762168884,
+      "delta": -0.027063846588134766,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 35,
+      "scaffold": "KSLKVKSPPHK",
+      "ala_version": "ASLKVKSPPHK",
+      "length": 11,
+      "K392": 0.6512397527694702,
+      "N392": 0.608791172504425,
+      "delta": 0.042448580265045166,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 29,
+      "scaffold": "VRLLLISIISS",
+      "ala_version": "ARLLLISIISS",
+      "length": 11,
+      "K392": 0.6472485065460205,
+      "N392": 0.7018960118293762,
+      "delta": -0.05464750528335571,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 94,
+      "scaffold": "SISKLLLDSLSKY",
+      "ala_version": "AISKLLLDSLSKY",
+      "length": 13,
+      "K392": 0.6417754888534546,
+      "N392": 0.767341136932373,
+      "delta": -0.12556564807891846,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 23,
+      "scaffold": "VSTVKKSFPK",
+      "ala_version": "ASTVKKSFPK",
+      "length": 10,
+      "K392": 0.6360321640968323,
+      "N392": 0.414209246635437,
+      "delta": 0.22182291746139526,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 44,
+      "scaffold": "SRYVLLFLVKY",
+      "ala_version": "ARYVLLFLVKY",
+      "length": 11,
+      "K392": 0.6356202363967896,
+      "N392": 0.7074325084686279,
+      "delta": -0.07181227207183838,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 81,
+      "scaffold": "RRSKYLNRRITIK",
+      "ala_version": "ARSKYLNRRITIK",
+      "length": 13,
+      "K392": 0.6308711171150208,
+      "N392": 0.37505537271499634,
+      "delta": 0.2558157444000244,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 3,
+      "scaffold": "VVLKVLPIPK",
+      "ala_version": "AVLKVLPIPK",
+      "length": 10,
+      "K392": 0.6276534795761108,
+      "N392": 0.7035287618637085,
+      "delta": -0.07587528228759766,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 71,
+      "scaffold": "SRSLLVLDFSPK",
+      "ala_version": "ARSLLVLDFSPK",
+      "length": 12,
+      "K392": 0.6203631162643433,
+      "N392": 0.6093860268592834,
+      "delta": 0.010977089405059814,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 50,
+      "scaffold": "AKSKKVLSIQYK",
+      "ala_version": "AKSKKVLSIQYK",
+      "length": 12,
+      "K392": 0.6201087236404419,
+      "N392": 0.49118757247924805,
+      "delta": 0.12892115116119385,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 40,
+      "scaffold": "SVLLWISIIKG",
+      "ala_version": "AVLLWISIIKG",
+      "length": 11,
+      "K392": 0.6164337396621704,
+      "N392": 0.8579061031341553,
+      "delta": -0.24147236347198486,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 85,
+      "scaffold": "KSIVIKSSLLTGT",
+      "ala_version": "ASIVIKSSLLTGT",
+      "length": 13,
+      "K392": 0.6147717237472534,
+      "N392": 0.8368970155715942,
+      "delta": -0.22212529182434082,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 96,
+      "scaffold": "ARTVIILKKLSKKKG",
+      "ala_version": "ARTVIILKKLSKKKG",
+      "length": 15,
+      "K392": 0.6045220494270325,
+      "N392": 0.7864078879356384,
+      "delta": -0.18188583850860596,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 89,
+      "scaffold": "SRSYLLDRSSLKN",
+      "ala_version": "ARSYLLDRSSLKN",
+      "length": 13,
+      "K392": 0.6017216444015503,
+      "N392": 0.6213526129722595,
+      "delta": -0.01963096857070923,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 62,
+      "scaffold": "SRLYIIKLSSST",
+      "ala_version": "ARLYIIKLSSST",
+      "length": 12,
+      "K392": 0.598220944404602,
+      "N392": 0.5465921759605408,
+      "delta": 0.05162876844406128,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 22,
+      "scaffold": "SVYPKLSFPK",
+      "ala_version": "AVYPKLSFPK",
+      "length": 10,
+      "K392": 0.5900235176086426,
+      "N392": 0.5502000451087952,
+      "delta": 0.03982347249984741,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 91,
+      "scaffold": "TRIVKYKLRKPPT",
+      "ala_version": "ARIVKYKLRKPPT",
+      "length": 13,
+      "K392": 0.5893123745918274,
+      "N392": 0.6971836090087891,
+      "delta": -0.10787123441696167,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 39,
+      "scaffold": "SVLKYVSSKKK",
+      "ala_version": "AVLKYVSSKKK",
+      "length": 11,
+      "K392": 0.5889927744865417,
+      "N392": 0.667547881603241,
+      "delta": -0.07855510711669922,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 70,
+      "scaffold": "EKLVLVSLSSPT",
+      "ala_version": "AKLVLVSLSSPT",
+      "length": 12,
+      "K392": 0.5877432227134705,
+      "N392": 0.8562386631965637,
+      "delta": -0.26849544048309326,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 9,
+      "scaffold": "VRTKKVKPKK",
+      "ala_version": "ARTKKVKPKK",
+      "length": 10,
+      "K392": 0.5723150372505188,
+      "N392": 0.6389614939689636,
+      "delta": -0.06664645671844482,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 32,
+      "scaffold": "SSIKVYAAPIK",
+      "ala_version": "ASIKVYAAPIK",
+      "length": 11,
+      "K392": 0.5667975544929504,
+      "N392": 0.5059882402420044,
+      "delta": 0.060809314250946045,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 2,
+      "scaffold": "TSSKLLSFPN",
+      "ala_version": "ASSKLLSFPN",
+      "length": 10,
+      "K392": 0.5654550194740295,
+      "N392": 0.4183098077774048,
+      "delta": 0.14714521169662476,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 33,
+      "scaffold": "ESLPKISSPKK",
+      "ala_version": "ASLPKISSPKK",
+      "length": 11,
+      "K392": 0.5637176036834717,
+      "N392": 0.7075982093811035,
+      "delta": -0.14388060569763184,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 73,
+      "scaffold": "SRSVKYNLKKPIK",
+      "ala_version": "ARSVKYNLKKPIK",
+      "length": 13,
+      "K392": 0.5499097108840942,
+      "N392": 0.7935947775840759,
+      "delta": -0.2436850666999817,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 7,
+      "scaffold": "SSTKHDSVHY",
+      "ala_version": "ASTKHDSVHY",
+      "length": 10,
+      "K392": 0.5493720769882202,
+      "N392": 0.6722556352615356,
+      "delta": -0.12288355827331543,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 106,
+      "scaffold": "KKNGVVLRSKAKILK",
+      "ala_version": "AKNGVVLRSKAKILK",
+      "length": 15,
+      "K392": 0.5492062568664551,
+      "N392": 0.630653977394104,
+      "delta": -0.08144772052764893,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 100,
+      "scaffold": "ARTPIILKRLSAIKK",
+      "ala_version": "ARTPIILKRLSAIKK",
+      "length": 15,
+      "K392": 0.5463051199913025,
+      "N392": 0.4620394706726074,
+      "delta": 0.08426564931869507,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 47,
+      "scaffold": "ASTVKLKIPSY",
+      "ala_version": "ASTVKLKIPSY",
+      "length": 11,
+      "K392": 0.5436356663703918,
+      "N392": 0.5729493498802185,
+      "delta": -0.02931368350982666,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 108,
+      "scaffold": "SIVTVKSARQYTKIG",
+      "ala_version": "AIVTVKSARQYTKIG",
+      "length": 15,
+      "K392": 0.5422368049621582,
+      "N392": 0.5420815944671631,
+      "delta": 0.0001552104949951172,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 84,
+      "scaffold": "PRVLYYNNSKSIK",
+      "ala_version": "ARVLYYNNSKSIK",
+      "length": 13,
+      "K392": 0.5379959940910339,
+      "N392": 0.7069492936134338,
+      "delta": -0.1689532995223999,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 93,
+      "scaffold": "SRSLVLNRKDPIK",
+      "ala_version": "ARSLVLNRKDPIK",
+      "length": 13,
+      "K392": 0.5343596935272217,
+      "N392": 0.7454750537872314,
+      "delta": -0.21111536026000977,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 17,
+      "scaffold": "TRTYKVSFPY",
+      "ala_version": "ARTYKVSFPY",
+      "length": 10,
+      "K392": 0.5337603092193604,
+      "N392": 0.5388457179069519,
+      "delta": -0.005085408687591553,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 105,
+      "scaffold": "RRSPRVALRQSKKLK",
+      "ala_version": "ARSPRVALRQSKKLK",
+      "length": 15,
+      "K392": 0.5332188606262207,
+      "N392": 0.7271729111671448,
+      "delta": -0.19395405054092407,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 101,
+      "scaffold": "SRSGVYKKRSLVAKK",
+      "ala_version": "ARSGVYKKRSLVAKK",
+      "length": 15,
+      "K392": 0.5277766585350037,
+      "N392": 0.5791252851486206,
+      "delta": -0.05134862661361694,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 12,
+      "scaffold": "KKSPLVSIPY",
+      "ala_version": "AKSPLVSIPY",
+      "length": 10,
+      "K392": 0.5237851738929749,
+      "N392": 0.7005254626274109,
+      "delta": -0.17674028873443604,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 59,
+      "scaffold": "ARSIVLLASIKN",
+      "ala_version": "ARSIVLLASIKN",
+      "length": 12,
+      "K392": 0.5158992409706116,
+      "N392": 0.6940493583679199,
+      "delta": -0.17815011739730835,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 82,
+      "scaffold": "SKSVLVDSSITKK",
+      "ala_version": "AKSVLVDSSITKK",
+      "length": 13,
+      "K392": 0.5099673867225647,
+      "N392": 0.7194405794143677,
+      "delta": -0.20947319269180298,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 102,
+      "scaffold": "SKITVILLRLAVIIK",
+      "ala_version": "AKITVILLRLAVIIK",
+      "length": 15,
+      "K392": 0.4898832440376282,
+      "N392": 0.8186895847320557,
+      "delta": -0.3288063406944275,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 74,
+      "scaffold": "SRSLVLSSSLPKK",
+      "ala_version": "ARSLVLSSSLPKK",
+      "length": 13,
+      "K392": 0.4868859350681305,
+      "N392": 0.6072824597358704,
+      "delta": -0.12039652466773987,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 116,
+      "scaffold": "KRNPKYSAKSYKSLG",
+      "ala_version": "ARNPKYSAKSYKSLG",
+      "length": 15,
+      "K392": 0.46751245856285095,
+      "N392": 0.8411809206008911,
+      "delta": -0.37366846203804016,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 41,
+      "scaffold": "AVTKLVSPFSN",
+      "ala_version": "AVTKLVSPFSN",
+      "length": 11,
+      "K392": 0.46552711725234985,
+      "N392": 0.2558276951313019,
+      "delta": 0.20969942212104797,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 72,
+      "scaffold": "SSIILKKSALKGN",
+      "ala_version": "ASIILKKSALKGN",
+      "length": 13,
+      "K392": 0.4533189833164215,
+      "N392": 0.3786439597606659,
+      "delta": 0.07467502355575562,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 83,
+      "scaffold": "KKTVKKLSSLTAK",
+      "ala_version": "AKTVKKLSSLTAK",
+      "length": 13,
+      "K392": 0.4431874752044678,
+      "N392": 0.3424614667892456,
+      "delta": 0.10072600841522217,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 37,
+      "scaffold": "KVYKVYSIKKG",
+      "ala_version": "AVYKVYSIKKG",
+      "length": 11,
+      "K392": 0.41757732629776,
+      "N392": 0.8156906366348267,
+      "delta": -0.39811331033706665,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 95,
+      "scaffold": "SRSKKKSSASSAT",
+      "ala_version": "ARSKKKSSASSAT",
+      "length": 13,
+      "K392": 0.41324561834335327,
+      "N392": 0.5112364292144775,
+      "delta": -0.09799081087112427,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 107,
+      "scaffold": "EISGVLYAKLKAIIK",
+      "ala_version": "AISGVLYAKLKAIIK",
+      "length": 15,
+      "K392": 0.40810710191726685,
+      "N392": 0.3715917766094208,
+      "delta": 0.03651532530784607,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 55,
+      "scaffold": "SKSVKKSSSIKY",
+      "ala_version": "AKSVKKSSSIKY",
+      "length": 12,
+      "K392": 0.40384963154792786,
+      "N392": 0.5471858382225037,
+      "delta": -0.1433362066745758,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 90,
+      "scaffold": "RVTVYIDNSISPE",
+      "ala_version": "AVTVYIDNSISPE",
+      "length": 13,
+      "K392": 0.40092533826828003,
+      "N392": 0.4929966330528259,
+      "delta": -0.0920712947845459,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 54,
+      "scaffold": "SRLVIYLPFLYY",
+      "ala_version": "ARLVIYLPFLYY",
+      "length": 12,
+      "K392": 0.3978496789932251,
+      "N392": 0.6215524077415466,
+      "delta": -0.22370272874832153,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 52,
+      "scaffold": "KIVLWKFPFSKY",
+      "ala_version": "AIVLWKFPFSKY",
+      "length": 12,
+      "K392": 0.39658495783805847,
+      "N392": 0.7727025747299194,
+      "delta": -0.37611761689186096,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 104,
+      "scaffold": "SKTTKYSKLSSKIKK",
+      "ala_version": "AKTTKYSKLSSKIKK",
+      "length": 15,
+      "K392": 0.3412470817565918,
+      "N392": 0.45961692929267883,
+      "delta": -0.11836984753608704,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 79,
+      "scaffold": "TRSLKLSDRKSIK",
+      "ala_version": "ARSLKLSDRKSIK",
+      "length": 13,
+      "K392": 0.3348868489265442,
+      "N392": 0.22798776626586914,
+      "delta": 0.10689908266067505,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 87,
+      "scaffold": "KRSYYISSKDKGE",
+      "ala_version": "ARSYYISSKDKGE",
+      "length": 13,
+      "K392": 0.332101434469223,
+      "N392": 0.395317405462265,
+      "delta": -0.06321597099304199,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 78,
+      "scaffold": "SKVVYKSNRLSAE",
+      "ala_version": "AKVVYKSNRLSAE",
+      "length": 13,
+      "K392": 0.29423579573631287,
+      "N392": 0.7338893413543701,
+      "delta": -0.43965354561805725,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 112,
+      "scaffold": "RIVTKILIRSSTSKK",
+      "ala_version": "AIVTKILIRSSTSKK",
+      "length": 15,
+      "K392": 0.2894919812679291,
+      "N392": 0.5917348861694336,
+      "delta": -0.3022429049015045,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 80,
+      "scaffold": "SRSKVVSSSKSKT",
+      "ala_version": "ARSKVVSSSKSKT",
+      "length": 13,
+      "K392": 0.2709466218948364,
+      "N392": 0.5546626448631287,
+      "delta": -0.28371602296829224,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 111,
+      "scaffold": "SRVVNKSKQLATLAK",
+      "ala_version": "ARVVNKSKQLATLAK",
+      "length": 15,
+      "K392": 0.2505611181259155,
+      "N392": 0.21798652410507202,
+      "delta": 0.032574594020843506,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 113,
+      "scaffold": "SRIVKYKKRSSAAIK",
+      "ala_version": "ARIVKYKKRSSAAIK",
+      "length": 15,
+      "K392": 0.23269380629062653,
+      "N392": 0.28369036316871643,
+      "delta": -0.050996556878089905,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 115,
+      "scaffold": "SSTIVKKKSIATSKK",
+      "ala_version": "ASTIVKKKSIATSKK",
+      "length": 15,
+      "K392": 0.18374131619930267,
+      "N392": 0.22656632959842682,
+      "delta": -0.042825013399124146,
+      "bucket": "D_weak"
+    }
+  ],
+  "bucket_b": [
+    {
+      "idx": 45,
+      "scaffold": "KILKLYSSKKY",
+      "ala_version": "AILKLYSSKKY",
+      "length": 11,
+      "K392": 0.8915140628814697,
+      "N392": 0.4648073613643646,
+      "delta": 0.4267067015171051,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 31,
+      "scaffold": "VVLVWIFPKKK",
+      "ala_version": "AVLVWIFPKKK",
+      "length": 11,
+      "K392": 0.8820160031318665,
+      "N392": 0.6818451881408691,
+      "delta": 0.20017081499099731,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 110,
+      "scaffold": "SVSIKYYARQKVSNK",
+      "ala_version": "AVSIKYYARQKVSNK",
+      "length": 15,
+      "K392": 0.87613844871521,
+      "N392": 0.8259186148643494,
+      "delta": 0.050219833850860596,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 27,
+      "scaffold": "VRLPWVSSKKY",
+      "ala_version": "ARLPWVSSKKY",
+      "length": 11,
+      "K392": 0.874156653881073,
+      "N392": 0.6729612946510315,
+      "delta": 0.2011953592300415,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 60,
+      "scaffold": "SRVKIYLDIIKP",
+      "ala_version": "ARVKIYLDIIKP",
+      "length": 12,
+      "K392": 0.8664820194244385,
+      "N392": 0.5808920860290527,
+      "delta": 0.28558993339538574,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 119,
+      "scaffold": "KIVVIIYARSLTKIK",
+      "ala_version": "AIVVIIYARSLTKIK",
+      "length": 15,
+      "K392": 0.8519870638847351,
+      "N392": 0.6924188733100891,
+      "delta": 0.159568190574646,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 24,
+      "scaffold": "ASLVLYSPKSK",
+      "ala_version": "ASLVLYSPKSK",
+      "length": 11,
+      "K392": 0.8457711338996887,
+      "N392": 0.7924947142601013,
+      "delta": 0.0532764196395874,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 42,
+      "scaffold": "SSSKVYSSKKY",
+      "ala_version": "ASSKVYSSKKY",
+      "length": 11,
+      "K392": 0.8368229866027832,
+      "N392": 0.5460102558135986,
+      "delta": 0.29081273078918457,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 76,
+      "scaffold": "PITYYYSRRSSPT",
+      "ala_version": "AITYYYSRRSSPT",
+      "length": 13,
+      "K392": 0.8322154879570007,
+      "N392": 0.3772813379764557,
+      "delta": 0.45493414998054504,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 6,
+      "scaffold": "KVKKHSPIHK",
+      "ala_version": "AVKKHSPIHK",
+      "length": 10,
+      "K392": 0.8286546468734741,
+      "N392": 0.770331084728241,
+      "delta": 0.058323562145233154,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 117,
+      "scaffold": "SRSPVKKKSSSAIAK",
+      "ala_version": "ARSPVKKKSSSAIAK",
+      "length": 15,
+      "K392": 0.8272132873535156,
+      "N392": 0.4208415150642395,
+      "delta": 0.4063717722892761,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 11,
+      "scaffold": "SSTKLLSLKK",
+      "ala_version": "ASTKLLSLKK",
+      "length": 10,
+      "K392": 0.8259990215301514,
+      "N392": 0.30975592136383057,
+      "delta": 0.5162431001663208,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 63,
+      "scaffold": "KILIWKFSSSPN",
+      "ala_version": "AILIWKFSSSPN",
+      "length": 12,
+      "K392": 0.8069918155670166,
+      "N392": 0.5204696655273438,
+      "delta": 0.28652215003967285,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 14,
+      "scaffold": "KVYPWDSIIY",
+      "ala_version": "AVYPWDSIIY",
+      "length": 10,
+      "K392": 0.8061432838439941,
+      "N392": 0.6826013326644897,
+      "delta": 0.1235419511795044,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 66,
+      "scaffold": "SSYVVYFSFLKT",
+      "ala_version": "ASYVVYFSFLKT",
+      "length": 12,
+      "K392": 0.8044256567955017,
+      "N392": 0.6885402798652649,
+      "delta": 0.11588537693023682,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 1,
+      "scaffold": "SVLVLKSVSK",
+      "ala_version": "AVLVLKSVSK",
+      "length": 10,
+      "K392": 0.8011072278022766,
+      "N392": 0.620485246181488,
+      "delta": 0.18062198162078857,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 114,
+      "scaffold": "ARNVIYARKLLKILQ",
+      "ala_version": "ARNVIYARKLLKILQ",
+      "length": 15,
+      "K392": 0.7999193668365479,
+      "N392": 0.7129014730453491,
+      "delta": 0.08701789379119873,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 67,
+      "scaffold": "KRSVKIKARQKP",
+      "ala_version": "ARSVKIKARQKP",
+      "length": 12,
+      "K392": 0.7772189974784851,
+      "N392": 0.6952759623527527,
+      "delta": 0.08194303512573242,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 28,
+      "scaffold": "AVLVLKSSPSG",
+      "ala_version": "AVLVLKSSPSG",
+      "length": 11,
+      "K392": 0.7728894352912903,
+      "N392": 0.47199746966362,
+      "delta": 0.3008919656276703,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 99,
+      "scaffold": "SRVPVYKRSQSAKKK",
+      "ala_version": "ARVPVYKRSQSAKKK",
+      "length": 15,
+      "K392": 0.7458985447883606,
+      "N392": 0.5497728586196899,
+      "delta": 0.19612568616867065,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 118,
+      "scaffold": "ARVGRVYKRQKAAIK",
+      "ala_version": "ARVGRVYKRQKAAIK",
+      "length": 15,
+      "K392": 0.7310937643051147,
+      "N392": 0.4863564074039459,
+      "delta": 0.24473735690116882,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 61,
+      "scaffold": "KRLVIIFSIPSK",
+      "ala_version": "ARLVIIFSIPSK",
+      "length": 12,
+      "K392": 0.7135913968086243,
+      "N392": 0.5227834582328796,
+      "delta": 0.19080793857574463,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 58,
+      "scaffold": "SRTILKSLFSPK",
+      "ala_version": "ARTILKSLFSPK",
+      "length": 12,
+      "K392": 0.7039582133293152,
+      "N392": 0.6082808375358582,
+      "delta": 0.09567737579345703,
+      "bucket": "B_allele_selective"
+    },
+    {
+      "idx": 97,
+      "scaffold": "KVNIVLALSLSALKK",
+      "ala_version": "AVNIVLALSLSALKK",
+      "length": 15,
+      "K392": 0.7015723586082458,
+      "N392": 0.5994992852210999,
+      "delta": 0.102073073387146,
+      "bucket": "B_allele_selective"
+    }
+  ],
+  "n392_leaning": [
+    {
+      "idx": 78,
+      "scaffold": "SKVVYKSNRLSAE",
+      "ala_version": "AKVVYKSNRLSAE",
+      "length": 13,
+      "K392": 0.29423579573631287,
+      "N392": 0.7338893413543701,
+      "delta": -0.43965354561805725,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 37,
+      "scaffold": "KVYKVYSIKKG",
+      "ala_version": "AVYKVYSIKKG",
+      "length": 11,
+      "K392": 0.41757732629776,
+      "N392": 0.8156906366348267,
+      "delta": -0.39811331033706665,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 52,
+      "scaffold": "KIVLWKFPFSKY",
+      "ala_version": "AIVLWKFPFSKY",
+      "length": 12,
+      "K392": 0.39658495783805847,
+      "N392": 0.7727025747299194,
+      "delta": -0.37611761689186096,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 116,
+      "scaffold": "KRNPKYSAKSYKSLG",
+      "ala_version": "ARNPKYSAKSYKSLG",
+      "length": 15,
+      "K392": 0.46751245856285095,
+      "N392": 0.8411809206008911,
+      "delta": -0.37366846203804016,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 102,
+      "scaffold": "SKITVILLRLAVIIK",
+      "ala_version": "AKITVILLRLAVIIK",
+      "length": 15,
+      "K392": 0.4898832440376282,
+      "N392": 0.8186895847320557,
+      "delta": -0.3288063406944275,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 112,
+      "scaffold": "RIVTKILIRSSTSKK",
+      "ala_version": "AIVTKILIRSSTSKK",
+      "length": 15,
+      "K392": 0.2894919812679291,
+      "N392": 0.5917348861694336,
+      "delta": -0.3022429049015045,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 80,
+      "scaffold": "SRSKVVSSSKSKT",
+      "ala_version": "ARSKVVSSSKSKT",
+      "length": 13,
+      "K392": 0.2709466218948364,
+      "N392": 0.5546626448631287,
+      "delta": -0.28371602296829224,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 70,
+      "scaffold": "EKLVLVSLSSPT",
+      "ala_version": "AKLVLVSLSSPT",
+      "length": 12,
+      "K392": 0.5877432227134705,
+      "N392": 0.8562386631965637,
+      "delta": -0.26849544048309326,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 73,
+      "scaffold": "SRSVKYNLKKPIK",
+      "ala_version": "ARSVKYNLKKPIK",
+      "length": 13,
+      "K392": 0.5499097108840942,
+      "N392": 0.7935947775840759,
+      "delta": -0.2436850666999817,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 40,
+      "scaffold": "SVLLWISIIKG",
+      "ala_version": "AVLLWISIIKG",
+      "length": 11,
+      "K392": 0.6164337396621704,
+      "N392": 0.8579061031341553,
+      "delta": -0.24147236347198486,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 54,
+      "scaffold": "SRLVIYLPFLYY",
+      "ala_version": "ARLVIYLPFLYY",
+      "length": 12,
+      "K392": 0.3978496789932251,
+      "N392": 0.6215524077415466,
+      "delta": -0.22370272874832153,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 85,
+      "scaffold": "KSIVIKSSLLTGT",
+      "ala_version": "ASIVIKSSLLTGT",
+      "length": 13,
+      "K392": 0.6147717237472534,
+      "N392": 0.8368970155715942,
+      "delta": -0.22212529182434082,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 93,
+      "scaffold": "SRSLVLNRKDPIK",
+      "ala_version": "ARSLVLNRKDPIK",
+      "length": 13,
+      "K392": 0.5343596935272217,
+      "N392": 0.7454750537872314,
+      "delta": -0.21111536026000977,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 82,
+      "scaffold": "SKSVLVDSSITKK",
+      "ala_version": "AKSVLVDSSITKK",
+      "length": 13,
+      "K392": 0.5099673867225647,
+      "N392": 0.7194405794143677,
+      "delta": -0.20947319269180298,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 105,
+      "scaffold": "RRSPRVALRQSKKLK",
+      "ala_version": "ARSPRVALRQSKKLK",
+      "length": 15,
+      "K392": 0.5332188606262207,
+      "N392": 0.7271729111671448,
+      "delta": -0.19395405054092407,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 96,
+      "scaffold": "ARTVIILKKLSKKKG",
+      "ala_version": "ARTVIILKKLSKKKG",
+      "length": 15,
+      "K392": 0.6045220494270325,
+      "N392": 0.7864078879356384,
+      "delta": -0.18188583850860596,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 59,
+      "scaffold": "ARSIVLLASIKN",
+      "ala_version": "ARSIVLLASIKN",
+      "length": 12,
+      "K392": 0.5158992409706116,
+      "N392": 0.6940493583679199,
+      "delta": -0.17815011739730835,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 12,
+      "scaffold": "KKSPLVSIPY",
+      "ala_version": "AKSPLVSIPY",
+      "length": 10,
+      "K392": 0.5237851738929749,
+      "N392": 0.7005254626274109,
+      "delta": -0.17674028873443604,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 51,
+      "scaffold": "SRYVVVFAIIST",
+      "ala_version": "ARYVVVFAIIST",
+      "length": 12,
+      "K392": 0.7235260009765625,
+      "N392": 0.8928210139274597,
+      "delta": -0.16929501295089722,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 84,
+      "scaffold": "PRVLYYNNSKSIK",
+      "ala_version": "ARVLYYNNSKSIK",
+      "length": 13,
+      "K392": 0.5379959940910339,
+      "N392": 0.7069492936134338,
+      "delta": -0.1689532995223999,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 19,
+      "scaffold": "VSYYWVSIHK",
+      "ala_version": "ASYYWVSIHK",
+      "length": 10,
+      "K392": 0.7279664278030396,
+      "N392": 0.8833783268928528,
+      "delta": -0.15541189908981323,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 33,
+      "scaffold": "ESLPKISSPKK",
+      "ala_version": "ASLPKISSPKK",
+      "length": 11,
+      "K392": 0.5637176036834717,
+      "N392": 0.7075982093811035,
+      "delta": -0.14388060569763184,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 55,
+      "scaffold": "SKSVKKSSSIKY",
+      "ala_version": "AKSVKKSSSIKY",
+      "length": 12,
+      "K392": 0.40384963154792786,
+      "N392": 0.5471858382225037,
+      "delta": -0.1433362066745758,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 94,
+      "scaffold": "SISKLLLDSLSKY",
+      "ala_version": "AISKLLLDSLSKY",
+      "length": 13,
+      "K392": 0.6417754888534546,
+      "N392": 0.767341136932373,
+      "delta": -0.12556564807891846,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 7,
+      "scaffold": "SSTKHDSVHY",
+      "ala_version": "ASTKHDSVHY",
+      "length": 10,
+      "K392": 0.5493720769882202,
+      "N392": 0.6722556352615356,
+      "delta": -0.12288355827331543,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 74,
+      "scaffold": "SRSLVLSSSLPKK",
+      "ala_version": "ARSLVLSSSLPKK",
+      "length": 13,
+      "K392": 0.4868859350681305,
+      "N392": 0.6072824597358704,
+      "delta": -0.12039652466773987,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 104,
+      "scaffold": "SKTTKYSKLSSKIKK",
+      "ala_version": "AKTTKYSKLSSKIKK",
+      "length": 15,
+      "K392": 0.3412470817565918,
+      "N392": 0.45961692929267883,
+      "delta": -0.11836984753608704,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 69,
+      "scaffold": "PSSYWKSLFSKP",
+      "ala_version": "ASSYWKSLFSKP",
+      "length": 12,
+      "K392": 0.6582100987434387,
+      "N392": 0.7703425288200378,
+      "delta": -0.11213243007659912,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 91,
+      "scaffold": "TRIVKYKLRKPPT",
+      "ala_version": "ARIVKYKLRKPPT",
+      "length": 13,
+      "K392": 0.5893123745918274,
+      "N392": 0.6971836090087891,
+      "delta": -0.10787123441696167,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 13,
+      "scaffold": "VRYKHLPIPY",
+      "ala_version": "ARYKHLPIPY",
+      "length": 10,
+      "K392": 0.7852763533592224,
+      "N392": 0.884705662727356,
+      "delta": -0.09942930936813354,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 43,
+      "scaffold": "ASSVLKFPVSK",
+      "ala_version": "ASSVLKFPVSK",
+      "length": 11,
+      "K392": 0.7401843070983887,
+      "N392": 0.8395304083824158,
+      "delta": -0.0993461012840271,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 95,
+      "scaffold": "SRSKKKSSASSAT",
+      "ala_version": "ARSKKKSSASSAT",
+      "length": 13,
+      "K392": 0.41324561834335327,
+      "N392": 0.5112364292144775,
+      "delta": -0.09799081087112427,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 90,
+      "scaffold": "RVTVYIDNSISPE",
+      "ala_version": "AVTVYIDNSISPE",
+      "length": 13,
+      "K392": 0.40092533826828003,
+      "N392": 0.4929966330528259,
+      "delta": -0.0920712947845459,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 18,
+      "scaffold": "VVSKHLSFKK",
+      "ala_version": "AVSKHLSFKK",
+      "length": 10,
+      "K392": 0.7179434895515442,
+      "N392": 0.8067384362220764,
+      "delta": -0.08879494667053223,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 77,
+      "scaffold": "RRILLKSSLSSKK",
+      "ala_version": "ARILLKSSLSSKK",
+      "length": 13,
+      "K392": 0.668046772480011,
+      "N392": 0.7498530745506287,
+      "delta": -0.08180630207061768,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 106,
+      "scaffold": "KKNGVVLRSKAKILK",
+      "ala_version": "AKNGVVLRSKAKILK",
+      "length": 15,
+      "K392": 0.5492062568664551,
+      "N392": 0.630653977394104,
+      "delta": -0.08144772052764893,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 39,
+      "scaffold": "SVLKYVSSKKK",
+      "ala_version": "AVLKYVSSKKK",
+      "length": 11,
+      "K392": 0.5889927744865417,
+      "N392": 0.667547881603241,
+      "delta": -0.07855510711669922,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 3,
+      "scaffold": "VVLKVLPIPK",
+      "ala_version": "AVLKVLPIPK",
+      "length": 10,
+      "K392": 0.6276534795761108,
+      "N392": 0.7035287618637085,
+      "delta": -0.07587528228759766,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 44,
+      "scaffold": "SRYVLLFLVKY",
+      "ala_version": "ARYVLLFLVKY",
+      "length": 11,
+      "K392": 0.6356202363967896,
+      "N392": 0.7074325084686279,
+      "delta": -0.07181227207183838,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 9,
+      "scaffold": "VRTKKVKPKK",
+      "ala_version": "ARTKKVKPKK",
+      "length": 10,
+      "K392": 0.5723150372505188,
+      "N392": 0.6389614939689636,
+      "delta": -0.06664645671844482,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 87,
+      "scaffold": "KRSYYISSKDKGE",
+      "ala_version": "ARSYYISSKDKGE",
+      "length": 13,
+      "K392": 0.332101434469223,
+      "N392": 0.395317405462265,
+      "delta": -0.06321597099304199,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 29,
+      "scaffold": "VRLLLISIISS",
+      "ala_version": "ARLLLISIISS",
+      "length": 11,
+      "K392": 0.6472485065460205,
+      "N392": 0.7018960118293762,
+      "delta": -0.05464750528335571,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 101,
+      "scaffold": "SRSGVYKKRSLVAKK",
+      "ala_version": "ARSGVYKKRSLVAKK",
+      "length": 15,
+      "K392": 0.5277766585350037,
+      "N392": 0.5791252851486206,
+      "delta": -0.05134862661361694,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 113,
+      "scaffold": "SRIVKYKKRSSAAIK",
+      "ala_version": "ARIVKYKKRSSAAIK",
+      "length": 15,
+      "K392": 0.23269380629062653,
+      "N392": 0.28369036316871643,
+      "delta": -0.050996556878089905,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 34,
+      "scaffold": "VSYKWLLLIKK",
+      "ala_version": "ASYKWLLLIKK",
+      "length": 11,
+      "K392": 0.784555196762085,
+      "N392": 0.830342710018158,
+      "delta": -0.045787513256073,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 115,
+      "scaffold": "SSTIVKKKSIATSKK",
+      "ala_version": "ASTIVKKKSIATSKK",
+      "length": 15,
+      "K392": 0.18374131619930267,
+      "N392": 0.22656632959842682,
+      "delta": -0.042825013399124146,
+      "bucket": "D_weak"
+    },
+    {
+      "idx": 5,
+      "scaffold": "SVLLLLKFKY",
+      "ala_version": "AVLLLLKFKY",
+      "length": 10,
+      "K392": 0.8814910054206848,
+      "N392": 0.9223216772079468,
+      "delta": -0.04083067178726196,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 20,
+      "scaffold": "SSTLVVDFHK",
+      "ala_version": "ASTLVVDFHK",
+      "length": 10,
+      "K392": 0.6871211528778076,
+      "N392": 0.7218142151832581,
+      "delta": -0.03469306230545044,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 47,
+      "scaffold": "ASTVKLKIPSY",
+      "ala_version": "ASTVKLKIPSY",
+      "length": 11,
+      "K392": 0.5436356663703918,
+      "N392": 0.5729493498802185,
+      "delta": -0.02931368350982666,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 53,
+      "scaffold": "ERYVVIKLRLYN",
+      "ala_version": "ARYVVIKLRLYN",
+      "length": 12,
+      "K392": 0.6551570296287537,
+      "N392": 0.6822208762168884,
+      "delta": -0.027063846588134766,
+      "bucket": "C_moderate"
+    },
+    {
+      "idx": 64,
+      "scaffold": "SRSIWLKPAISK",
+      "ala_version": "ARSIWLKPAISK",
+      "length": 12,
+      "K392": 0.8036112785339355,
+      "N392": 0.8298166990280151,
+      "delta": -0.02620542049407959,
+      "bucket": "A_erap2_inhibitor"
+    },
+    {
+      "idx": 92,
+      "scaffold": "RSTVLKSLRLLPK",
+      "ala_version": "ASTVLKSLRLLPK",
+      "length": 13,
+      "K392": 0.781603217124939,
+      "N392": 0.8072964549064636,
+      "delta": -0.025693237781524658,
+      "bucket": "A_erap2_inhibitor"
+    }
+  ],
+  "p1_scan_candidates": [
+    "KILKLYSSKKY",
+    "TSYYWSPLHK",
+    "VVLVWIFPKKK",
+    "SVLLLLKFKY",
+    "SVSIKYYARQKVSNK"
+  ]
+}

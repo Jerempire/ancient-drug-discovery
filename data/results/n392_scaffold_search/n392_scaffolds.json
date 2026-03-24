@@ -1,0 +1,1341 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-23T10:03:30.489919",
+    "model": "TianlaiChen/PepMLM-650M",
+    "conditioned_on": "N392_channel",
+    "temperature": 1.5,
+    "top_k": 5,
+    "num_scaffolds": 120,
+    "lengths": [
+      10,
+      11,
+      12,
+      13,
+      15
+    ]
+  },
+  "scaffolds": [
+    {
+      "sequence": "VKLLVLSIPY",
+      "length": 10,
+      "p1": "V"
+    },
+    {
+      "sequence": "SVLVLKSVSK",
+      "length": 10,
+      "p1": "S"
+    },
+    {
+      "sequence": "TSSKLLSFPN",
+      "length": 10,
+      "p1": "T"
+    },
+    {
+      "sequence": "VVLKVLPIPK",
+      "length": 10,
+      "p1": "V"
+    },
+    {
+      "sequence": "EKKVHKSIPK",
+      "length": 10,
+      "p1": "E"
+    },
+    {
+      "sequence": "SVLLLLKFKY",
+      "length": 10,
+      "p1": "S"
+    },
+    {
+      "sequence": "KVKKHSPIHK",
+      "length": 10,
+      "p1": "K"
+    },
+    {
+      "sequence": "SSTKHDSVHY",
+      "length": 10,
+      "p1": "S"
+    },
+    {
+      "sequence": "TITVLLSIHK",
+      "length": 10,
+      "p1": "T"
+    },
+    {
+      "sequence": "VRTKKVKPKK",
+      "length": 10,
+      "p1": "V"
+    },
+    {
+      "sequence": "KSLKLLSIPK",
+      "length": 10,
+      "p1": "K"
+    },
+    {
+      "sequence": "SSTKLLSLKK",
+      "length": 10,
+      "p1": "S"
+    },
+    {
+      "sequence": "KKSPLVSIPY",
+      "length": 10,
+      "p1": "K"
+    },
+    {
+      "sequence": "VRYKHLPIPY",
+      "length": 10,
+      "p1": "V"
+    },
+    {
+      "sequence": "KVYPWDSIIY",
+      "length": 10,
+      "p1": "K"
+    },
+    {
+      "sequence": "KSLKLSSFSK",
+      "length": 10,
+      "p1": "K"
+    },
+    {
+      "sequence": "TSYYWSPLHK",
+      "length": 10,
+      "p1": "T"
+    },
+    {
+      "sequence": "TRTYKVSFPY",
+      "length": 10,
+      "p1": "T"
+    },
+    {
+      "sequence": "VVSKHLSFKK",
+      "length": 10,
+      "p1": "V"
+    },
+    {
+      "sequence": "VSYYWVSIHK",
+      "length": 10,
+      "p1": "V"
+    },
+    {
+      "sequence": "SSTLVVDFHK",
+      "length": 10,
+      "p1": "S"
+    },
+    {
+      "sequence": "KSSKLDSPPS",
+      "length": 10,
+      "p1": "K"
+    },
+    {
+      "sequence": "SVYPKLSFPK",
+      "length": 10,
+      "p1": "S"
+    },
+    {
+      "sequence": "VSTVKKSFPK",
+      "length": 10,
+      "p1": "V"
+    },
+    {
+      "sequence": "ASLVLYSPKSK",
+      "length": 11,
+      "p1": "A"
+    },
+    {
+      "sequence": "SVSVWYAPKLG",
+      "length": 11,
+      "p1": "S"
+    },
+    {
+      "sequence": "SSTPWLSPISG",
+      "length": 11,
+      "p1": "S"
+    },
+    {
+      "sequence": "VRLPWVSSKKY",
+      "length": 11,
+      "p1": "V"
+    },
+    {
+      "sequence": "AVLVLKSSPSG",
+      "length": 11,
+      "p1": "A"
+    },
+    {
+      "sequence": "VRLLLISIISS",
+      "length": 11,
+      "p1": "V"
+    },
+    {
+      "sequence": "AVSPVYSPPKG",
+      "length": 11,
+      "p1": "A"
+    },
+    {
+      "sequence": "VVLVWIFPKKK",
+      "length": 11,
+      "p1": "V"
+    },
+    {
+      "sequence": "SSIKVYAAPIK",
+      "length": 11,
+      "p1": "S"
+    },
+    {
+      "sequence": "ESLPKISSPKK",
+      "length": 11,
+      "p1": "E"
+    },
+    {
+      "sequence": "VSYKWLLLIKK",
+      "length": 11,
+      "p1": "V"
+    },
+    {
+      "sequence": "KSLKVKSPPHK",
+      "length": 11,
+      "p1": "K"
+    },
+    {
+      "sequence": "VVYPKYALFKK",
+      "length": 11,
+      "p1": "V"
+    },
+    {
+      "sequence": "KVYKVYSIKKG",
+      "length": 11,
+      "p1": "K"
+    },
+    {
+      "sequence": "VSLTLKSPKKG",
+      "length": 11,
+      "p1": "V"
+    },
+    {
+      "sequence": "SVLKYVSSKKK",
+      "length": 11,
+      "p1": "S"
+    },
+    {
+      "sequence": "SVLLWISIIKG",
+      "length": 11,
+      "p1": "S"
+    },
+    {
+      "sequence": "AVTKLVSPFSN",
+      "length": 11,
+      "p1": "A"
+    },
+    {
+      "sequence": "SSSKVYSSKKY",
+      "length": 11,
+      "p1": "S"
+    },
+    {
+      "sequence": "ASSVLKFPVSK",
+      "length": 11,
+      "p1": "A"
+    },
+    {
+      "sequence": "SRYVLLFLVKY",
+      "length": 11,
+      "p1": "S"
+    },
+    {
+      "sequence": "KILKLYSSKKY",
+      "length": 11,
+      "p1": "K"
+    },
+    {
+      "sequence": "VTLKLYSIFHG",
+      "length": 11,
+      "p1": "V"
+    },
+    {
+      "sequence": "ASTVKLKIPSY",
+      "length": 11,
+      "p1": "A"
+    },
+    {
+      "sequence": "ERTVKISARSSK",
+      "length": 12,
+      "p1": "E"
+    },
+    {
+      "sequence": "SRSKVVSASLSN",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "AKSKKVLSIQYK",
+      "length": 12,
+      "p1": "A"
+    },
+    {
+      "sequence": "SRYVVVFAIIST",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "KIVLWKFPFSKY",
+      "length": 12,
+      "p1": "K"
+    },
+    {
+      "sequence": "ERYVVIKLRLYN",
+      "length": 12,
+      "p1": "E"
+    },
+    {
+      "sequence": "SRLVIYLPFLYY",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "SKSVKKSSSIKY",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "EVLKVVKPRIKK",
+      "length": 12,
+      "p1": "E"
+    },
+    {
+      "sequence": "KVTIIYKLRPKN",
+      "length": 12,
+      "p1": "K"
+    },
+    {
+      "sequence": "SRTILKSLFSPK",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "ARSIVLLASIKN",
+      "length": 12,
+      "p1": "A"
+    },
+    {
+      "sequence": "SRVKIYLDIIKP",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "KRLVIIFSIPSK",
+      "length": 12,
+      "p1": "K"
+    },
+    {
+      "sequence": "SRLYIIKLSSST",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "KILIWKFSSSPN",
+      "length": 12,
+      "p1": "K"
+    },
+    {
+      "sequence": "SRSIWLKPAISK",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "SSLVLVFLFPKY",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "SSYVVYFSFLKT",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "KRSVKIKARQKP",
+      "length": 12,
+      "p1": "K"
+    },
+    {
+      "sequence": "SVTVKISPFIKP",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "PSSYWKSLFSKP",
+      "length": 12,
+      "p1": "P"
+    },
+    {
+      "sequence": "EKLVLVSLSSPT",
+      "length": 12,
+      "p1": "E"
+    },
+    {
+      "sequence": "SRSLLVLDFSPK",
+      "length": 12,
+      "p1": "S"
+    },
+    {
+      "sequence": "SSIILKKSALKGN",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "SRSVKYNLKKPIK",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "SRSLVLSSSLPKK",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "RSSKVIDSSSSIK",
+      "length": 13,
+      "p1": "R"
+    },
+    {
+      "sequence": "PITYYYSRRSSPT",
+      "length": 13,
+      "p1": "P"
+    },
+    {
+      "sequence": "RRILLKSSLSSKK",
+      "length": 13,
+      "p1": "R"
+    },
+    {
+      "sequence": "SKVVYKSNRLSAE",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "TRSLKLSDRKSIK",
+      "length": 13,
+      "p1": "T"
+    },
+    {
+      "sequence": "SRSKVVSSSKSKT",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "RRSKYLNRRITIK",
+      "length": 13,
+      "p1": "R"
+    },
+    {
+      "sequence": "SKSVLVDSSITKK",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "KKTVKKLSSLTAK",
+      "length": 13,
+      "p1": "K"
+    },
+    {
+      "sequence": "PRVLYYNNSKSIK",
+      "length": 13,
+      "p1": "P"
+    },
+    {
+      "sequence": "KSIVIKSSLLTGT",
+      "length": 13,
+      "p1": "K"
+    },
+    {
+      "sequence": "SITVYKNLSISPT",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "KRSYYISSKDKGE",
+      "length": 13,
+      "p1": "K"
+    },
+    {
+      "sequence": "SISLYIDRRLPGK",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "SRSYLLDRSSLKN",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "RVTVYIDNSISPE",
+      "length": 13,
+      "p1": "R"
+    },
+    {
+      "sequence": "TRIVKYKLRKPPT",
+      "length": 13,
+      "p1": "T"
+    },
+    {
+      "sequence": "RSTVLKSLRLLPK",
+      "length": 13,
+      "p1": "R"
+    },
+    {
+      "sequence": "SRSLVLNRKDPIK",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "SISKLLLDSLSKY",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "SRSKKKSSASSAT",
+      "length": 13,
+      "p1": "S"
+    },
+    {
+      "sequence": "ARTVIILKKLSKKKG",
+      "length": 15,
+      "p1": "A"
+    },
+    {
+      "sequence": "KVNIVLALSLSALKK",
+      "length": 15,
+      "p1": "K"
+    },
+    {
+      "sequence": "SIVVKLLALQAKSKK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "SRVPVYKRSQSAKKK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "ARTPIILKRLSAIKK",
+      "length": 15,
+      "p1": "A"
+    },
+    {
+      "sequence": "SRSGVYKKRSLVAKK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "SKITVILLRLAVIIK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "SKIVVLLKLQSVKKK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "SKTTKYSKLSSKIKK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "RRSPRVALRQSKKLK",
+      "length": 15,
+      "p1": "R"
+    },
+    {
+      "sequence": "KKNGVVLRSKAKILK",
+      "length": 15,
+      "p1": "K"
+    },
+    {
+      "sequence": "EISGVLYAKLKAIIK",
+      "length": 15,
+      "p1": "E"
+    },
+    {
+      "sequence": "SIVTVKSARQYTKIG",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "KRVGKIYIRLAAIIK",
+      "length": 15,
+      "p1": "K"
+    },
+    {
+      "sequence": "SVSIKYYARQKVSNK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "SRVVNKSKQLATLAK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "RIVTKILIRSSTSKK",
+      "length": 15,
+      "p1": "R"
+    },
+    {
+      "sequence": "SRIVKYKKRSSAAIK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "ARNVIYARKLLKILQ",
+      "length": 15,
+      "p1": "A"
+    },
+    {
+      "sequence": "SSTIVKKKSIATSKK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "KRNPKYSAKSYKSLG",
+      "length": 15,
+      "p1": "K"
+    },
+    {
+      "sequence": "SRSPVKKKSSSAIAK",
+      "length": 15,
+      "p1": "S"
+    },
+    {
+      "sequence": "ARVGRVYKRQKAAIK",
+      "length": 15,
+      "p1": "A"
+    },
+    {
+      "sequence": "KIVVIIYARSLTKIK",
+      "length": 15,
+      "p1": "K"
+    }
+  ],
+  "ala_baselines": [
+    {
+      "original": "VKLLVLSIPY",
+      "ala_version": "AKLLVLSIPY",
+      "length": 10,
+      "original_p1": "V"
+    },
+    {
+      "original": "SVLVLKSVSK",
+      "ala_version": "AVLVLKSVSK",
+      "length": 10,
+      "original_p1": "S"
+    },
+    {
+      "original": "TSSKLLSFPN",
+      "ala_version": "ASSKLLSFPN",
+      "length": 10,
+      "original_p1": "T"
+    },
+    {
+      "original": "VVLKVLPIPK",
+      "ala_version": "AVLKVLPIPK",
+      "length": 10,
+      "original_p1": "V"
+    },
+    {
+      "original": "EKKVHKSIPK",
+      "ala_version": "AKKVHKSIPK",
+      "length": 10,
+      "original_p1": "E"
+    },
+    {
+      "original": "SVLLLLKFKY",
+      "ala_version": "AVLLLLKFKY",
+      "length": 10,
+      "original_p1": "S"
+    },
+    {
+      "original": "KVKKHSPIHK",
+      "ala_version": "AVKKHSPIHK",
+      "length": 10,
+      "original_p1": "K"
+    },
+    {
+      "original": "SSTKHDSVHY",
+      "ala_version": "ASTKHDSVHY",
+      "length": 10,
+      "original_p1": "S"
+    },
+    {
+      "original": "TITVLLSIHK",
+      "ala_version": "AITVLLSIHK",
+      "length": 10,
+      "original_p1": "T"
+    },
+    {
+      "original": "VRTKKVKPKK",
+      "ala_version": "ARTKKVKPKK",
+      "length": 10,
+      "original_p1": "V"
+    },
+    {
+      "original": "KSLKLLSIPK",
+      "ala_version": "ASLKLLSIPK",
+      "length": 10,
+      "original_p1": "K"
+    },
+    {
+      "original": "SSTKLLSLKK",
+      "ala_version": "ASTKLLSLKK",
+      "length": 10,
+      "original_p1": "S"
+    },
+    {
+      "original": "KKSPLVSIPY",
+      "ala_version": "AKSPLVSIPY",
+      "length": 10,
+      "original_p1": "K"
+    },
+    {
+      "original": "VRYKHLPIPY",
+      "ala_version": "ARYKHLPIPY",
+      "length": 10,
+      "original_p1": "V"
+    },
+    {
+      "original": "KVYPWDSIIY",
+      "ala_version": "AVYPWDSIIY",
+      "length": 10,
+      "original_p1": "K"
+    },
+    {
+      "original": "KSLKLSSFSK",
+      "ala_version": "ASLKLSSFSK",
+      "length": 10,
+      "original_p1": "K"
+    },
+    {
+      "original": "TSYYWSPLHK",
+      "ala_version": "ASYYWSPLHK",
+      "length": 10,
+      "original_p1": "T"
+    },
+    {
+      "original": "TRTYKVSFPY",
+      "ala_version": "ARTYKVSFPY",
+      "length": 10,
+      "original_p1": "T"
+    },
+    {
+      "original": "VVSKHLSFKK",
+      "ala_version": "AVSKHLSFKK",
+      "length": 10,
+      "original_p1": "V"
+    },
+    {
+      "original": "VSYYWVSIHK",
+      "ala_version": "ASYYWVSIHK",
+      "length": 10,
+      "original_p1": "V"
+    },
+    {
+      "original": "SSTLVVDFHK",
+      "ala_version": "ASTLVVDFHK",
+      "length": 10,
+      "original_p1": "S"
+    },
+    {
+      "original": "KSSKLDSPPS",
+      "ala_version": "ASSKLDSPPS",
+      "length": 10,
+      "original_p1": "K"
+    },
+    {
+      "original": "SVYPKLSFPK",
+      "ala_version": "AVYPKLSFPK",
+      "length": 10,
+      "original_p1": "S"
+    },
+    {
+      "original": "VSTVKKSFPK",
+      "ala_version": "ASTVKKSFPK",
+      "length": 10,
+      "original_p1": "V"
+    },
+    {
+      "original": "ASLVLYSPKSK",
+      "ala_version": "ASLVLYSPKSK",
+      "length": 11,
+      "original_p1": "A"
+    },
+    {
+      "original": "SVSVWYAPKLG",
+      "ala_version": "AVSVWYAPKLG",
+      "length": 11,
+      "original_p1": "S"
+    },
+    {
+      "original": "SSTPWLSPISG",
+      "ala_version": "ASTPWLSPISG",
+      "length": 11,
+      "original_p1": "S"
+    },
+    {
+      "original": "VRLPWVSSKKY",
+      "ala_version": "ARLPWVSSKKY",
+      "length": 11,
+      "original_p1": "V"
+    },
+    {
+      "original": "AVLVLKSSPSG",
+      "ala_version": "AVLVLKSSPSG",
+      "length": 11,
+      "original_p1": "A"
+    },
+    {
+      "original": "VRLLLISIISS",
+      "ala_version": "ARLLLISIISS",
+      "length": 11,
+      "original_p1": "V"
+    },
+    {
+      "original": "AVSPVYSPPKG",
+      "ala_version": "AVSPVYSPPKG",
+      "length": 11,
+      "original_p1": "A"
+    },
+    {
+      "original": "VVLVWIFPKKK",
+      "ala_version": "AVLVWIFPKKK",
+      "length": 11,
+      "original_p1": "V"
+    },
+    {
+      "original": "SSIKVYAAPIK",
+      "ala_version": "ASIKVYAAPIK",
+      "length": 11,
+      "original_p1": "S"
+    },
+    {
+      "original": "ESLPKISSPKK",
+      "ala_version": "ASLPKISSPKK",
+      "length": 11,
+      "original_p1": "E"
+    },
+    {
+      "original": "VSYKWLLLIKK",
+      "ala_version": "ASYKWLLLIKK",
+      "length": 11,
+      "original_p1": "V"
+    },
+    {
+      "original": "KSLKVKSPPHK",
+      "ala_version": "ASLKVKSPPHK",
+      "length": 11,
+      "original_p1": "K"
+    },
+    {
+      "original": "VVYPKYALFKK",
+      "ala_version": "AVYPKYALFKK",
+      "length": 11,
+      "original_p1": "V"
+    },
+    {
+      "original": "KVYKVYSIKKG",
+      "ala_version": "AVYKVYSIKKG",
+      "length": 11,
+      "original_p1": "K"
+    },
+    {
+      "original": "VSLTLKSPKKG",
+      "ala_version": "ASLTLKSPKKG",
+      "length": 11,
+      "original_p1": "V"
+    },
+    {
+      "original": "SVLKYVSSKKK",
+      "ala_version": "AVLKYVSSKKK",
+      "length": 11,
+      "original_p1": "S"
+    },
+    {
+      "original": "SVLLWISIIKG",
+      "ala_version": "AVLLWISIIKG",
+      "length": 11,
+      "original_p1": "S"
+    },
+    {
+      "original": "AVTKLVSPFSN",
+      "ala_version": "AVTKLVSPFSN",
+      "length": 11,
+      "original_p1": "A"
+    },
+    {
+      "original": "SSSKVYSSKKY",
+      "ala_version": "ASSKVYSSKKY",
+      "length": 11,
+      "original_p1": "S"
+    },
+    {
+      "original": "ASSVLKFPVSK",
+      "ala_version": "ASSVLKFPVSK",
+      "length": 11,
+      "original_p1": "A"
+    },
+    {
+      "original": "SRYVLLFLVKY",
+      "ala_version": "ARYVLLFLVKY",
+      "length": 11,
+      "original_p1": "S"
+    },
+    {
+      "original": "KILKLYSSKKY",
+      "ala_version": "AILKLYSSKKY",
+      "length": 11,
+      "original_p1": "K"
+    },
+    {
+      "original": "VTLKLYSIFHG",
+      "ala_version": "ATLKLYSIFHG",
+      "length": 11,
+      "original_p1": "V"
+    },
+    {
+      "original": "ASTVKLKIPSY",
+      "ala_version": "ASTVKLKIPSY",
+      "length": 11,
+      "original_p1": "A"
+    },
+    {
+      "original": "ERTVKISARSSK",
+      "ala_version": "ARTVKISARSSK",
+      "length": 12,
+      "original_p1": "E"
+    },
+    {
+      "original": "SRSKVVSASLSN",
+      "ala_version": "ARSKVVSASLSN",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "AKSKKVLSIQYK",
+      "ala_version": "AKSKKVLSIQYK",
+      "length": 12,
+      "original_p1": "A"
+    },
+    {
+      "original": "SRYVVVFAIIST",
+      "ala_version": "ARYVVVFAIIST",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "KIVLWKFPFSKY",
+      "ala_version": "AIVLWKFPFSKY",
+      "length": 12,
+      "original_p1": "K"
+    },
+    {
+      "original": "ERYVVIKLRLYN",
+      "ala_version": "ARYVVIKLRLYN",
+      "length": 12,
+      "original_p1": "E"
+    },
+    {
+      "original": "SRLVIYLPFLYY",
+      "ala_version": "ARLVIYLPFLYY",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "SKSVKKSSSIKY",
+      "ala_version": "AKSVKKSSSIKY",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "EVLKVVKPRIKK",
+      "ala_version": "AVLKVVKPRIKK",
+      "length": 12,
+      "original_p1": "E"
+    },
+    {
+      "original": "KVTIIYKLRPKN",
+      "ala_version": "AVTIIYKLRPKN",
+      "length": 12,
+      "original_p1": "K"
+    },
+    {
+      "original": "SRTILKSLFSPK",
+      "ala_version": "ARTILKSLFSPK",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "ARSIVLLASIKN",
+      "ala_version": "ARSIVLLASIKN",
+      "length": 12,
+      "original_p1": "A"
+    },
+    {
+      "original": "SRVKIYLDIIKP",
+      "ala_version": "ARVKIYLDIIKP",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "KRLVIIFSIPSK",
+      "ala_version": "ARLVIIFSIPSK",
+      "length": 12,
+      "original_p1": "K"
+    },
+    {
+      "original": "SRLYIIKLSSST",
+      "ala_version": "ARLYIIKLSSST",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "KILIWKFSSSPN",
+      "ala_version": "AILIWKFSSSPN",
+      "length": 12,
+      "original_p1": "K"
+    },
+    {
+      "original": "SRSIWLKPAISK",
+      "ala_version": "ARSIWLKPAISK",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "SSLVLVFLFPKY",
+      "ala_version": "ASLVLVFLFPKY",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "SSYVVYFSFLKT",
+      "ala_version": "ASYVVYFSFLKT",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "KRSVKIKARQKP",
+      "ala_version": "ARSVKIKARQKP",
+      "length": 12,
+      "original_p1": "K"
+    },
+    {
+      "original": "SVTVKISPFIKP",
+      "ala_version": "AVTVKISPFIKP",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "PSSYWKSLFSKP",
+      "ala_version": "ASSYWKSLFSKP",
+      "length": 12,
+      "original_p1": "P"
+    },
+    {
+      "original": "EKLVLVSLSSPT",
+      "ala_version": "AKLVLVSLSSPT",
+      "length": 12,
+      "original_p1": "E"
+    },
+    {
+      "original": "SRSLLVLDFSPK",
+      "ala_version": "ARSLLVLDFSPK",
+      "length": 12,
+      "original_p1": "S"
+    },
+    {
+      "original": "SSIILKKSALKGN",
+      "ala_version": "ASIILKKSALKGN",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "SRSVKYNLKKPIK",
+      "ala_version": "ARSVKYNLKKPIK",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "SRSLVLSSSLPKK",
+      "ala_version": "ARSLVLSSSLPKK",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "RSSKVIDSSSSIK",
+      "ala_version": "ASSKVIDSSSSIK",
+      "length": 13,
+      "original_p1": "R"
+    },
+    {
+      "original": "PITYYYSRRSSPT",
+      "ala_version": "AITYYYSRRSSPT",
+      "length": 13,
+      "original_p1": "P"
+    },
+    {
+      "original": "RRILLKSSLSSKK",
+      "ala_version": "ARILLKSSLSSKK",
+      "length": 13,
+      "original_p1": "R"
+    },
+    {
+      "original": "SKVVYKSNRLSAE",
+      "ala_version": "AKVVYKSNRLSAE",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "TRSLKLSDRKSIK",
+      "ala_version": "ARSLKLSDRKSIK",
+      "length": 13,
+      "original_p1": "T"
+    },
+    {
+      "original": "SRSKVVSSSKSKT",
+      "ala_version": "ARSKVVSSSKSKT",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "RRSKYLNRRITIK",
+      "ala_version": "ARSKYLNRRITIK",
+      "length": 13,
+      "original_p1": "R"
+    },
+    {
+      "original": "SKSVLVDSSITKK",
+      "ala_version": "AKSVLVDSSITKK",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "KKTVKKLSSLTAK",
+      "ala_version": "AKTVKKLSSLTAK",
+      "length": 13,
+      "original_p1": "K"
+    },
+    {
+      "original": "PRVLYYNNSKSIK",
+      "ala_version": "ARVLYYNNSKSIK",
+      "length": 13,
+      "original_p1": "P"
+    },
+    {
+      "original": "KSIVIKSSLLTGT",
+      "ala_version": "ASIVIKSSLLTGT",
+      "length": 13,
+      "original_p1": "K"
+    },
+    {
+      "original": "SITVYKNLSISPT",
+      "ala_version": "AITVYKNLSISPT",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "KRSYYISSKDKGE",
+      "ala_version": "ARSYYISSKDKGE",
+      "length": 13,
+      "original_p1": "K"
+    },
+    {
+      "original": "SISLYIDRRLPGK",
+      "ala_version": "AISLYIDRRLPGK",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "SRSYLLDRSSLKN",
+      "ala_version": "ARSYLLDRSSLKN",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "RVTVYIDNSISPE",
+      "ala_version": "AVTVYIDNSISPE",
+      "length": 13,
+      "original_p1": "R"
+    },
+    {
+      "original": "TRIVKYKLRKPPT",
+      "ala_version": "ARIVKYKLRKPPT",
+      "length": 13,
+      "original_p1": "T"
+    },
+    {
+      "original": "RSTVLKSLRLLPK",
+      "ala_version": "ASTVLKSLRLLPK",
+      "length": 13,
+      "original_p1": "R"
+    },
+    {
+      "original": "SRSLVLNRKDPIK",
+      "ala_version": "ARSLVLNRKDPIK",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "SISKLLLDSLSKY",
+      "ala_version": "AISKLLLDSLSKY",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "SRSKKKSSASSAT",
+      "ala_version": "ARSKKKSSASSAT",
+      "length": 13,
+      "original_p1": "S"
+    },
+    {
+      "original": "ARTVIILKKLSKKKG",
+      "ala_version": "ARTVIILKKLSKKKG",
+      "length": 15,
+      "original_p1": "A"
+    },
+    {
+      "original": "KVNIVLALSLSALKK",
+      "ala_version": "AVNIVLALSLSALKK",
+      "length": 15,
+      "original_p1": "K"
+    },
+    {
+      "original": "SIVVKLLALQAKSKK",
+      "ala_version": "AIVVKLLALQAKSKK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "SRVPVYKRSQSAKKK",
+      "ala_version": "ARVPVYKRSQSAKKK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "ARTPIILKRLSAIKK",
+      "ala_version": "ARTPIILKRLSAIKK",
+      "length": 15,
+      "original_p1": "A"
+    },
+    {
+      "original": "SRSGVYKKRSLVAKK",
+      "ala_version": "ARSGVYKKRSLVAKK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "SKITVILLRLAVIIK",
+      "ala_version": "AKITVILLRLAVIIK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "SKIVVLLKLQSVKKK",
+      "ala_version": "AKIVVLLKLQSVKKK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "SKTTKYSKLSSKIKK",
+      "ala_version": "AKTTKYSKLSSKIKK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "RRSPRVALRQSKKLK",
+      "ala_version": "ARSPRVALRQSKKLK",
+      "length": 15,
+      "original_p1": "R"
+    },
+    {
+      "original": "KKNGVVLRSKAKILK",
+      "ala_version": "AKNGVVLRSKAKILK",
+      "length": 15,
+      "original_p1": "K"
+    },
+    {
+      "original": "EISGVLYAKLKAIIK",
+      "ala_version": "AISGVLYAKLKAIIK",
+      "length": 15,
+      "original_p1": "E"
+    },
+    {
+      "original": "SIVTVKSARQYTKIG",
+      "ala_version": "AIVTVKSARQYTKIG",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "KRVGKIYIRLAAIIK",
+      "ala_version": "ARVGKIYIRLAAIIK",
+      "length": 15,
+      "original_p1": "K"
+    },
+    {
+      "original": "SVSIKYYARQKVSNK",
+      "ala_version": "AVSIKYYARQKVSNK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "SRVVNKSKQLATLAK",
+      "ala_version": "ARVVNKSKQLATLAK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "RIVTKILIRSSTSKK",
+      "ala_version": "AIVTKILIRSSTSKK",
+      "length": 15,
+      "original_p1": "R"
+    },
+    {
+      "original": "SRIVKYKKRSSAAIK",
+      "ala_version": "ARIVKYKKRSSAAIK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "ARNVIYARKLLKILQ",
+      "ala_version": "ARNVIYARKLLKILQ",
+      "length": 15,
+      "original_p1": "A"
+    },
+    {
+      "original": "SSTIVKKKSIATSKK",
+      "ala_version": "ASTIVKKKSIATSKK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "KRNPKYSAKSYKSLG",
+      "ala_version": "ARNPKYSAKSYKSLG",
+      "length": 15,
+      "original_p1": "K"
+    },
+    {
+      "original": "SRSPVKKKSSSAIAK",
+      "ala_version": "ARSPVKKKSSSAIAK",
+      "length": 15,
+      "original_p1": "S"
+    },
+    {
+      "original": "ARVGRVYKRQKAAIK",
+      "ala_version": "ARVGRVYKRQKAAIK",
+      "length": 15,
+      "original_p1": "A"
+    },
+    {
+      "original": "KIVVIIYARSLTKIK",
+      "ala_version": "AIVVIIYARSLTKIK",
+      "length": 15,
+      "original_p1": "K"
+    }
+  ]
+}

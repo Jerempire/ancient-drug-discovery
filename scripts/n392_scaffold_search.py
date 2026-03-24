@@ -174,8 +174,8 @@ def cmd_generate():
 
 
 def cmd_analyze(results_dir: str):
-    """Analyze Boltz-2 results to find N392-leaning scaffolds."""
-    import glob
+    """Analyze Boltz-2 results — rank by K392 potency first, selectivity second."""
+    from statistics import mean, median
 
     results_path = Path(results_dir)
     scaffolds_json = OUT_DIR / "n392_scaffolds.json"
@@ -206,18 +206,25 @@ def cmd_analyze(results_dir: str):
                 scores[idx] = {}
             scores[idx][variant] = sum(iptms) / len(iptms)
 
-    # Classify scaffolds
-    n392_leaning = []
-    neutral = []
-    k392_leaning = []
-
+    # Build full scaffold list with scores
+    all_entries = []
     for idx, variants in sorted(scores.items()):
         k = variants.get("K392", 0)
         n = variants.get("N392", 0)
         delta = k - n
         scaffold = data["ala_baselines"][idx]
 
-        entry = {
+        # Bucket classification (per ChatGPT framework)
+        if k >= 0.7 and delta > 0.05:
+            bucket = "B_allele_selective"
+        elif k >= 0.7:
+            bucket = "A_erap2_inhibitor"
+        elif k >= 0.5:
+            bucket = "C_moderate"
+        else:
+            bucket = "D_weak"
+
+        all_entries.append({
             "idx": idx,
             "scaffold": scaffold["original"],
             "ala_version": scaffold["ala_version"],
@@ -225,50 +232,123 @@ def cmd_analyze(results_dir: str):
             "K392": k,
             "N392": n,
             "delta": delta,
-        }
+            "bucket": bucket,
+        })
 
-        if delta < -0.02:
-            n392_leaning.append(entry)
-        elif delta > 0.02:
-            k392_leaning.append(entry)
+    # --- REPORT ---
+    SEP = "=" * 80
+    DASH = "-" * 80
+
+    print(SEP)
+    print("N392 SCAFFOLD SCREEN — RANKED BY K392 POTENCY")
+    print("Primary: K392 binding strength | Secondary: K392 vs N392 selectivity")
+    print(SEP)
+
+    # Summary stats
+    k392_scores = [e["K392"] for e in all_entries]
+    n392_scores = [e["N392"] for e in all_entries]
+    deltas = [e["delta"] for e in all_entries]
+
+    print(f"\nTotal scaffolds screened: {len(all_entries)}")
+    print(f"K392 ipTM: mean={mean(k392_scores):.3f}, median={median(k392_scores):.3f}, max={max(k392_scores):.3f}")
+    print(f"N392 ipTM: mean={mean(n392_scores):.3f}, median={median(n392_scores):.3f}, max={max(n392_scores):.3f}")
+    print(f"Delta (K-N): mean={mean(deltas):+.3f}, median={median(deltas):+.3f}")
+    print(f"K392-leaning: {sum(1 for d in deltas if d > 0.02)}")
+    print(f"Neutral: {sum(1 for d in deltas if -0.02 <= d <= 0.02)}")
+    print(f"N392-leaning: {sum(1 for d in deltas if d < -0.02)}")
+
+    # Bucket counts
+    buckets = defaultdict(list)
+    for e in all_entries:
+        buckets[e["bucket"]].append(e)
+
+    print(f"\n{'='*80}")
+    print("BUCKET CLASSIFICATION")
+    print(f"{'='*80}")
+    print(f"Bucket B (K392 >= 0.7 AND selective > +0.05): {len(buckets['B_allele_selective'])} scaffolds")
+    print(f"Bucket A (K392 >= 0.7, any selectivity):      {len(buckets['A_erap2_inhibitor'])} scaffolds")
+    print(f"Bucket C (K392 0.5-0.7):                      {len(buckets['C_moderate'])} scaffolds")
+    print(f"Bucket D (K392 < 0.5):                        {len(buckets['D_weak'])} scaffolds")
+
+    # Top 15 by K392 potency
+    by_k392 = sorted(all_entries, key=lambda x: -x["K392"])
+    print(f"\n{'='*80}")
+    print("TOP 15 BY K392 BINDING STRENGTH")
+    print(f"{'='*80}")
+    print("%-5s %-22s %4s %8s %8s %8s %s" % ("Rank", "Scaffold", "Len", "K392", "N392", "Delta", "Bucket"))
+    print(DASH)
+    for i, e in enumerate(by_k392[:15], 1):
+        print("%-5d %-22s %4d %8.3f %8.3f %+8.3f %s" % (
+            i, e["scaffold"], e["length"], e["K392"], e["N392"], e["delta"], e["bucket"]))
+
+    # Top 10 Bucket B (allele-selective)
+    bucket_b = sorted(buckets["B_allele_selective"], key=lambda x: -x["K392"])
+    if bucket_b:
+        print(f"\n{'='*80}")
+        print("BUCKET B: ALLELE-SELECTIVE K392 INHIBITORS (best outcome)")
+        print("K392 >= 0.7 AND delta > +0.05")
+        print(f"{'='*80}")
+        print("%-5s %-22s %4s %8s %8s %8s" % ("Rank", "Scaffold", "Len", "K392", "N392", "Delta"))
+        print(DASH)
+        for i, e in enumerate(bucket_b[:10], 1):
+            print("%-5d %-22s %4d %8.3f %8.3f %+8.3f" % (
+                i, e["scaffold"], e["length"], e["K392"], e["N392"], e["delta"]))
+
+    # N392-leaning (for mechanistic interest)
+    n392_leaning = sorted([e for e in all_entries if e["delta"] < -0.02], key=lambda x: x["delta"])
+    if n392_leaning:
+        print(f"\n{'='*80}")
+        print("N392-LEANING SCAFFOLDS (counterscreen interest / mechanistic)")
+        print(f"{'='*80}")
+        for e in n392_leaning[:10]:
+            print("  %-22s (%daa)  K392=%8.3f  N392=%8.3f  delta=%+.3f" % (
+                e["scaffold"], e["length"], e["K392"], e["N392"], e["delta"]))
+
+    # Comparison to VKLLLL
+    print(f"\n{'='*80}")
+    print("COMPARISON TO EXISTING LEADS")
+    print(f"{'='*80}")
+    print("VKLLLL (P1=V): K392=0.801, N392=0.665, delta=+0.137 (bias-corrected +0.125)")
+    print("VKLLLL (P1=E): K392=0.796, N392=0.709, delta=+0.087 (bias-corrected +0.076)")
+    if bucket_b:
+        best = bucket_b[0]
+        print(f"Best new Bucket B: {best['scaffold']} K392={best['K392']:.3f} delta={best['delta']:+.3f}")
+        if best["K392"] > 0.801:
+            print(">>> NEW SCAFFOLD BEATS VKLLLL ON K392 POTENCY")
+        elif best["delta"] > 0.137:
+            print(">>> NEW SCAFFOLD BEATS VKLLLL ON SELECTIVITY")
         else:
-            neutral.append(entry)
+            print(">>> VKLLLL remains the lead — new scaffolds are backup/diversity")
 
-    # Report
-    print("=" * 70)
-    print("N392 SCAFFOLD DISCOVERY RESULTS")
-    print("=" * 70)
-    print(f"Total scaffolds screened: {len(scores)}")
-    print(f"N392-leaning: {len(n392_leaning)}")
-    print(f"Neutral: {len(neutral)}")
-    print(f"K392-leaning: {len(k392_leaning)}")
-
-    print(f"\n{'='*70}")
-    print("N392-LEANING SCAFFOLDS (best candidates for N392 arm)")
-    print("=" * 70)
-    for s in sorted(n392_leaning, key=lambda x: x["delta"]):
-        print(f"  {s['scaffold']:<20} ({s['length']}aa)  K392={s['K392']:.3f}  N392={s['N392']:.3f}  delta={s['delta']:+.3f}")
-
-    print(f"\n{'='*70}")
-    print("NEUTRAL SCAFFOLDS (potential for either arm)")
-    print("=" * 70)
-    for s in sorted(neutral, key=lambda x: x["delta"]):
-        print(f"  {s['scaffold']:<20} ({s['length']}aa)  K392={s['K392']:.3f}  N392={s['N392']:.3f}  delta={s['delta']:+.3f}")
+    # P1 scan recommendations
+    print(f"\n{'='*80}")
+    print("RECOMMENDED NEXT STEPS")
+    print(f"{'='*80}")
+    top_for_p1 = by_k392[:5]
+    print(f"P1 scan candidates (top 5 by K392, test V/E/L/A/D at P1):")
+    for e in top_for_p1:
+        print(f"  {e['scaffold']} ({e['length']}aa, K392={e['K392']:.3f}, delta={e['delta']:+.3f})")
 
     # Save
     result = {
+        "summary": {
+            "total_screened": len(all_entries),
+            "k392_mean": mean(k392_scores),
+            "n392_mean": mean(n392_scores),
+            "delta_mean": mean(deltas),
+            "bucket_b_count": len(buckets["B_allele_selective"]),
+            "bucket_a_count": len(buckets["A_erap2_inhibitor"]),
+            "n392_leaning_count": len(n392_leaning),
+        },
+        "all_scaffolds": sorted(all_entries, key=lambda x: -x["K392"]),
+        "bucket_b": bucket_b,
         "n392_leaning": n392_leaning,
-        "neutral": neutral,
-        "k392_leaning": k392_leaning,
-        "total_screened": len(scores),
+        "p1_scan_candidates": [e["scaffold"] for e in top_for_p1],
     }
-    out_path = OUT_DIR / "scaffold_bias_results.json"
+    out_path = OUT_DIR / "scaffold_screen_results.json"
     with open(out_path, "w") as f:
         json.dump(result, f, indent=2)
     print(f"\nSaved to {out_path}")
-
-    if n392_leaning:
-        print(f"\nNext: Run P1 scan (A, L, V, D, F, I) on top {min(5, len(n392_leaning))} N392-leaning scaffolds")
 
 
 if __name__ == "__main__":
