@@ -41,6 +41,10 @@ outputs/
 # Vast.ai instance state
 .vast_instance.json
 
+# Boltz-2 prediction outputs (large CIF/pkl/npz files)
+v4/validation/boltz2_out/*/boltz_results_*/
+v4/validation/boltz2_out/*/boltz_results_*
+
 # GPU pipeline results (download locally, too large for git)
 data/results/
 BioReason-Pro/
