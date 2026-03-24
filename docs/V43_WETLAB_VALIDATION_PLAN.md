@@ -345,36 +345,68 @@ If enzymatic assay confirms activity:
 
 ---
 
-## TASK ASSIGNMENT: Terminal Split
+## TASK ASSIGNMENT: Terminal Split (Parallelized)
 
-### Terminal A: SASA + Local Analysis (CPU only)
-1. Generate Boltz-2 structures of Elite Four vs FULL ERAP2 (not cropped channel — need zinc)
-2. Run SASA zinc capping test
+### Terminal A: SASA + Local Analysis + CRO + Patent (CPU only, no GPU)
+1. Generate Boltz-2 structures of Elite Four vs FULL ERAP2 (not cropped — need zinc)
+2. Run SASA zinc capping test (`scripts/sasa_zinc_check.py`)
 3. Analyze existing Boltz-2 CIF files for contact maps
-4. **Time:** ~2 hours
-5. **Cost:** $0 (local CPU)
+4. Draft synthesis order for GenScript/AAPPTEC
+5. Draft provisional patent application
+6. Prepare assay protocol document for CRO
+7. **Time:** ~3 hours
+8. **Cost:** $0 (local CPU)
 
-### Terminal B: MD Simulations — ERAP2-K392 (GPU)
-1. Run 4 peptides × ERAP2-K392 = 4 simulations (10ns each)
-2. **Time:** ~8 hours on RTX 4090
-3. **Cost:** ~$2-3
+### Terminal B: MD — Leads vs ERAP2-K392 + IRAP (GPU instance 1)
+**Peptides:** VAGSAF (Hammer) + IAFSAF (Scalpel)
+**Targets:** ERAP2-K392 + IRAP
+**Runs:** 4 simulations (2 peptides × 2 targets × 10ns each)
+1. Launch RTX 4090 on Vast.ai
+2. Install OpenMM: `conda install -c conda-forge openmm mdtraj pdbfixer`
+3. Upload PDB structures + `scripts/openmm_md_protocol.py`
+4. Run sequentially: VAGSAF→ERAP2, VAGSAF→IRAP, IAFSAF→ERAP2, IAFSAF→IRAP
+5. Download trajectories + run `scripts/md_drift_analysis.py`
+6. Destroy instance
+7. **Time:** ~8 hours on RTX 4090
+8. **Cost:** ~$2-3
 
-### Terminal C: MD Simulations — IRAP + ERAP1 (GPU)
-1. Run 4 peptides × IRAP = 4 simulations
-2. Run 4 peptides × ERAP1 = 4 simulations
-3. **Time:** ~16 hours on RTX 4090
-4. **Cost:** ~$4-6
-5. Can split across 2 GPU instances for ~8 hours
+### Terminal C: MD — Controls vs ERAP2-K392 + IRAP (GPU instance 2)
+**Peptides:** VAWSAF (Trp Edge) + FASGAV (Scrambled Control)
+**Targets:** ERAP2-K392 + IRAP
+**Runs:** 4 simulations (2 peptides × 2 targets × 10ns each)
+1. Same setup as Terminal B
+2. **CRITICAL: FASGAV is the gate experiment.** If scrambled control LOCKS in ERAP2 (RMSD <2Å), the pocket is artificially sticky and ALL results from Terminals B and D are suspect. Monitor FASGAV first — if it drifts out of ERAP2 within 2-3ns, the control passes and you can trust the lead data.
+3. **Time:** ~8 hours on RTX 4090
+4. **Cost:** ~$2-3
 
-### Terminal D: CRO Prep + Patent Drafting (no GPU)
-1. Draft synthesis order for GenScript/AAPPTEC
-2. Draft provisional patent application
-3. Prepare assay protocol document for CRO
-4. **Time:** ~3 hours
-5. **Cost:** $0
+### Terminal D: MD — All 4 peptides vs ERAP1 (GPU instance 3)
+**Peptides:** VAGSAF, IAFSAF, VAWSAF, FASGAV
+**Targets:** ERAP1 only
+**Runs:** 4 simulations (4 peptides × 1 target × 10ns each)
+1. Same setup as Terminal B
+2. All 4 peptides should drift out of ERAP1 — confirms molecular ruler evasion in MD
+3. **Time:** ~8 hours on RTX 4090
+4. **Cost:** ~$2-3
+
+### Execution Order
+```
+Hour 0:  Launch all 4 terminals simultaneously
+Hour 1:  Terminal A delivers SASA results
+Hour 2:  Terminal C — check FASGAV vs ERAP2 (the gate)
+         If FASGAV RMSD > 3Å by 2ns → CONTROL PASSES, continue all
+         If FASGAV RMSD < 2Å by 2ns → STOP, pocket is sticky, rethink
+Hour 8:  Terminals B, C, D finish MD runs
+Hour 9:  Run drift analysis on all 12 trajectories
+Hour 10: Compile results, update synthesis panel
+```
+
+### Early Termination Rules
+- **If FASGAV locks in ERAP2:** STOP terminals B and D. Destroy instances. The sticky pocket means Boltz-2 starting poses are biased. Need to re-equilibrate with randomized peptide placement.
+- **If any lead drifts out of ERAP2-K392 within 2ns:** That lead is deprioritized. Don't waste the remaining 8ns — kill that run and reallocate GPU time.
+- **If all leads drift out of IRAP within 2ns:** IRAP evasion confirmed early. Can kill IRAP runs and save GPU hours.
 
 ### Total Estimated Cost
-- GPU compute: ~$6-12
+- 3 GPU instances × 8 hrs × ~$0.27/hr = ~$6-8
 - Peptide synthesis: ~$400-800
 - Patent filing: $75
 - Enzyme assay reagents: ~$500-800
