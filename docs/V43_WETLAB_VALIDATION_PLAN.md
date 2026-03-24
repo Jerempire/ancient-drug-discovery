@@ -168,9 +168,11 @@ GPU: Required. RTX 4090 does ~150 ns/day for ~10K atom system.
 """
 ```
 
-### Analysis: Drift Detection
+### Analysis: Drift Detection + Functional Validation
 
-After each 10ns run, compute:
+After each 10ns run, compute ALL of the following:
+
+#### A. Core Stability Metrics
 
 1. **Peptide RMSD** (backbone atoms, aligned to protein):
    - < 2.0 Å: LOCKED — peptide is stable
@@ -187,8 +189,80 @@ After each 10ns run, compute:
    - > 70% maintained: STABLE complex
    - < 30% maintained: DISSOCIATED
 
+#### B. Zinc Distance (CRITICAL — proves functional inhibition)
+
+4. **Peptide-to-Zinc Distance**:
+   - Track minimum distance from any peptide heavy atom to catalytic Zn2+ over time
+   - < 5 Å: Peptide is near catalytic center — potential functional plug
+   - 5-10 Å: Peptide is in channel but not blocking zinc
+   - > 10 Å: Peptide is peripheral, not inhibitory
+   - **Must use FULL ERAP2 structure** (not cropped channel) for this metric
+
+#### C. 3-Region Contact Distribution (proves NOT a local anchor)
+
+5. **Contact Distribution Across 3 Channel Neighborhoods**:
+   A 6-mer must touch 3 distinct regions to be a real binder, not a local anchor:
+
+   | Region | Name | Key Residues | What It Proves |
+   |---|---|---|---|
+   | **Floor** | K392 selectivity handle | K392, Y398 | Variant selectivity |
+   | **Wall** | IRAP/ERAP1 evasion handle | A403, A406 | Paralog selectivity |
+   | **Ceiling** | Channel cap | Q412, D414 | Peptide fills volume, not laying flat |
+
+   For each frame, count contacts (< 4.5 Å) with each region:
+   - All 3 regions contacted: **VOLUME FILLER** — real functional binder
+   - 2 regions: **PARTIAL** — may still work but less confident
+   - 1 region only: **LOCAL ANCHOR** — likely not a functional inhibitor
+
+#### D. Hydrogen Bond Occupancy (proves specific interactions)
+
+6. **Key H-bond Occupancy Over Trajectory**:
+   - P1 ↔ K392 sidechain: Is there a persistent interaction? (>50% occupancy)
+   - C-terminal Phe backbone ↔ channel residues: Does the aromatic anchor hold?
+   - Any peptide ↔ Y398 hydroxyl: Does the ERAP2-unique Tyr contribute?
+   - Report: H-bond donor, acceptor, occupancy %, avg distance
+
+#### E. Per-Run Summary JSON (REQUIRED — all terminals must output this)
+
+Each MD run's `summary.json` in the terminal output directory must contain:
+```json
+{
+  "peptide": "VAGSAF",
+  "target": "erap2k392",
+  "terminal": "b",
+  "rmsd_final": 1.45,
+  "rmsd_mean": 1.23,
+  "rmsd_max": 2.10,
+  "com_drift_final": 0.82,
+  "contact_fraction_final": 0.85,
+  "zinc_distance_mean": 4.2,
+  "zinc_distance_min": 3.1,
+  "floor_contacts_pct": 0.92,
+  "wall_contacts_pct": 0.78,
+  "ceiling_contacts_pct": 0.65,
+  "region_verdict": "VOLUME_FILLER",
+  "hbond_p1_k392_occupancy": 0.73,
+  "hbond_cterm_occupancy": 0.81,
+  "verdict": "LOCKED",
+  "simulation_ns": 10.0,
+  "wall_time_hours": 1.8,
+  "gpu": "RTX 4090",
+  "instance_id": "33XXXXXX"
+}
+```
+
 ### Script Location for Analysis
 `scripts/md_drift_analysis.py`
+
+### FUTURE: Steered MD Competition Test (Phase 2, after initial MD)
+
+If leads pass the 10ns stability test, run Steered Molecular Dynamics (SMD):
+- Place a natural 10-mer substrate at the channel entrance while the 6-mer is bound
+- Apply a pulling force to drag the substrate into the channel
+- **If the 6-mer doesn't budge**: it has higher binding affinity than substrate → true competitive inhibitor
+- **If the 6-mer gets displaced**: it's a weaker binder that won't survive in vivo substrate competition
+- This is the computational equivalent of a Ki assay
+- Requires ~5ns per pull, 3 replicas = ~15ns per peptide. Do AFTER confirming stability.
 
 ### Expected Results
 
