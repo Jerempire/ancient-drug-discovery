@@ -1,0 +1,42 @@
+{
+  "created": "2026-03-24",
+  "plan": "docs/V43_WETLAB_VALIDATION_PLAN.md",
+  "terminal_a": {
+    "status": "not_started",
+    "role": "SASA zinc capping + CRO prep + patent drafting (CPU only)",
+    "tasks_completed": [],
+    "tasks_remaining": ["sasa_VAGSAF", "sasa_IAFSAF", "sasa_VAWSAF", "sasa_FASGAV", "contact_maps", "cro_specs", "patent_draft"],
+    "last_updated": null
+  },
+  "terminal_b": {
+    "status": "not_started",
+    "role": "MD leads vs ERAP2-K392 + IRAP (GPU)",
+    "instance_id": null,
+    "ssh": null,
+    "runs_completed": [],
+    "runs_remaining": ["VAGSAF_erap2k392", "VAGSAF_irap", "IAFSAF_erap2k392", "IAFSAF_irap"],
+    "last_updated": null
+  },
+  "terminal_c": {
+    "status": "not_started",
+    "role": "MD controls vs ERAP2-K392 + IRAP — RUNS FASGAV GATE FIRST (GPU)",
+    "instance_id": null,
+    "ssh": null,
+    "runs_completed": [],
+    "runs_remaining": ["FASGAV_erap2k392", "FASGAV_irap", "VAWSAF_erap2k392", "VAWSAF_irap"],
+    "gate_result": null,
+    "last_updated": null
+  },
+  "terminal_d": {
+    "status": "not_started",
+    "role": "MD all 4 peptides vs ERAP1 (GPU)",
+    "instance_id": null,
+    "ssh": null,
+    "runs_completed": [],
+    "runs_remaining": ["VAGSAF_erap1", "IAFSAF_erap1", "VAWSAF_erap1", "FASGAV_erap1"],
+    "last_updated": null
+  },
+  "gate_passed": null,
+  "all_complete": false,
+  "notes": "Terminal C must run FASGAV_erap2k392 FIRST. If RMSD < 2A at 2ns, set gate_passed=false and alert all terminals to STOP."
+}

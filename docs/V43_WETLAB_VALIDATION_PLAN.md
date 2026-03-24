@@ -414,6 +414,154 @@ Hour 10: Compile results, update synthesis panel
 
 ---
 
+## OUTPUT DIRECTORY STRUCTURE
+
+**Every terminal writes to its own subdirectory. No exceptions.**
+
+```
+data/results/v43_validation/
+├── terminal_a/                    ← Terminal A (CPU, local)
+│   ├── sasa/
+│   │   ├── VAGSAF_sasa.json
+│   │   ├── IAFSAF_sasa.json
+│   │   ├── VAWSAF_sasa.json
+│   │   ├── FASGAV_sasa.json
+│   │   └── sasa_summary.json     ← zinc capping verdicts
+│   ├── contact_maps/
+│   │   └── *.json
+│   └── terminal_a_status.json    ← updated after each task completes
+│
+├── terminal_b/                    ← Terminal B (GPU — leads vs ERAP2+IRAP)
+│   ├── md_VAGSAF_erap2k392/
+│   │   ├── trajectory.dcd
+│   │   ├── rmsd.csv
+│   │   ├── com_drift.csv
+│   │   └── summary.json
+│   ├── md_VAGSAF_irap/
+│   │   ├── trajectory.dcd
+│   │   ├── rmsd.csv
+│   │   ├── com_drift.csv
+│   │   └── summary.json
+│   ├── md_IAFSAF_erap2k392/
+│   │   └── (same structure)
+│   ├── md_IAFSAF_irap/
+│   │   └── (same structure)
+│   └── terminal_b_status.json    ← updated after each run completes
+│
+├── terminal_c/                    ← Terminal C (GPU — controls vs ERAP2+IRAP)
+│   ├── md_VAWSAF_erap2k392/
+│   │   └── (same structure)
+│   ├── md_VAWSAF_irap/
+│   │   └── (same structure)
+│   ├── md_FASGAV_erap2k392/      ← THE GATE EXPERIMENT
+│   │   └── (same structure)
+│   ├── md_FASGAV_irap/
+│   │   └── (same structure)
+│   └── terminal_c_status.json
+│
+├── terminal_d/                    ← Terminal D (GPU — all 4 vs ERAP1)
+│   ├── md_VAGSAF_erap1/
+│   │   └── (same structure)
+│   ├── md_IAFSAF_erap1/
+│   │   └── (same structure)
+│   ├── md_VAWSAF_erap1/
+│   │   └── (same structure)
+│   ├── md_FASGAV_erap1/
+│   │   └── (same structure)
+│   └── terminal_d_status.json
+│
+├── compiled/                      ← Final compiled results (written AFTER all terminals finish)
+│   ├── all_rmsd.csv              ← 12 runs, one row per run
+│   ├── all_drift.csv
+│   ├── selectivity_matrix.json   ← full 4×3 peptide×target matrix
+│   ├── gate_result.json          ← FASGAV pass/fail verdict
+│   └── final_verdict.md          ← human-readable summary
+│
+└── coordination.json              ← COORDINATION FILE (see below)
+```
+
+### Coordination File: `coordination.json`
+
+Each terminal reads and updates this file to track progress. **Use atomic file writes (Python json.load/dump) to avoid corruption.**
+
+```json
+{
+  "created": "2026-03-24T...",
+  "terminal_a": {
+    "status": "not_started",
+    "tasks_completed": [],
+    "tasks_remaining": ["sasa", "contact_maps"],
+    "last_updated": null
+  },
+  "terminal_b": {
+    "status": "not_started",
+    "instance_id": null,
+    "ssh": null,
+    "runs_completed": [],
+    "runs_remaining": ["VAGSAF_erap2k392", "VAGSAF_irap", "IAFSAF_erap2k392", "IAFSAF_irap"],
+    "last_updated": null
+  },
+  "terminal_c": {
+    "status": "not_started",
+    "instance_id": null,
+    "ssh": null,
+    "runs_completed": [],
+    "runs_remaining": ["FASGAV_erap2k392", "FASGAV_irap", "VAWSAF_erap2k392", "VAWSAF_irap"],
+    "gate_result": null,
+    "last_updated": null
+  },
+  "terminal_d": {
+    "status": "not_started",
+    "instance_id": null,
+    "ssh": null,
+    "runs_completed": [],
+    "runs_remaining": ["VAGSAF_erap1", "IAFSAF_erap1", "VAWSAF_erap1", "FASGAV_erap1"],
+    "last_updated": null
+  },
+  "gate_passed": null,
+  "all_complete": false
+}
+```
+
+### Rules for All Terminals
+
+1. **Write ONLY to your own `terminal_X/` directory.** Never write to another terminal's directory.
+2. **Update `coordination.json`** after completing each run. Move the run name from `runs_remaining` to `runs_completed`. Update `last_updated` timestamp.
+3. **Check `coordination.json` before starting a new run.** If `gate_passed` is `false`, STOP and destroy your GPU instance.
+4. **Terminal C sets the gate.** After FASGAV vs ERAP2-K392 finishes, Terminal C writes `gate_result` ("pass" or "fail") and sets `gate_passed` to `true` or `false`.
+5. **Each MD run's `summary.json` must contain:**
+   ```json
+   {
+     "peptide": "VAGSAF",
+     "target": "erap2k392",
+     "terminal": "b",
+     "rmsd_final": 1.45,
+     "rmsd_mean": 1.23,
+     "rmsd_max": 2.10,
+     "com_drift_final": 0.82,
+     "contact_fraction_final": 0.85,
+     "verdict": "LOCKED",
+     "simulation_ns": 10.0,
+     "wall_time_hours": 1.8,
+     "gpu": "RTX 4090",
+     "instance_id": "33XXXXXX"
+   }
+   ```
+6. **Naming convention for trajectories on Vast.ai:** `/workspace/md_{PEPTIDE}_{TARGET}/` — matches the local directory name exactly. Download with `scp -r` into your terminal's directory.
+7. **Do NOT run `git push` from GPU terminals.** Only push from the local machine after downloading results.
+
+### Post-Completion: Compiling Results
+
+After all terminals report `status: "complete"` in `coordination.json`, one terminal (preferably Terminal A since it's local) runs the compiler:
+
+```bash
+python scripts/compile_v43_results.py
+```
+
+This reads all 12 `summary.json` files, builds the selectivity matrix, and writes `compiled/final_verdict.md`.
+
+---
+
 ## SUCCESS CRITERIA
 
 ### Computational (this phase)
