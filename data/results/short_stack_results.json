@@ -1,0 +1,260 @@
+{
+  "library": {
+    "ss6_VAGSAF": {
+      "seq": "VAGSAF",
+      "len": 6,
+      "logic": "V-P1 + small mid + F-Cterm"
+    },
+    "ss6_IAGSAY": {
+      "seq": "IAGSAY",
+      "len": 6,
+      "logic": "I-P1 + small mid + Y-Cterm"
+    },
+    "ss6_VAGSYW": {
+      "seq": "VAGSYW",
+      "len": 6,
+      "logic": "V-P1 + aromatic pair Cterm"
+    },
+    "ss6_IAGSAW": {
+      "seq": "IAGSAW",
+      "len": 6,
+      "logic": "I-P1 + W-Cterm (large aromatic)"
+    },
+    "ss6_LAGSAF": {
+      "seq": "LAGSAF",
+      "len": 6,
+      "logic": "L-P1 (linear) + F-Cterm"
+    },
+    "ss6_VASSKY": {
+      "seq": "VASSKY",
+      "len": 6,
+      "logic": "V-P1 + mini KY motif (cation-pi)"
+    },
+    "ss7_VAGSAAF": {
+      "seq": "VAGSAAF",
+      "len": 7,
+      "logic": "V-P1 + extended small mid + F-Cterm"
+    },
+    "ss7_IAGSAAY": {
+      "seq": "IAGSAAY",
+      "len": 7,
+      "logic": "I-P1 + extended + Y-Cterm"
+    },
+    "ss7_VAGSKKY": {
+      "seq": "VAGSKKY",
+      "len": 7,
+      "logic": "V-P1 + KKY motif on 7-mer"
+    },
+    "ss7_IAGSKKY": {
+      "seq": "IAGSKKY",
+      "len": 7,
+      "logic": "I-P1 + KKY motif on 7-mer"
+    },
+    "ss7_VAFSAGY": {
+      "seq": "VAFSAGY",
+      "len": 7,
+      "logic": "V-P1 + F-mid aromatic + Y-Cterm"
+    },
+    "ss7_IALSAFW": {
+      "seq": "IALSAFW",
+      "len": 7,
+      "logic": "I-P1 + L-mid + FW aromatic pair"
+    },
+    "ss6_VAWSAF": {
+      "seq": "VAWSAF",
+      "len": 6,
+      "logic": "W at P3 \u2014 fits ERAP2 Ala406 hole, clashes IRAP Asn406"
+    },
+    "ss6_IAFSAF": {
+      "seq": "IAFSAF",
+      "len": 6,
+      "logic": "F at P3 \u2014 aromatic clash handle"
+    },
+    "ss7_VAWSAAF": {
+      "seq": "VAWSAAF",
+      "len": 7,
+      "logic": "W at P3, 7-mer version"
+    },
+    "ss7_IAFSAAY": {
+      "seq": "IAFSAAY",
+      "len": 7,
+      "logic": "F at P3, 7-mer, Y-Cterm"
+    },
+    "ss6_AAGSAF": {
+      "seq": "AAGSAF",
+      "len": 6,
+      "logic": "A-P1 baseline (no steric P1)"
+    },
+    "ss6_EAGSAF": {
+      "seq": "EAGSAF",
+      "len": 6,
+      "logic": "E-P1 charged (salt bridge vs steric test)"
+    }
+  },
+  "results": [
+    {
+      "name": "ss6_IAFSAF",
+      "seq": "IAFSAF",
+      "len": 6,
+      "K392": 0.8697773019472758,
+      "N392": 0.631103386481603,
+      "delta": 0.23867391546567274,
+      "logic": "F at P3 \u2014 aromatic clash handle"
+    },
+    {
+      "name": "ss6_AAGSAF",
+      "seq": "AAGSAF",
+      "len": 6,
+      "K392": 0.7988821069399515,
+      "N392": 0.6346526543299357,
+      "delta": 0.16422945261001587,
+      "logic": "A-P1 baseline (no steric P1)"
+    },
+    {
+      "name": "ss6_LAGSAF",
+      "seq": "LAGSAF",
+      "len": 6,
+      "K392": 0.8208070993423462,
+      "N392": 0.7168087561925253,
+      "delta": 0.10399834314982093,
+      "logic": "L-P1 (linear) + F-Cterm"
+    },
+    {
+      "name": "ss6_EAGSAF",
+      "seq": "EAGSAF",
+      "len": 6,
+      "K392": 0.7302346030871073,
+      "N392": 0.6414044499397278,
+      "delta": 0.08883015314737952,
+      "logic": "E-P1 charged (salt bridge vs steric test)"
+    },
+    {
+      "name": "ss7_IAFSAAY",
+      "seq": "IAFSAAY",
+      "len": 7,
+      "K392": 0.7095176577568054,
+      "N392": 0.6269771854082743,
+      "delta": 0.08254047234853112,
+      "logic": "F at P3, 7-mer, Y-Cterm"
+    },
+    {
+      "name": "ss7_VAFSAGY",
+      "seq": "VAFSAGY",
+      "len": 7,
+      "K392": 0.8333855072657267,
+      "N392": 0.7540064652760824,
+      "delta": 0.0793790419896443,
+      "logic": "V-P1 + F-mid aromatic + Y-Cterm"
+    },
+    {
+      "name": "ss6_IAGSAW",
+      "seq": "IAGSAW",
+      "len": 6,
+      "K392": 0.8202431599299113,
+      "N392": 0.7441276510556539,
+      "delta": 0.07611550887425733,
+      "logic": "I-P1 + W-Cterm (large aromatic)"
+    },
+    {
+      "name": "ss6_VASSKY",
+      "seq": "VASSKY",
+      "len": 6,
+      "K392": 0.7180127104123434,
+      "N392": 0.6565063496430715,
+      "delta": 0.06150636076927185,
+      "logic": "V-P1 + mini KY motif (cation-pi)"
+    },
+    {
+      "name": "ss6_VAGSAF",
+      "seq": "VAGSAF",
+      "len": 6,
+      "K392": 0.905193825562795,
+      "N392": 0.8699601888656616,
+      "delta": 0.03523363669713342,
+      "logic": "V-P1 + small mid + F-Cterm"
+    },
+    {
+      "name": "ss6_VAWSAF",
+      "seq": "VAWSAF",
+      "len": 6,
+      "K392": 0.8516319990158081,
+      "N392": 0.8298391103744507,
+      "delta": 0.021792888641357422,
+      "logic": "W at P3 \u2014 fits ERAP2 Ala406 hole, clashes IRAP Asn406"
+    },
+    {
+      "name": "ss7_IALSAFW",
+      "seq": "IALSAFW",
+      "len": 7,
+      "K392": 0.8772329092025757,
+      "N392": 0.8744552135467529,
+      "delta": 0.002777695655822754,
+      "logic": "I-P1 + L-mid + FW aromatic pair"
+    },
+    {
+      "name": "ss6_VAGSYW",
+      "seq": "VAGSYW",
+      "len": 6,
+      "K392": 0.7770534753799438,
+      "N392": 0.7774553100268046,
+      "delta": -0.00040183464686072146,
+      "logic": "V-P1 + aromatic pair Cterm"
+    },
+    {
+      "name": "ss7_IAGSAAY",
+      "seq": "IAGSAAY",
+      "len": 7,
+      "K392": 0.7307568987210592,
+      "N392": 0.7487063407897949,
+      "delta": -0.01794944206873572,
+      "logic": "I-P1 + extended + Y-Cterm"
+    },
+    {
+      "name": "ss7_IAGSKKY",
+      "seq": "IAGSKKY",
+      "len": 7,
+      "K392": 0.775848388671875,
+      "N392": 0.8196362654368082,
+      "delta": -0.04378787676493323,
+      "logic": "I-P1 + KKY motif on 7-mer"
+    },
+    {
+      "name": "ss7_VAWSAAF",
+      "seq": "VAWSAAF",
+      "len": 7,
+      "K392": 0.6292903025945028,
+      "N392": 0.694725771745046,
+      "delta": -0.06543546915054321,
+      "logic": "W at P3, 7-mer version"
+    },
+    {
+      "name": "ss7_VAGSAAF",
+      "seq": "VAGSAAF",
+      "len": 7,
+      "K392": 0.8009946346282959,
+      "N392": 0.8824262817700704,
+      "delta": -0.08143164714177453,
+      "logic": "V-P1 + extended small mid + F-Cterm"
+    },
+    {
+      "name": "ss6_IAGSAY",
+      "seq": "IAGSAY",
+      "len": 6,
+      "K392": 0.7590006391207377,
+      "N392": 0.8577848672866821,
+      "delta": -0.09878422816594445,
+      "logic": "I-P1 + small mid + Y-Cterm"
+    },
+    {
+      "name": "ss7_VAGSKKY",
+      "seq": "VAGSKKY",
+      "len": 7,
+      "K392": 0.728140652179718,
+      "N392": 0.844244122505188,
+      "delta": -0.11610347032546997,
+      "logic": "V-P1 + KKY motif on 7-mer"
+    }
+  ],
+  "k392_selective_count": 10,
+  "total_tested": 18
+}
