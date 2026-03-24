@@ -1,0 +1,12 @@
+{
+    "erap2_k392": {
+        "pdb": "erap2_k392.pdb",
+        "binding_site_residues": "388-410",
+        "description": "ERAP2 K392 - target (Ala406)"
+    },
+    "irap": {
+        "pdb": "irap.pdb",
+        "binding_site_residues": "388-410",
+        "description": "IRAP - off-target (Asn406, should clash with bulky)"
+    }
+}
