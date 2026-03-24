@@ -1,0 +1,178 @@
+[
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P4P5P6_III",
+    "avg_contacts": 263.0,
+    "avg_hbonds": 10.5,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P4P5P6_LLL",
+    "avg_contacts": 251.0,
+    "avg_hbonds": 9.7,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P5P6_II",
+    "avg_contacts": 262.0,
+    "avg_hbonds": 10.7,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P5P6_LL",
+    "avg_contacts": 261.0,
+    "avg_hbonds": 10.9,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P5P6_VV",
+    "avg_contacts": 296.0,
+    "avg_hbonds": 13.0,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P5P6_WW",
+    "avg_contacts": 282.0,
+    "avg_hbonds": 11.1,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P5_W_P6_V",
+    "avg_contacts": 286.0,
+    "avg_hbonds": 12.6,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P5_hydrophobic_IVL",
+    "avg_contacts": 241.0,
+    "avg_hbonds": 9.7,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_P5_naphthyl_W_P6_I",
+    "avg_contacts": 259.0,
+    "avg_hbonds": 10.2,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_hydrophobic_core",
+    "avg_contacts": 250.0,
+    "avg_hbonds": 9.9,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "erap2_k392",
+    "peptide": "v41c_parent",
+    "avg_contacts": 262.0,
+    "avg_hbonds": 10.7,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P4P5P6_III",
+    "avg_contacts": 516.0,
+    "avg_hbonds": 17.3,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P4P5P6_LLL",
+    "avg_contacts": 505.0,
+    "avg_hbonds": 15.4,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P5P6_II",
+    "avg_contacts": 507.0,
+    "avg_hbonds": 17.2,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P5P6_LL",
+    "avg_contacts": 517.0,
+    "avg_hbonds": 18.2,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P5P6_VV",
+    "avg_contacts": 510.0,
+    "avg_hbonds": 17.1,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P5P6_WW",
+    "avg_contacts": 520.0,
+    "avg_hbonds": 18.5,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P5_W_P6_V",
+    "avg_contacts": 515.0,
+    "avg_hbonds": 18.3,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P5_hydrophobic_IVL",
+    "avg_contacts": 517.0,
+    "avg_hbonds": 17.8,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_P5_naphthyl_W_P6_I",
+    "avg_contacts": 512.0,
+    "avg_hbonds": 18.1,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_hydrophobic_core",
+    "avg_contacts": 517.0,
+    "avg_hbonds": 17.9,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  },
+  {
+    "target": "irap",
+    "peptide": "v41c_parent",
+    "avg_contacts": 520.0,
+    "avg_hbonds": 18.8,
+    "n_samples": 32,
+    "pos406_contacts": {}
+  }
+]
