@@ -187,5 +187,33 @@
     "seq": "EKTVLLSIGK",
     "experiment": "E5_multiseed",
     "rationale": "v42_multi_TVL multi-seed: V4.2 winner (K392=0.721, selE1=+0.150, selIR=+0.154)"
+  },
+  {
+    "name": "ss_trp406_EKLLWLSIGK",
+    "seq": "EKLLWLSIGK",
+    "experiment": "E4_shortstack",
+    "family": "C_trp_wedge",
+    "rationale": "Trp wedge at P5 (faces A406): bulky aromatic clashes with IRAP N486/K500"
+  },
+  {
+    "name": "ss_trp406_EKTVWLSIGK",
+    "seq": "EKTVWLSIGK",
+    "experiment": "E4_shortstack",
+    "family": "C_trp_wedge",
+    "rationale": "TVL winner + Trp wedge at P5: combines 392+398+403 handles with IRAP steric clash"
+  },
+  {
+    "name": "ss_trp406_EKTWKY",
+    "seq": "EKTWKY",
+    "experiment": "E4_shortstack",
+    "family": "C_trp_wedge",
+    "rationale": "6-mer: TVL handles (E+T) + Trp wedge (W) + KY anchor"
+  },
+  {
+    "name": "ss_trp406_KILWKY",
+    "seq": "KILWKY",
+    "experiment": "E4_shortstack",
+    "family": "C_trp_wedge",
+    "rationale": "6-mer: KKY-family + Trp wedge at interior position"
   }
 ]
