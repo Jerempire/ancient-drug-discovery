@@ -1,0 +1,70 @@
+{
+  "VAGSAF": {
+    "erap2k392": {
+      "iptm": 0.9101369380950928,
+      "cif": "/workspace/results/elite_four/VAGSAF_vs_erap2k392/boltz_results_VAGSAF_vs_erap2k392/predictions/VAGSAF_vs_erap2k392/VAGSAF_vs_erap2k392_model_0.cif",
+      "n_cifs": 3
+    },
+    "erap1": {
+      "iptm": 0.485929399728775,
+      "cif": "/workspace/results/elite_four/VAGSAF_vs_erap1/boltz_results_VAGSAF_vs_erap1/predictions/VAGSAF_vs_erap1/VAGSAF_vs_erap1_model_0.cif",
+      "n_cifs": 3
+    },
+    "irap": {
+      "iptm": 0.30672159790992737,
+      "cif": "/workspace/results/elite_four/VAGSAF_vs_irap/boltz_results_VAGSAF_vs_irap/predictions/VAGSAF_vs_irap/VAGSAF_vs_irap_model_0.cif",
+      "n_cifs": 3
+    }
+  },
+  "IAFSAF": {
+    "erap2k392": {
+      "iptm": 0.837949812412262,
+      "cif": "/workspace/results/elite_four/IAFSAF_vs_erap2k392/boltz_results_IAFSAF_vs_erap2k392/predictions/IAFSAF_vs_erap2k392/IAFSAF_vs_erap2k392_model_0.cif",
+      "n_cifs": 3
+    },
+    "erap1": {
+      "iptm": 0.19247610867023468,
+      "cif": "/workspace/results/elite_four/IAFSAF_vs_erap1/boltz_results_IAFSAF_vs_erap1/predictions/IAFSAF_vs_erap1/IAFSAF_vs_erap1_model_0.cif",
+      "n_cifs": 3
+    },
+    "irap": {
+      "iptm": 0.3933633863925934,
+      "cif": "/workspace/results/elite_four/IAFSAF_vs_irap/boltz_results_IAFSAF_vs_irap/predictions/IAFSAF_vs_irap/IAFSAF_vs_irap_model_0.cif",
+      "n_cifs": 3
+    }
+  },
+  "VAWSAF": {
+    "erap2k392": {
+      "iptm": 0.8972274661064148,
+      "cif": "/workspace/results/elite_four/VAWSAF_vs_erap2k392/boltz_results_VAWSAF_vs_erap2k392/predictions/VAWSAF_vs_erap2k392/VAWSAF_vs_erap2k392_model_0.cif",
+      "n_cifs": 3
+    },
+    "erap1": {
+      "iptm": 0.16161154210567474,
+      "cif": "/workspace/results/elite_four/VAWSAF_vs_erap1/boltz_results_VAWSAF_vs_erap1/predictions/VAWSAF_vs_erap1/VAWSAF_vs_erap1_model_0.cif",
+      "n_cifs": 3
+    },
+    "irap": {
+      "iptm": 0.22918292880058289,
+      "cif": "/workspace/results/elite_four/VAWSAF_vs_irap/boltz_results_VAWSAF_vs_irap/predictions/VAWSAF_vs_irap/VAWSAF_vs_irap_model_0.cif",
+      "n_cifs": 3
+    }
+  },
+  "FASGAV": {
+    "erap2k392": {
+      "iptm": 0.8131793141365051,
+      "cif": "/workspace/results/elite_four/FASGAV_vs_erap2k392/boltz_results_FASGAV_vs_erap2k392/predictions/FASGAV_vs_erap2k392/FASGAV_vs_erap2k392_model_0.cif",
+      "n_cifs": 3
+    },
+    "erap1": {
+      "iptm": 0.14225420355796814,
+      "cif": "/workspace/results/elite_four/FASGAV_vs_erap1/boltz_results_FASGAV_vs_erap1/predictions/FASGAV_vs_erap1/FASGAV_vs_erap1_model_0.cif",
+      "n_cifs": 3
+    },
+    "irap": {
+      "iptm": 0.39082983136177063,
+      "cif": "/workspace/results/elite_four/FASGAV_vs_irap/boltz_results_FASGAV_vs_irap/predictions/FASGAV_vs_irap/FASGAV_vs_irap_model_0.cif",
+      "n_cifs": 3
+    }
+  }
+}

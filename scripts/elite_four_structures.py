@@ -132,7 +132,7 @@ def cmd_graft():
     # Paths (local)
     PROJECT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     STRUCT_DIR = os.path.join(PROJECT, "data", "structures")
-    CIF_DIR = os.path.join(PROJECT, "data", "results", "v43_validation", "elite_four_cifs")
+    CIF_DIR = os.path.join(PROJECT, "data", "results", "v43_validation", "elite_four_cifs", "elite_four")
     OUT_DIR = os.path.join(PROJECT, "data", "results", "v43_validation", "md_starting_structures")
     os.makedirs(OUT_DIR, exist_ok=True)
 
