@@ -18,10 +18,10 @@
     "last_updated": "2026-03-24T20:21:38.656727"
   },
   "terminal_b": {
-    "status": "not_started",
+    "status": "in_progress",
     "role": "MD leads vs ERAP2-K392 + IRAP (GPU)",
-    "instance_id": null,
-    "ssh": null,
+    "instance_id": 33489778,
+    "ssh": "ssh -p 19778 root@ssh1.vast.ai",
     "runs_completed": [],
     "runs_remaining": [
       "VAGSAF_erap2k392",
@@ -29,11 +29,11 @@
       "IAFSAF_erap2k392",
       "IAFSAF_irap"
     ],
-    "last_updated": null
+    "last_updated": "2026-03-25T01:48:00"
   },
   "terminal_c": {
     "status": "not_started",
-    "role": "MD controls vs ERAP2-K392 + IRAP \u00e2\u20ac\u201d RUNS FASGAV GATE FIRST (GPU)",
+    "role": "MD controls vs ERAP2-K392 + IRAP — RUNS FASGAV GATE FIRST (GPU)",
     "instance_id": null,
     "ssh": null,
     "runs_completed": [],

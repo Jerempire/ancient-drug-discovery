@@ -1,0 +1,62 @@
+{
+  "V_pep_K392": {
+    "case": "V_pep_K392",
+    "peptide": "VKLLLLSI",
+    "variant": "K392",
+    "n_atoms": 185116,
+    "prod_ns": 10.0,
+    "wall_time_s": 6194.216005086899,
+    "ns_per_day": 141.52324116022888,
+    "peptide_rmsd_mean_A": 0.9394341707229614,
+    "peptide_rmsd_std_A": 0.3866528868675232,
+    "peptide_rmsd_max_A": 1.8944118022918701,
+    "min_dist_mean_A": 23.900915145874023,
+    "min_dist_max_A": 35.78563690185547,
+    "first_dissociation_ns": 0.0
+  },
+  "V_pep_N392": {
+    "case": "V_pep_N392",
+    "peptide": "VKLLLLSI",
+    "variant": "N392",
+    "n_atoms": 185165,
+    "prod_ns": 10.0,
+    "wall_time_s": 6342.87424993515,
+    "ns_per_day": 138.053863968625,
+    "peptide_rmsd_mean_A": 1.0404807329177856,
+    "peptide_rmsd_std_A": 0.19979996979236603,
+    "peptide_rmsd_max_A": 1.4815776348114014,
+    "min_dist_mean_A": 24.521055221557617,
+    "min_dist_max_A": 37.1317253112793,
+    "first_dissociation_ns": 0.0
+  },
+  "D_pep_K392": {
+    "case": "D_pep_K392",
+    "peptide": "DKLLLLSI",
+    "variant": "K392",
+    "n_atoms": 186644,
+    "prod_ns": 10.0,
+    "wall_time_s": 6481.415375947952,
+    "ns_per_day": 135.1664856625492,
+    "peptide_rmsd_mean_A": 1.60453462600708,
+    "peptide_rmsd_std_A": 0.22861017286777496,
+    "peptide_rmsd_max_A": 2.3256235122680664,
+    "min_dist_mean_A": 24.933202743530273,
+    "min_dist_max_A": 36.94000244140625,
+    "first_dissociation_ns": 0.0
+  },
+  "D_pep_N392": {
+    "case": "D_pep_N392",
+    "peptide": "DKLLLLSI",
+    "variant": "N392",
+    "n_atoms": 185429,
+    "prod_ns": 10.0,
+    "wall_time_s": 6371.419675350189,
+    "ns_per_day": 137.67128215699728,
+    "peptide_rmsd_mean_A": 0.7351281046867371,
+    "peptide_rmsd_std_A": 0.12716299295425415,
+    "peptide_rmsd_max_A": 1.436460018157959,
+    "min_dist_mean_A": 28.347835540771484,
+    "min_dist_max_A": 37.816192626953125,
+    "first_dissociation_ns": 0.0
+  }
+}
