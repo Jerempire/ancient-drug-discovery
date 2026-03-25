@@ -1,0 +1,9 @@
+{
+  "label": "ss_KVI_01_irap",
+  "n_steps": 2500000,
+  "final_rmsd": 13.01,
+  "avg_rmsd": 10.3,
+  "rmsd_drift": 11.64,
+  "residence_pct": 100.0,
+  "residence_last_2ns": 100.0
+}

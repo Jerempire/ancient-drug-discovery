@@ -1,0 +1,9 @@
+{
+  "label": "ss_RVI_01_erap2_n392",
+  "n_steps": 2500000,
+  "final_rmsd": 14.22,
+  "avg_rmsd": 12.39,
+  "rmsd_drift": 13.02,
+  "residence_pct": 94.0,
+  "residence_last_2ns": 100.0
+}

@@ -1,0 +1,22 @@
+{
+    "erap2_n392": {
+        "pdb": "erap2_n392.pdb",
+        "binding_site_residues": "388-410",
+        "description": "ERAP2 N392 - primary target"
+    },
+    "erap2_k392": {
+        "pdb": "erap2_k392.pdb",
+        "binding_site_residues": "388-410",
+        "description": "ERAP2 K392 - variant check"
+    },
+    "erap1": {
+        "pdb": "erap1.pdb",
+        "binding_site_residues": "388-410",
+        "description": "ERAP1 - must avoid"
+    },
+    "irap": {
+        "pdb": "irap.pdb",
+        "binding_site_residues": "388-410",
+        "description": "IRAP - must avoid"
+    }
+}
