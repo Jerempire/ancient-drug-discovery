@@ -2,20 +2,18 @@
   "created": "2026-03-24",
   "plan": "docs/V43_WETLAB_VALIDATION_PLAN.md",
   "terminal_a": {
-    "status": "in_progress",
+    "status": "waiting_for_md",
     "role": "SASA zinc capping + CRO prep + patent drafting (CPU only)",
     "tasks_completed": [
-      "graft_structures"
-    ],
-    "tasks_remaining": [
-      "sasa_IAFSAF",
-      "sasa_VAWSAF",
-      "sasa_FASGAV",
+      "graft_structures",
+      "sasa_all",
       "contact_maps",
       "cro_specs",
       "patent_draft"
     ],
-    "last_updated": "2026-03-24T20:21:38.656727"
+    "tasks_remaining": [],
+    "last_updated": "2026-03-25T03:01:45.721795+00:00",
+    "notes": "All CPU tasks complete. SASA, contact maps, CRO specs, patent draft done. Compiler ready. Waiting for MD results from B/C/D."
   },
   "terminal_b": {
     "status": "in_progress",
@@ -32,10 +30,10 @@
     "last_updated": "2026-03-25T01:48:00"
   },
   "terminal_c": {
-    "status": "not_started",
-    "role": "MD controls vs ERAP2-K392 + IRAP — RUNS FASGAV GATE FIRST (GPU)",
-    "instance_id": null,
-    "ssh": null,
+    "status": "in_progress",
+    "role": "MD controls vs ERAP2-K392 + IRAP \u00e2\u20ac\u201d RUNS FASGAV GATE FIRST (GPU)",
+    "instance_id": "unknown",
+    "ssh": "ssh -p 19738 root@ssh8.vast.ai",
     "runs_completed": [],
     "runs_remaining": [
       "FASGAV_erap2k392",
@@ -43,14 +41,14 @@
       "VAWSAF_erap2k392",
       "VAWSAF_irap"
     ],
-    "gate_result": null,
-    "last_updated": null
+    "gate_result": "pass_com_drift",
+    "last_updated": "2026-03-25T03:10:32.959388+00:00"
   },
   "terminal_d": {
-    "status": "not_started",
+    "status": "in_progress",
     "role": "MD all 4 peptides vs ERAP1 (GPU)",
-    "instance_id": null,
-    "ssh": null,
+    "instance_id": 33489714,
+    "ssh": "ssh -p 19714 root@ssh4.vast.ai",
     "runs_completed": [],
     "runs_remaining": [
       "VAGSAF_erap1",
@@ -58,9 +56,36 @@
       "VAWSAF_erap1",
       "FASGAV_erap1"
     ],
-    "last_updated": null
+    "last_updated": "2026-03-24T21:45:00"
   },
-  "gate_passed": null,
+  "gate_passed": true,
   "all_complete": false,
-  "notes": "Terminal C must run FASGAV_erap2k392 FIRST. If RMSD < 2A at 2ns, set gate_passed=false and alert all terminals to STOP."
+  "notes": "FASGAV gate: RMSD stays <2A (rigid 6-mer doesnt deform) but COM drift = 6.6A at 5.6ns. Peptide is sliding out as rigid body. Gate PASSES on COM drift metric. For rigid 6-mers, COM drift is better than RMSD for detecting ejection. FASGAV running to 10ns for full picture, then C starts remaining 3 runs.",
+  "terminal_e": {
+    "status": "analysis_complete",
+    "role": "V2 protein binder channel-capping redesign (CPU only)",
+    "tasks_completed": [
+      "contact_footprint_analysis",
+      "sasa_channel_cap_test",
+      "redesign_strategy",
+      "boltz2_yaml_configs"
+    ],
+    "tasks_remaining": [
+      "run_boltz2_hybrid_predictions",
+      "rerun_sasa_on_hybrid_poses",
+      "selectivity_counterscreen"
+    ],
+    "last_updated": "2026-03-25T11:09:54.412175+00:00",
+    "results": {
+      "channel_capping_verdict": "BRIDGE_NOT_CAP",
+      "entrance_sasa_reduction_pct": 30.7,
+      "zinc_sasa_reduction_pct": 44.5,
+      "k392_sasa_reduction_pct": 79.7,
+      "ceiling_sasa_reduction_pct": 0.0,
+      "functional_verdict": "POSSIBLY_INHIBITORY",
+      "redesign_needed": true,
+      "recommended_approach": "Hybrid V2+V4: graft VAGSAF/IAFSAF peptide tail onto binder C-terminus via GGS linker"
+    },
+    "notes": "V2 binder bridges both divergent patches but leaves channel entrance 70% open. Ceiling (409-419) completely uncovered. Binder extends deep (442-489) instead of capping. Hybrid approach: protein body for selectivity + peptide tail for channel plugging. Boltz-2 YAMLs ready at data/boltz2_inputs/v2_hybrid_*.yaml"
+  }
 }

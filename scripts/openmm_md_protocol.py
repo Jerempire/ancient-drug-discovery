@@ -152,8 +152,9 @@ def find_zinc_index(topology):
 
 
 def run_simulation(system, topology, positions, output_dir, production_ns):
-    """Run minimization + equilibration + production."""
+    """Run minimization + restrained equilibration + production."""
     from openmm import LangevinMiddleIntegrator, MonteCarloBarostat, Platform
+    from openmm import CustomExternalForce
     from openmm.app import Simulation, DCDReporter, StateDataReporter, PDBFile
     from openmm import unit
 
@@ -174,6 +175,23 @@ def run_simulation(system, topology, positions, output_dir, production_ns):
             properties = {}
             print("WARNING: Using CPU platform — will be very slow!")
 
+    # --- Add position restraints on peptide heavy atoms ---
+    peptide_info = find_peptide_indices(topology)
+    restraint_force = CustomExternalForce(
+        "k * periodicdistance(x, y, z, x0, y0, z0)^2"
+    )
+    restraint_force.addGlobalParameter("k", 0.0)  # start at 0, set before equil
+    restraint_force.addPerParticleParameter("x0")
+    restraint_force.addPerParticleParameter("y0")
+    restraint_force.addPerParticleParameter("z0")
+
+    # Add peptide heavy atoms to restraint force
+    # (positions will be set after minimization)
+    for idx in peptide_info["heavy"]:
+        restraint_force.addParticle(idx, [0.0, 0.0, 0.0])
+    restraint_force_idx = system.addForce(restraint_force)
+    print("Added position restraints on %d peptide heavy atoms" % len(peptide_info["heavy"]))
+
     # Integrator
     integrator = LangevinMiddleIntegrator(
         TEMPERATURE * unit.kelvin,
@@ -189,25 +207,56 @@ def run_simulation(system, topology, positions, output_dir, production_ns):
     print("Minimizing (%d steps)..." % MINIMIZE_STEPS)
     sim.minimizeEnergy(maxIterations=MINIMIZE_STEPS)
 
-    # Save minimized structure
+    # Save minimized structure and update restraint reference positions
     state = sim.context.getState(getPositions=True)
+    min_positions = state.getPositions()
     with open(os.path.join(output_dir, "minimized.pdb"), "w") as f:
-        PDBFile.writeFile(topology, state.getPositions(), f)
+        PDBFile.writeFile(topology, min_positions, f)
 
-    # --- Phase 2: NVT Equilibration ---
-    nvt_steps = int(NVT_EQUIL_PS / (TIMESTEP_FS / 1000))
-    print("NVT equilibration (%d ps, %d steps)..." % (NVT_EQUIL_PS, nvt_steps))
+    # Set restraint reference positions to minimized coordinates
+    for i, idx in enumerate(peptide_info["heavy"]):
+        pos = min_positions[idx]
+        restraint_force.setParticleParameters(
+            i, idx,
+            [pos.x, pos.y, pos.z]
+        )
+    restraint_force.updateParametersInContext(sim.context)
+
+    # --- Phase 2: Restrained Equilibration (ramped) ---
+    # Schedule: 10 kJ/mol/nm² × 500ps → 5 × 250ps → 2 × 250ps → release
+    restraint_schedule = [
+        (10.0, 500),  # kJ/mol/nm², ps
+        (5.0, 250),
+        (2.0, 250),
+    ]
+
     sim.context.setVelocitiesToTemperature(TEMPERATURE * unit.kelvin)
-    sim.step(nvt_steps)
 
-    # --- Phase 3: NPT Equilibration ---
+    # Add barostat for NPT equilibration
     system.addForce(MonteCarloBarostat(PRESSURE * unit.atmospheres, TEMPERATURE * unit.kelvin))
     sim.context.reinitialize(preserveState=True)
-    npt_steps = int(NPT_EQUIL_PS / (TIMESTEP_FS / 1000))
-    print("NPT equilibration (%d ps, %d steps)..." % (NPT_EQUIL_PS, npt_steps))
-    sim.step(npt_steps)
 
-    # --- Phase 4: Production ---
+    # Re-set restraint reference positions after reinitialize
+    for i, idx in enumerate(peptide_info["heavy"]):
+        pos = min_positions[idx]
+        restraint_force.setParticleParameters(
+            i, idx,
+            [pos.x, pos.y, pos.z]
+        )
+    restraint_force.updateParametersInContext(sim.context)
+
+    for k_val, duration_ps in restraint_schedule:
+        n_steps = int(duration_ps / (TIMESTEP_FS / 1000))
+        sim.context.setParameter("k", k_val)
+        print("Restrained equilibration: k=%.1f kJ/mol/nm², %d ps (%d steps)..." % (
+            k_val, duration_ps, n_steps))
+        sim.step(n_steps)
+
+    # Release restraints
+    sim.context.setParameter("k", 0.0)
+    print("Restraints released — entering production MD")
+
+    # --- Phase 3: Production ---
     production_steps = int(production_ns * 1000 / (TIMESTEP_FS / 1000))
     report_interval = int(REPORT_INTERVAL_PS / (TIMESTEP_FS / 1000))
     energy_interval = int(ENERGY_INTERVAL_PS / (TIMESTEP_FS / 1000))
