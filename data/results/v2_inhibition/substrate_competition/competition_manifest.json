@@ -1,0 +1,52 @@
+{
+  "generated": "2026-03-26T00:34:08.852493+00:00",
+  "total_predictions": 7,
+  "diffusion_samples": 3,
+  "seed": 42,
+  "configs": [
+    {
+      "name": "ctrl_VAGSAF",
+      "type": "control",
+      "substrate": "VAGSAF",
+      "chains": 2
+    },
+    {
+      "name": "test_VAGSAF",
+      "type": "test",
+      "substrate": "VAGSAF",
+      "chains": 3
+    },
+    {
+      "name": "ctrl_KILKLYSSKKY",
+      "type": "control",
+      "substrate": "KILKLYSSKKY",
+      "chains": 2
+    },
+    {
+      "name": "test_KILKLYSSKKY",
+      "type": "test",
+      "substrate": "KILKLYSSKKY",
+      "chains": 3
+    },
+    {
+      "name": "ctrl_LLLLLLLLL",
+      "type": "control",
+      "substrate": "LLLLLLLLL",
+      "chains": 2
+    },
+    {
+      "name": "test_LLLLLLLLL",
+      "type": "test",
+      "substrate": "LLLLLLLLL",
+      "chains": 3
+    },
+    {
+      "name": "sanity_v2_erap2",
+      "type": "sanity",
+      "substrate": null,
+      "chains": 2
+    }
+  ],
+  "estimated_cost": "~$0.56 on RTX 4090 (~4.5 min each)",
+  "total_chains_largest": "ERAP2 (960aa) + V2 (92aa) + substrate (6-11aa) = ~1063aa"
+}

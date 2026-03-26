@@ -1,0 +1,139 @@
+{
+  "analysis": "PRODIGY binding affinity prediction for V2 binders",
+  "timestamp": "2026-03-26T00:26:53.906724+00:00",
+  "temperature_C": 25.0,
+  "constructs": {
+    "Y87A_Y89A": {
+      "erap2": {
+        "dG_kcal_mol": -13.285,
+        "Kd_M": 1.800419746745961e-10,
+        "Kd_uM": 0.0002,
+        "contacts": {},
+        "nis_charged": 35.42857142857143,
+        "nis_polar": null,
+        "nis_apolar": 26.857142857142858
+      },
+      "erap1": {
+        "dG_kcal_mol": -8.79,
+        "Kd_M": 3.5685678656259147e-07,
+        "Kd_uM": 0.3569,
+        "contacts": {},
+        "nis_charged": 31.794871794871796,
+        "nis_polar": null,
+        "nis_apolar": 34.35897435897436
+      },
+      "irap": {
+        "dG_kcal_mol": -11.049,
+        "Kd_M": 7.862859620169849e-09,
+        "Kd_uM": 0.0079,
+        "contacts": {},
+        "nis_charged": 31.41592920353982,
+        "nis_polar": null,
+        "nis_apolar": 36.283185840707965
+      },
+      "anpep": {
+        "dG_kcal_mol": -8.303,
+        "Kd_M": 8.129274742342728e-07,
+        "Kd_uM": 0.8129,
+        "contacts": {},
+        "nis_charged": 24.583333333333332,
+        "nis_polar": null,
+        "nis_apolar": 37.5
+      }
+    },
+    "parent_trim_c5": {
+      "erap2": {
+        "dG_kcal_mol": -15.086,
+        "Kd_M": 8.593572984880889e-12,
+        "Kd_uM": 0.0,
+        "contacts": {},
+        "nis_charged": 35.88235294117647,
+        "nis_polar": null,
+        "nis_apolar": 24.705882352941178
+      },
+      "erap1": {
+        "dG_kcal_mol": -10.998,
+        "Kd_M": 8.56498152289368e-09,
+        "Kd_uM": 0.0086,
+        "contacts": {},
+        "nis_charged": 33.15217391304348,
+        "nis_polar": null,
+        "nis_apolar": 30.97826086956522
+      },
+      "irap": {
+        "dG_kcal_mol": -10.206,
+        "Kd_M": 3.265414418773505e-08,
+        "Kd_uM": 0.0327,
+        "contacts": {},
+        "nis_charged": 32.17391304347826,
+        "nis_polar": null,
+        "nis_apolar": 33.47826086956522
+      },
+      "anpep": {
+        "dG_kcal_mol": -10.929,
+        "Kd_M": 9.636919201000936e-09,
+        "Kd_uM": 0.0096,
+        "contacts": {},
+        "nis_charged": 24.686192468619247,
+        "nis_polar": null,
+        "nis_apolar": 36.82008368200837
+      }
+    },
+    "wt": {
+      "erap2": {
+        "dG_kcal_mol": -14.259,
+        "Kd_M": 3.474786036237942e-11,
+        "Kd_uM": 0.0,
+        "contacts": {},
+        "nis_charged": 32.33830845771144,
+        "nis_polar": null,
+        "nis_apolar": 30.845771144278608
+      },
+      "erap1": {
+        "dG_kcal_mol": -8.164,
+        "Kd_M": 1.0278070789516775e-06,
+        "Kd_uM": 1.0278,
+        "contacts": {},
+        "nis_charged": 31.97969543147208,
+        "nis_polar": null,
+        "nis_apolar": 34.01015228426396
+      },
+      "irap": {
+        "dG_kcal_mol": -11.972,
+        "Kd_M": 1.6531675695068148e-09,
+        "Kd_uM": 0.0017,
+        "contacts": {},
+        "nis_charged": 33.480176211453745,
+        "nis_polar": null,
+        "nis_apolar": 32.59911894273128
+      },
+      "anpep": {
+        "dG_kcal_mol": -9.322,
+        "Kd_M": 1.4522302937102664e-07,
+        "Kd_uM": 0.1452,
+        "contacts": {},
+        "nis_charged": 25.641025641025642,
+        "nis_polar": null,
+        "nis_apolar": 34.61538461538461
+      }
+    }
+  },
+  "reference_inhibitors": {
+    "bestatin (ERAP2)": {
+      "Kd_uM": 5.0,
+      "note": "Known aminopeptidase inhibitor, broad-spectrum"
+    },
+    "DG011A (ERAP2)": {
+      "Kd_uM": 0.05,
+      "note": "Selective ERAP2 inhibitor, published lead"
+    },
+    "leucinethiol (ERAP1)": {
+      "Kd_uM": 0.3,
+      "note": "Potent ERAP1 inhibitor"
+    },
+    "ERAP2-IN-1": {
+      "Kd_uM": 1.2,
+      "note": "Literature compound"
+    }
+  }
+}

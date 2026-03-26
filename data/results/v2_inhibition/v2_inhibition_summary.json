@@ -1,0 +1,37 @@
+{
+  "analysis": "V2 inhibition estimation \u2014 combined multi-method",
+  "timestamp": "2026-03-26T00:32:25.720720+00:00",
+  "lead_construct": "Y87A_Y89A",
+  "binding_assessment": "STRONG",
+  "inhibition_assessment": "PLAUSIBLE_BUT_UNCERTAIN",
+  "selectivity_assessment": "EXCELLENT",
+  "prodigy_erap2_kd_nM": 0.18,
+  "conservative_kd_nM": 18.0,
+  "estimated_ic50_range_uM": {
+    "best": 0.04,
+    "central": 0.1,
+    "worst": 1.0
+  },
+  "channel_occlusion_pct": 30.7,
+  "selectivity": {
+    "erap2_vs_erap1": 1982.1,
+    "erap2_vs_irap": 43.7,
+    "erap2_vs_anpep": 4515.2
+  },
+  "methods_used": [
+    "Boltz-2 ipTM",
+    "PRODIGY protein-protein Kd",
+    "Rosetta dG_separated (prior data)",
+    "SASA channel capping"
+  ],
+  "methods_unavailable": [
+    "FoldX (no license)",
+    "MM-PBSA (PyRosetta not in env)",
+    "MD stability (6-mers drift)"
+  ],
+  "next_steps": [
+    "Substrate competition Boltz-2",
+    "Hybrid V2+V4 design",
+    "Wet lab IC50"
+  ]
+}
