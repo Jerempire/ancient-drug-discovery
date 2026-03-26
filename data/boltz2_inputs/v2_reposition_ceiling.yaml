@@ -1,0 +1,10 @@
+sequences:
+  - protein:
+      id: "erap2_channel"
+      sequence: "LFDPKTSSASDKLWVTRVIAHELAHQWFGNLVTMEWWNDIWLKEGFAKYMELIAVNATYPELQFDDYFLNVCFEVITKDSLNSSRPISKPAETPTQIQEMFDEVSYNKGACILNMLKDFLGEEKFQKGIIQYLKKFSYRNAKNDDLWSSLS"
+  - protein:
+      id: "v2_binder_original"
+      sequence: "DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN"
+# Run with: boltz predict v2_reposition_ceiling.yaml --diffusion_samples 5 --seed 42
+# Score all 5 samples, pick the one with best ceiling (409-419) coverage
+# Compare to original pose to check if repositioning is feasible

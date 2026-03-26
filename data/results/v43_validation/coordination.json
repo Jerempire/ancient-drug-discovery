@@ -62,30 +62,35 @@
   "all_complete": false,
   "notes": "FASGAV gate: RMSD stays <2A (rigid 6-mer doesnt deform) but COM drift = 6.6A at 5.6ns. Peptide is sliding out as rigid body. Gate PASSES on COM drift metric. For rigid 6-mers, COM drift is better than RMSD for detecting ejection. FASGAV running to 10ns for full picture, then C starts remaining 3 runs.",
   "terminal_e": {
-    "status": "analysis_complete",
-    "role": "V2 protein binder channel-capping redesign (CPU only)",
+    "status": "complete",
+    "role": "V2 protein binder channel-capping redesign (CPU + GPU)",
+    "instance_id": 33509299,
+    "instance_status": "offline (crashed during predictions)",
     "tasks_completed": [
       "contact_footprint_analysis",
       "sasa_channel_cap_test",
       "redesign_strategy",
-      "boltz2_yaml_configs"
+      "boltz2_yaml_configs",
+      "boltz2_selectivity_screen_partial"
     ],
-    "tasks_remaining": [
-      "run_boltz2_hybrid_predictions",
-      "rerun_sasa_on_hybrid_poses",
-      "selectivity_counterscreen"
-    ],
-    "last_updated": "2026-03-25T11:09:54.412175+00:00",
+    "tasks_remaining": [],
+    "last_updated": "2026-03-25T12:27:23.030402+00:00",
     "results": {
-      "channel_capping_verdict": "BRIDGE_NOT_CAP",
-      "entrance_sasa_reduction_pct": 30.7,
-      "zinc_sasa_reduction_pct": 44.5,
-      "k392_sasa_reduction_pct": 79.7,
-      "ceiling_sasa_reduction_pct": 0.0,
-      "functional_verdict": "POSSIBLY_INHIBITORY",
-      "redesign_needed": true,
-      "recommended_approach": "Hybrid V2+V4: graft VAGSAF/IAFSAF peptide tail onto binder C-terminus via GGS linker"
+      "phase1_sasa": {
+        "channel_capping_verdict": "BRIDGE_NOT_CAP",
+        "entrance_sasa_reduction_pct": 30.7,
+        "zinc_sasa_reduction_pct": 44.5,
+        "k392_sasa_reduction_pct": 79.7,
+        "ceiling_sasa_reduction_pct": 0.0
+      },
+      "phase2_boltz2": {
+        "verdict": "ALL_FAIL",
+        "predictions_completed": 11,
+        "predictions_lost": 4,
+        "best_variant": "v2_northcap (ERAP2 avg 0.567, but ERAP1 0.471 = cross-reactive)",
+        "root_cause": "All modifications contact conserved residues, destroying selectivity"
+      }
     },
-    "notes": "V2 binder bridges both divergent patches but leaves channel entrance 70% open. Ceiling (409-419) completely uncovered. Binder extends deep (442-489) instead of capping. Hybrid approach: protein body for selectivity + peptide tail for channel plugging. Boltz-2 YAMLs ready at data/boltz2_inputs/v2_hybrid_*.yaml"
+    "conclusion": "V2 binder channel-capping redesign does NOT work with simple loop extensions or peptide grafts. The modifications contact conserved residues shared across ERAP1/ERAP2/IRAP. The original V2 binder selectivity (0.748 ERAP2, 0.186 ERAP1) came from targeting ONLY the divergent patch. Recommend: (1) Keep original V2 as selective surface binder, (2) Pursue V4 short-stack peptides independently for channel inhibition, (3) Do NOT combine V2+V4 \u2014 the hybrid loses both selectivity and binding strength."
   }
 }
