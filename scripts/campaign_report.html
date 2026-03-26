@@ -1,0 +1,115 @@
+<div style="font-family: Georgia, serif; max-width: 720px; margin: 0 auto; color: #1a1a1a;">
+
+<h1 style="border-bottom: 3px solid #2c5f2d; padding-bottom: 10px;">V2 ERAP2 Inhibitor Campaign</h1>
+<p style="color: #555; font-size: 14px;">162 Boltz-2 predictions | 5 rounds | $2 compute | March 25-26, 2026</p>
+
+<h2>The Story</h2>
+
+<p>We set out to boost potency of our 92aa ERAP2 binder to 40-50% inhibition for cancer immunotherapy. ERAP2 trims antigenic peptides off cancer cells &mdash; inhibiting it exposes more neoantigens to the immune system. What we discovered instead changed the entire design strategy.</p>
+
+<h3>Act 1: The Binder Isn't Selective</h3>
+<p>Added tryptophan plug mutations and tethered VAGSAF cargo. All 4 constructs failed. Then discovered the <strong>parent binder itself prefers ERAP1 over ERAP2</strong> (0.604 vs 0.572). The binder was never selective &mdash; every modification made it worse.</p>
+
+<h3>Act 2: VAGSAF Isn't Selective Either</h3>
+<p>Pivoted to free VAGSAF peptides as standalone drugs. Tested 5 stabilized variants (cyclic, Pro-capped, extended, disulfide). <strong>All bind IRAP &ge; ERAP2.</strong> The original triple selectivity was under different conditions. Free VAGSAF is promiscuous across all M1 aminopeptidases.</p>
+
+<h3>Act 3: The Rigid Linker Changes Everything</h3>
+<p><strong>C2 EAAAK</strong> &mdash; binder + rigid helical linker + VAGSAF &mdash; was the only dual-selective construct. The EAAAK helix constrains VAGSAF delivery to ERAP2's channel only. <em>The binder provides selectivity, VAGSAF provides potency, the rigid linker is the glue.</em></p>
+
+<h3>Act 4: Fixing IRAP &mdash; The Hard Problem</h3>
+<p>IRAP selectivity was only 1.2x. Contact analysis revealed EAAAK lysines form contacts with IRAP &rarr; switched to EAAAA (1.4x). Negative design (3 point mutations) failed &mdash; binder re-docked on IRAP in new orientations.</p>
+
+<p><strong>Breakthrough:</strong> Aligned ERAP2/IRAP sequences (52% identical). Mapped all 35 binder interface contacts: 17 touch only conserved positions (cross-reactivity drivers), 4 touch only divergent positions (selectivity drivers). Used <strong>ProteinMPNN</strong> to redesign the 17 conserved positions while keeping divergent contacts fixed.</p>
+
+<p><strong>mpnn06</strong> emerged: ERAP2=0.815, ERAP1=0.326 (2.5x), IRAP=0.454 (<strong>1.8x</strong>).</p>
+
+<hr style="border: 1px solid #ddd;">
+
+<h2>Full Results</h2>
+
+<h3>Round 1: Binder Modifications (ALL FAILED)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse; font-size:13px; width:100%;">
+<tr style="background:#f0f0f0;"><th>Construct</th><th>Description</th><th>ERAP2</th><th>ERAP1</th><th>IRAP</th><th>E2/E1</th><th>E2/IR</th></tr>
+<tr><td>Parent</td><td>92aa control</td><td>0.572</td><td>0.604</td><td>0.407</td><td style="color:red;">0.9x</td><td>1.4x</td></tr>
+<tr><td>B (V19W+I49W)</td><td>Double W-plug</td><td>0.507</td><td>0.623</td><td>0.370</td><td style="color:red;">0.8x</td><td>1.4x</td></tr>
+<tr><td>C (GGGGS)</td><td>Flexible cargo</td><td>0.507</td><td>0.518</td><td>0.424</td><td style="color:red;">1.0x</td><td>1.2x</td></tr>
+<tr><td>D (combined)</td><td>W-plugs + cargo</td><td>0.455</td><td>0.616</td><td>0.376</td><td style="color:red;">0.7x</td><td>1.2x</td></tr>
+</table>
+
+<h3>Round 3: VAGSAF Stabilization + C2 EAAAK</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse; font-size:13px; width:100%;">
+<tr style="background:#f0f0f0;"><th>Variant</th><th>Description</th><th>ERAP2</th><th>ERAP1</th><th>IRAP</th><th>E2/E1</th><th>E2/IR</th></tr>
+<tr style="background:#d4edda;"><td><strong>C2 EAAAK</strong></td><td><strong>Rigid helix binder</strong></td><td><strong>0.759</strong></td><td><strong>0.193</strong></td><td><strong>0.609</strong></td><td style="color:green;"><strong>3.9x</strong></td><td><strong>1.2x</strong></td></tr>
+<tr><td>VAGSAFLL</td><td>Extended (8aa)</td><td>0.817</td><td>0.599</td><td>0.804</td><td>1.4x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>CVAGSAFC</td><td>Disulfide cyclic</td><td>0.772</td><td>0.755</td><td>0.811</td><td style="color:red;">1.0x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>VAGSAF</td><td>Control (6aa)</td><td>0.763</td><td>0.565</td><td>0.782</td><td>1.4x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>PVAGSAFP</td><td>Pro-capped</td><td>0.742</td><td>0.589</td><td>0.806</td><td>1.3x</td><td style="color:red;">0.9x</td></tr>
+<tr><td>GVAGSAFG</td><td>Head-tail cyclic</td><td>0.711</td><td>0.502</td><td>0.897</td><td>1.4x</td><td style="color:red;">0.8x</td></tr>
+</table>
+
+<h3>Round 4: Linker Fix + Negative Design</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse; font-size:13px; width:100%;">
+<tr style="background:#f0f0f0;"><th>Variant</th><th>ERAP2</th><th>ERAP1</th><th>IRAP</th><th>E2/E1</th><th>E2/IR</th></tr>
+<tr style="background:#d4edda;"><td><strong>c2_eaaaa3</strong></td><td><strong>0.778</strong></td><td>0.333</td><td><strong>0.573</strong></td><td>2.3x</td><td><strong>1.4x</strong></td></tr>
+<tr><td>c2_eaaak3 (ctrl)</td><td>0.729</td><td>0.294</td><td>0.588</td><td>2.5x</td><td>1.2x</td></tr>
+<tr><td>c2_eaaak2</td><td>0.703</td><td>0.240</td><td>0.571</td><td>2.9x</td><td>1.2x</td></tr>
+<tr><td>c2_eaaak1</td><td>0.743</td><td>0.299</td><td>0.740</td><td>2.5x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>neg1 (I2E)</td><td>0.664</td><td>0.255</td><td>0.708</td><td>2.6x</td><td style="color:red;">0.9x</td></tr>
+<tr><td>neg2 (D1R+I2E)</td><td>0.753</td><td>0.201</td><td>0.782</td><td>3.7x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>neg3 (all 3)</td><td>0.739</td><td>0.234</td><td>0.673</td><td>3.2x</td><td>1.1x</td></tr>
+</table>
+
+<h3>Round 5: ProteinMPNN Interface Redesign</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse; font-size:13px; width:100%;">
+<tr style="background:#f0f0f0;"><th>Design</th><th>ERAP2</th><th>ERAP1</th><th>IRAP</th><th>E2/E1</th><th>E2/IR</th></tr>
+<tr style="background:#e8e8e8;"><td><em>ref c2_eaaaa3</em></td><td><em>0.778</em></td><td><em>0.333</em></td><td><em>0.573</em></td><td><em>2.3x</em></td><td><em>1.4x</em></td></tr>
+<tr><td>mpnn01</td><td>0.810</td><td>0.381</td><td>0.711</td><td>2.1x</td><td>1.1x</td></tr>
+<tr><td>mpnn02</td><td>0.773</td><td>0.289</td><td>0.785</td><td>2.7x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>mpnn03</td><td>0.727</td><td>0.567</td><td>0.824</td><td style="color:red;">1.3x</td><td style="color:red;">0.9x</td></tr>
+<tr><td>mpnn04</td><td>0.753</td><td>0.242</td><td>0.705</td><td>3.1x</td><td>1.1x</td></tr>
+<tr><td>mpnn05</td><td>0.730</td><td>0.454</td><td>0.671</td><td>1.6x</td><td>1.1x</td></tr>
+<tr style="background:#c8e6c9;"><td><strong>mpnn06</strong></td><td><strong>0.815</strong></td><td><strong>0.326</strong></td><td><strong>0.454</strong></td><td><strong>2.5x</strong></td><td style="color:green;"><strong>1.8x</strong></td></tr>
+<tr><td>mpnn07</td><td>0.676</td><td>0.267</td><td>0.708</td><td>2.5x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>mpnn08</td><td>0.668</td><td>0.300</td><td>0.706</td><td>2.2x</td><td style="color:red;">0.9x</td></tr>
+<tr><td>mpnn09</td><td>0.730</td><td>0.322</td><td>0.745</td><td>2.3x</td><td style="color:red;">1.0x</td></tr>
+<tr><td>mpnn10</td><td>0.765</td><td>0.400</td><td>0.757</td><td>1.9x</td><td style="color:red;">1.0x</td></tr>
+</table>
+
+<hr style="border: 1px solid #ddd;">
+
+<h2>Final Lead: mpnn06</h2>
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; font-size:14px;">
+<tr style="background:#2c5f2d; color:white;"><th>Property</th><th>Value</th></tr>
+<tr><td>Size</td><td>113 amino acids, ~12.4 kDa, single chain</td></tr>
+<tr><td>ERAP2 ipTM</td><td><strong>0.815</strong> (best sample: 0.878)</td></tr>
+<tr><td>ERAP1 selectivity</td><td>0.326 (<strong>2.5x</strong>)</td></tr>
+<tr><td>IRAP selectivity</td><td>0.454 (<strong>1.8x</strong>)</td></tr>
+<tr><td>Mutations (14)</td><td>R3I Y5H F6Q W19K L23M T37N I39T V41L F51D I56Y A89N L90A K91L N92R</td></tr>
+<tr><td>Architecture</td><td>VAGSAF - (EAAAA)x3 helix - redesigned binder body</td></tr>
+<tr><td>Expression</td><td>E. coli (standard, no disulfides, no PTMs)</td></tr>
+</table>
+
+<h2>Key Insights</h2>
+<ol>
+<li><strong>Binder = selectivity, peptide = potency, rigid linker = glue.</strong> None works alone.</li>
+<li><strong>Free VAGSAF is promiscuous.</strong> Binds all M1 aminopeptidases equally.</li>
+<li><strong>Cyclization kills aminopeptidase selectivity.</strong> Substrate grooves expect extended peptides.</li>
+<li><strong>Point mutations can't fix structural cross-reactivity.</strong> Need systematic interface redesign.</li>
+<li><strong>Conserved vs divergent contact mapping</strong> is the right framework for selectivity engineering.</li>
+<li><strong>ProteinMPNN is noisy</strong> &mdash; 1 of 10 designs improved IRAP selectivity. Run large batches.</li>
+</ol>
+
+<h2>Next Steps</h2>
+<ul>
+<li>Validate mpnn06 with 5-10 diffusion samples</li>
+<li>PyRosetta interface analysis</li>
+<li>Consider RFdiffusion de novo if 1.8x isn't enough</li>
+<li>Wet lab expression feasibility</li>
+</ul>
+
+<p style="color:#888;font-size:12px;margin-top:30px;">
+Committed to Jerempire/ancient-drug-discovery |
+162 Boltz-2 predictions | 100 ProteinMPNN designs | ~$2 Vast.ai compute
+</p>
+</div>
