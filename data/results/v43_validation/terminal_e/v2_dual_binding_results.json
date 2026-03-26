@@ -1,0 +1,29 @@
+{
+  "analysis": "V2 Dual K/N Binding + Selectivity Screen",
+  "timestamp": "2026-03-26T00:03:08Z",
+  "instance": 33420112,
+  "note": "msa=empty, 3 diffusion samples, seed 42",
+  "results": {
+    "ko_core_aromatics": {
+      "description": "Y4A/F5A/Y11A/Y23A (97aa) — core aromatic knockout",
+      "erap2_k392": {"samples": [0.544, 0.499, 0.470], "avg": 0.504},
+      "erap2_n392": {"samples": [0.592, 0.414, 0.431], "avg": 0.479},
+      "erap1": {"samples": [0.688, 0.526, 0.548], "avg": 0.587},
+      "irap": {"samples": [0.581, 0.421, 0.399], "avg": 0.467}
+    },
+    "trim_c5": {
+      "description": "Y87A_Y89A parent (92aa) — best selectivity in original screen",
+      "erap2_k392": {"samples": [0.416, 0.380, 0.353], "avg": 0.383},
+      "erap2_n392": {"samples": [0.545, 0.480, 0.410], "avg": 0.478},
+      "erap1": {"samples": [0.652, 0.472, 0.592], "avg": 0.572},
+      "irap": {"samples": [0.699, 0.502, 0.405], "avg": 0.535}
+    },
+    "wildtype": {
+      "description": "Original n248 lead (97aa) — no mutations",
+      "erap2_k392": {"samples": [0.713, 0.414, 0.499], "avg": 0.542},
+      "erap2_n392": {"samples": [0.664, 0.476, 0.475], "avg": 0.538},
+      "erap1": {"samples": [0.614, 0.593, 0.596], "avg": 0.601},
+      "irap": {"samples": [0.379, 0.388, 0.347], "avg": 0.371}
+    }
+  }
+}

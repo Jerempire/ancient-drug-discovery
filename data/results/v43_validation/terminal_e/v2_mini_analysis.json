@@ -1,0 +1,131 @@
+{
+  "binder_sequence": "DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+  "total_residues": 92,
+  "interface_residues": 34,
+  "total_contacts_5A": 290,
+  "sliding_windows": [
+    {
+      "window": 20,
+      "start": 9,
+      "end": 28,
+      "coverage_pct": 49.3,
+      "contacts_5": 143,
+      "contacts_4": 54,
+      "k392": false,
+      "dp_contacts": 7,
+      "spps_ok": true,
+      "est_cost": "~$160",
+      "sequence": "LEEYLKNLPKVVDMLVDLYS"
+    },
+    {
+      "window": 25,
+      "start": 6,
+      "end": 30,
+      "coverage_pct": 56.6,
+      "contacts_5": 164,
+      "contacts_4": 63,
+      "k392": false,
+      "dp_contacts": 7,
+      "spps_ok": true,
+      "est_cost": "~$175",
+      "sequence": "FKSLEEYLKNLPKVVDMLVDLYSKG"
+    },
+    {
+      "window": 30,
+      "start": 9,
+      "end": 38,
+      "coverage_pct": 64.5,
+      "contacts_5": 187,
+      "contacts_4": 72,
+      "k392": true,
+      "dp_contacts": 8,
+      "spps_ok": true,
+      "est_cost": "~$190",
+      "sequence": "LEEYLKNLPKVVDMLVDLYSKGIFHLDNTN"
+    },
+    {
+      "window": 35,
+      "start": 6,
+      "end": 40,
+      "coverage_pct": 76.9,
+      "contacts_5": 223,
+      "contacts_4": 87,
+      "k392": true,
+      "dp_contacts": 8,
+      "spps_ok": true,
+      "est_cost": "~$205",
+      "sequence": "FKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNIL"
+    },
+    {
+      "window": 40,
+      "start": 2,
+      "end": 41,
+      "coverage_pct": 77.6,
+      "contacts_5": 225,
+      "contacts_4": 88,
+      "k392": true,
+      "dp_contacts": 8,
+      "spps_ok": true,
+      "est_cost": "~$220",
+      "sequence": "IRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILV"
+    },
+    {
+      "window": 45,
+      "start": 8,
+      "end": 52,
+      "coverage_pct": 86.2,
+      "contacts_5": 250,
+      "contacts_4": 93,
+      "k392": true,
+      "dp_contacts": 8,
+      "spps_ok": true,
+      "est_cost": "~$235",
+      "sequence": "SLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFG"
+    },
+    {
+      "window": 50,
+      "start": 6,
+      "end": 55,
+      "coverage_pct": 96.2,
+      "contacts_5": 279,
+      "contacts_4": 103,
+      "k392": true,
+      "dp_contacts": 8,
+      "spps_ok": true,
+      "est_cost": "~$250",
+      "sequence": "FKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAY"
+    }
+  ],
+  "segments": [
+    {
+      "start": 6,
+      "end": 13,
+      "length": 8
+    },
+    {
+      "start": 16,
+      "end": 24,
+      "length": 9
+    },
+    {
+      "start": 27,
+      "end": 34,
+      "length": 8
+    },
+    {
+      "start": 37,
+      "end": 41,
+      "length": 5
+    },
+    {
+      "start": 49,
+      "end": 56,
+      "length": 8
+    },
+    {
+      "start": 60,
+      "end": 60,
+      "length": 1
+    }
+  ]
+}

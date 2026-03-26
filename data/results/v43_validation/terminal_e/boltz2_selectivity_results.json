@@ -1,0 +1,153 @@
+{
+  "analysis": "Terminal E: V2 Channel-Capping Boltz-2 Selectivity Screen",
+  "timestamp": "2026-03-25T12:27:03.971141+00:00",
+  "instance": "33509299 (went offline during predictions)",
+  "variants_tested": 5,
+  "predictions_completed": 11,
+  "predictions_lost": 4,
+  "original_v2_scores": {
+    "erap2": 0.748,
+    "erap1": 0.186,
+    "irap": 0.186
+  },
+  "results": {
+    "v2_dualcap": {
+      "erap2k392": {
+        "samples": [
+          0.45,
+          0.425,
+          0.401
+        ],
+        "avg": 0.425
+      },
+      "erap1": {
+        "samples": [
+          0.746,
+          0.543,
+          0.469
+        ],
+        "avg": 0.586
+      },
+      "irap": {
+        "samples": [
+          0.343,
+          0.436,
+          0.357
+        ],
+        "avg": 0.379
+      }
+    },
+    "v2_hybrid_iafsaf": {
+      "erap2k392": {
+        "samples": [
+          0.609,
+          0.517,
+          0.471
+        ],
+        "avg": 0.532
+      },
+      "erap1": {
+        "samples": [
+          0.769,
+          0.538,
+          0.407
+        ],
+        "avg": 0.571
+      },
+      "irap": {
+        "samples": [
+          0.468,
+          0.62,
+          0.446
+        ],
+        "avg": 0.511
+      }
+    },
+    "v2_hybrid_vagsaf": {
+      "erap2k392": {
+        "samples": [
+          0.453,
+          0.434,
+          0.391
+        ],
+        "avg": 0.426
+      },
+      "erap1": {
+        "samples": [
+          0.622,
+          0.537,
+          0.497
+        ],
+        "avg": 0.552
+      },
+      "irap": {
+        "samples": [
+          0.464,
+          0.415,
+          0.361
+        ],
+        "avg": 0.413
+      }
+    },
+    "v2_northcap": {
+      "erap2k392": {
+        "samples": [
+          0.746,
+          0.554,
+          0.4
+        ],
+        "avg": 0.567
+      },
+      "erap1": {
+        "samples": [
+          0.501,
+          0.468,
+          0.444
+        ],
+        "avg": 0.471
+      },
+      "irap": {
+        "samples": null,
+        "avg": null,
+        "note": "connection dropped"
+      }
+    },
+    "v2_southcap": {
+      "erap2k392": {
+        "samples": null,
+        "avg": null,
+        "note": "connection dropped"
+      },
+      "erap1": {
+        "samples": null,
+        "avg": null,
+        "note": "connection dropped"
+      },
+      "irap": {
+        "samples": null,
+        "avg": null,
+        "note": "connection dropped"
+      }
+    }
+  },
+  "verdict": "ALL_FAIL",
+  "pass_criteria": {
+    "erap2_iptm_min": 0.7,
+    "erap1_iptm_max": 0.3,
+    "irap_iptm_max": 0.3
+  },
+  "best_variant": {
+    "name": "v2_northcap",
+    "erap2_best_sample": 0.746,
+    "erap2_avg": 0.567,
+    "erap1_avg": 0.471,
+    "note": "Highest ERAP2 score but also cross-reacts with ERAP1"
+  },
+  "root_cause": "Loop extensions and peptide tails contact conserved residues shared across ERAP1/ERAP2/IRAP, destroying selectivity. The original V2 selectivity came from targeting ONLY the divergent patch.",
+  "caveats": [
+    "msa=empty mode may underestimate selectivity",
+    "ERAP2 sequence crop differs from original V2 screen",
+    "Instance went offline \u2014 4 predictions (southcap + northcap vs IRAP) lost",
+    "cuequivariance patched to pure PyTorch (slightly lower accuracy)"
+  ]
+}

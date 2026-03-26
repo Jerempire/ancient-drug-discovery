@@ -1,0 +1,25 @@
+{
+  "note": "Partial results — saved in case instance dies before completion",
+  "timestamp": "2026-03-25T21:35:00Z",
+  "instance": 33420112,
+  "const_b_V19W_I49W": {
+    "erap2k392": {"samples": [0.661, 0.454, 0.406], "avg": 0.507},
+    "erap1": {"samples": [0.764, 0.577, 0.527], "avg": 0.623},
+    "irap": {"samples": [0.386, 0.366, 0.357], "avg": 0.370}
+  },
+  "const_c_tethered_vagsaf": {
+    "erap2k392": {"samples": [0.618, 0.435, 0.469], "avg": 0.507},
+    "erap1": {"samples": [0.523, 0.527, 0.503], "avg": 0.518},
+    "irap": {"samples": [0.457, 0.433, 0.382], "avg": 0.424}
+  },
+  "const_d_combined": {
+    "erap2k392": "PENDING",
+    "erap1": {"samples": [0.746, 0.616, 0.488], "avg": 0.617},
+    "irap": "PENDING"
+  },
+  "parent_baseline": {
+    "erap2k392": "PENDING (running after D)",
+    "erap1": "PENDING",
+    "irap": "PENDING"
+  }
+}

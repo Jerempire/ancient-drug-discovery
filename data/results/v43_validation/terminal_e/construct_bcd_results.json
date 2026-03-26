@@ -1,0 +1,43 @@
+{
+  "analysis": "Construct B/C/D Potency Upgrade Screen",
+  "timestamp": "2026-03-25T22:05:26Z",
+  "instance": 33420112,
+  "constructs": {
+    "parent": {
+      "description": "Y87A_Y89A unchanged (92aa)",
+      "sequence": "DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+      "erap2k392": {"samples": [0.650, 0.602, 0.463], "avg": 0.572},
+      "erap1": {"samples": [0.719, 0.607, 0.487], "avg": 0.604},
+      "irap": {"samples": [0.405, 0.350, 0.465], "avg": 0.407}
+    },
+    "construct_b": {
+      "description": "Double W-plug: V19W + I49W (92aa)",
+      "mutations": "V19W, I49W",
+      "sequence": "DIRHYFKSLEEYLKNLPKWVDMLVDLYSKGIFHLDNTNWLVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+      "erap2k392": {"samples": [0.661, 0.454, 0.406], "avg": 0.507},
+      "erap1": {"samples": [0.764, 0.577, 0.527], "avg": 0.623},
+      "irap": {"samples": [0.386, 0.366, 0.357], "avg": 0.370}
+    },
+    "construct_c": {
+      "description": "N-term tethered VAGSAF + (GGGGS)x3 + parent (113aa)",
+      "sequence": "VAGSAFGGGGSGGGGSGGGGSDIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+      "erap2k392": {"samples": [0.618, 0.435, 0.469], "avg": 0.507},
+      "erap1": {"samples": [0.523, 0.527, 0.503], "avg": 0.518},
+      "irap": {"samples": [0.457, 0.433, 0.382], "avg": 0.424}
+    },
+    "construct_d": {
+      "description": "Combined: N-term VAGSAF + (GGGGS)x3 + double-W parent (113aa)",
+      "mutations": "V19W, I49W + N-term VAGSAF cargo",
+      "sequence": "VAGSAFGGGGSGGGGSGGGGSDIRHYFKSLEEYLKNLPKWVDMLVDLYSKGIFHLDNTNWLVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+      "erap2k392": {"samples": [0.522, 0.418, 0.424], "avg": 0.455},
+      "erap1": {"samples": [0.746, 0.616, 0.488], "avg": 0.617},
+      "irap": {"samples": [0.402, 0.349, 0.377], "avg": 0.376}
+    }
+  },
+  "original_v2_reference": {
+    "erap2": 0.748,
+    "erap1": 0.186,
+    "irap": 0.186,
+    "note": "From original screen with different ERAP2 sequence crop and MSAs"
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "binder": "n248_trim_c5_Y87A_Y89A",
+  "binder_length": 92,
+  "target": "ERAP2 (cropped 350-500)",
+  "cif_file": "n248_trim_c5_Y87A_Y89A_erap2.cif",
+  "timestamp": "2026-03-25T10:55:30.551950+00:00",
+  "terminal": "e",
+  "sasa": {
+    "channel_entrance": {
+      "apo_sasa": 1907.3,
+      "holo_sasa": 1625.8,
+      "reduction_pct": 14.8,
+      "verdict": "NOT_CAPPED"
+    },
+    "zinc_coordinating": {
+      "apo_sasa": 29.5,
+      "holo_sasa": 16.2,
+      "reduction_pct": 45.0,
+      "verdict": "NOT_CAPPED"
+    },
+    "channel_interior": {
+      "apo_sasa": 1248.2,
+      "holo_sasa": 501.7,
+      "reduction_pct": 59.8,
+      "verdict": "PARTIALLY_CAPPED"
+    },
+    "entire_channel": {
+      "apo_sasa": 3155.5,
+      "holo_sasa": 2127.5,
+      "reduction_pct": 32.6,
+      "verdict": "NOT_CAPPED"
+    }
+  },
+  "interface": {
+    "erap2_contact_residues": [
+      350,
+      351,
+      361,
+      364,
+      365,
+      367,
+      368,
+      369,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      378,
+      379,
+      382,
+      383,
+      386,
+      392,
+      399,
+      402,
+      403,
+      407,
+      408,
+      443,
+      446,
+      447,
+      450,
+      475,
+      476,
+      478,
+      479,
+      482,
+      489
+    ],
+    "binder_contact_residues": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      16,
+      17,
+      19,
+      20,
+      21,
+      23,
+      24,
+      27,
+      28,
+      30,
+      34,
+      37,
+      38,
+      39,
+      40,
+      41,
+      49,
+      51,
+      52,
+      53,
+      54,
+      56,
+      60
+    ],
+    "n_erap2_contacts": 35,
+    "n_binder_contacts": 30,
+    "contacts_divergent_patch_1": [
+      361,
+      364,
+      365,
+      367
+    ],
+    "contacts_divergent_patch_2": [
+      402,
+      403,
+      407,
+      408
+    ],
+    "contacts_zinc_region": [
+      374
+    ],
+    "contacts_k392": true,
+    "contacts_interior": [
+      368,
+      369,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      378,
+      379,
+      382,
+      383,
+      386,
+      392,
+      399
+    ]
+  },
+  "uncapped_entrance_residues": [
+    {
+      "residue": 353,
+      "apo_sasa": 104.1,
+      "holo_sasa": 104.1,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 354,
+      "apo_sasa": 185.0,
+      "holo_sasa": 185.0,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 355,
+      "apo_sasa": 114.1,
+      "holo_sasa": 114.1,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 356,
+      "apo_sasa": 23.7,
+      "holo_sasa": 23.7,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 357,
+      "apo_sasa": 48.6,
+      "holo_sasa": 48.6,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 358,
+      "apo_sasa": 65.6,
+      "holo_sasa": 65.6,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 359,
+      "apo_sasa": 73.7,
+      "holo_sasa": 73.7,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 360,
+      "apo_sasa": 64.3,
+      "holo_sasa": 64.3,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 361,
+      "apo_sasa": 71.3,
+      "holo_sasa": 59.2,
+      "pct_exposed": 83.0
+    },
+    {
+      "residue": 362,
+      "apo_sasa": 19.3,
+      "holo_sasa": 19.3,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 363,
+      "apo_sasa": 151.0,
+      "holo_sasa": 148.8,
+      "pct_exposed": 99.0
+    },
+    {
+      "residue": 366,
+      "apo_sasa": 11.0,
+      "holo_sasa": 11.0,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 367,
+      "apo_sasa": 58.0,
+      "holo_sasa": 38.6,
+      "pct_exposed": 67.0
+    },
+    {
+      "residue": 400,
+      "apo_sasa": 9.6,
+      "holo_sasa": 9.6,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 401,
+      "apo_sasa": 7.1,
+      "holo_sasa": 7.1,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 402,
+      "apo_sasa": 49.1,
+      "holo_sasa": 33.4,
+      "pct_exposed": 68.0
+    },
+    {
+      "residue": 405,
+      "apo_sasa": 82.9,
+      "holo_sasa": 82.9,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 406,
+      "apo_sasa": 80.6,
+      "holo_sasa": 64.2,
+      "pct_exposed": 80.0
+    },
+    {
+      "residue": 409,
+      "apo_sasa": 74.6,
+      "holo_sasa": 74.6,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 410,
+      "apo_sasa": 109.1,
+      "holo_sasa": 109.1,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 411,
+      "apo_sasa": 28.6,
+      "holo_sasa": 28.6,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 412,
+      "apo_sasa": 105.0,
+      "holo_sasa": 105.0,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 413,
+      "apo_sasa": 5.7,
+      "holo_sasa": 5.7,
+      "pct_exposed": 100.0
+    },
+    {
+      "residue": 414,
+      "apo_sasa": 96.3,
+      "holo_sasa": 96.3,
+      "pct_exposed": 100.0
+    }
+  ],
+  "geometry": {
+    "binder_com_to_entrance": 19.2,
+    "binder_com_to_interior": 16.3,
+    "binder_com_to_zinc": 14.1,
+    "nterm_to_entrance": 27.0,
+    "cterm_to_entrance": 25.4
+  },
+  "extension_candidates": [
+    {
+      "binder_residue": 11,
+      "aa": "E",
+      "distance_to_entrance": 11.3,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 14,
+      "aa": "K",
+      "distance_to_entrance": 7.4,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 15,
+      "aa": "N",
+      "distance_to_entrance": 7.4,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 18,
+      "aa": "K",
+      "distance_to_entrance": 7.5,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 22,
+      "aa": "M",
+      "distance_to_entrance": 7.1,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 25,
+      "aa": "D",
+      "distance_to_entrance": 7.5,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 26,
+      "aa": "L",
+      "distance_to_entrance": 8.4,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 29,
+      "aa": "K",
+      "distance_to_entrance": 9.0,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 31,
+      "aa": "I",
+      "distance_to_entrance": 11.2,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 32,
+      "aa": "F",
+      "distance_to_entrance": 10.2,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 33,
+      "aa": "H",
+      "distance_to_entrance": 8.1,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 35,
+      "aa": "D",
+      "distance_to_entrance": 7.6,
+      "is_solvent_exposed": true
+    },
+    {
+      "binder_residue": 36,
+      "aa": "N",
+      "distance_to_entrance": 7.7,
+      "is_solvent_exposed": true
+    }
+  ],
+  "binder_sequence": "DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+  "verdict": {
+    "classification": "INTERIOR_PLUG",
+    "entrance_reduction_pct": 14.8,
+    "interior_reduction_pct": 59.8,
+    "recommendation": "Binder occludes interior but entrance open \u2014 substrates can still enter. Need to extend binder to cover entrance residues 353-363 and 409-414."
+  }
+}

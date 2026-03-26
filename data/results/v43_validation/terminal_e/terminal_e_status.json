@@ -1,0 +1,75 @@
+{
+  "terminal": "e",
+  "role": "V2 protein binder channel-capping redesign",
+  "status": "analysis_complete",
+  "last_updated": "2026-03-25",
+
+  "findings": {
+    "current_binder": {
+      "name": "n248_trim_c5_Y87A_Y89A",
+      "length": 92,
+      "ipTM_erap2": 0.748,
+      "ipTM_irap": 0.186,
+      "selectivity": "clean (ERAP2 >> IRAP)"
+    },
+    "capping_verdict": "INTERIOR_PLUG",
+    "entrance_sasa_reduction_pct": 14.8,
+    "interior_sasa_reduction_pct": 59.8,
+    "zinc_sasa_reduction_pct": 45.0,
+    "problem": "Binder contacts divergent patch and channel interior but leaves entrance mouth wide open. Substrates can still enter the channel.",
+    "uncapped_entrance_residues": 24,
+    "uncapped_clusters": {
+      "north_rim": "353-363 (100% exposed)",
+      "south_rim": "405-414 (mostly 100% exposed)"
+    }
+  },
+
+  "conservation_analysis": {
+    "safe_erap2_unique": [353, 354, 363, 366, 367, 401, 402, 405, 406, 408, 412, 413, 414],
+    "caution_shared_one": [355, 358, 359, 360, 361, 362, 364, 404, 407, 409],
+    "danger_conserved_all": [356, 357, 365, 400, 410, 411],
+    "note": "Loop extensions ONLY target ERAP2-unique residues to preserve selectivity"
+  },
+
+  "redesign_variants": {
+    "v2_southcap": {
+      "length": 96,
+      "insert": "RNSF at pos 14-15",
+      "targets": "D414(salt bridge), Q412(H-bond), N405(H-bond), F413(aromatic)",
+      "rationale": "Closest bridge: binder res 14 -> ERAP2 406 at 8.8A, needs 4-residue loop"
+    },
+    "v2_northcap": {
+      "length": 97,
+      "insert": "ENYGS at pos 25-26",
+      "targets": "R366(salt bridge), W363(aromatic), P353(backbone), K354(backbone)",
+      "rationale": "Closest bridge: binder res 25 -> ERAP2 353 at 10.4A, needs 5-residue loop"
+    },
+    "v2_dualcap": {
+      "length": 101,
+      "insert": "RNSF at pos 14-15 + ENYGS at pos 29-30",
+      "targets": "Both south and north rim contacts",
+      "rationale": "Maximum entrance coverage, both ERAP2-unique clusters"
+    }
+  },
+
+  "boltz2_yamls_generated": 9,
+  "yaml_directory": "data/results/v43_validation/terminal_e/boltz2_yamls/",
+
+  "next_steps": [
+    "1. Run 9 Boltz-2 predictions on GPU (3 variants x 3 targets, 3 diffusion samples each)",
+    "2. PASS criteria: ipTM_erap2 > 0.7, ipTM_erap1 < 0.3, ipTM_irap < 0.3",
+    "3. Re-run SASA capping analysis on best variant CIF",
+    "4. If entrance SASA reduction > 80%: channel capped selectively",
+    "5. If selectivity breaks: remove offending loop contacts, redesign"
+  ],
+
+  "files_produced": [
+    "terminal_e/capping_analysis.json",
+    "terminal_e/capping_redesign.json",
+    "terminal_e/v2_southcap.fasta",
+    "terminal_e/v2_northcap.fasta",
+    "terminal_e/v2_dualcap.fasta",
+    "terminal_e/boltz2_yamls/*.yaml (9 files)",
+    "terminal_e/terminal_e_status.json"
+  ]
+}

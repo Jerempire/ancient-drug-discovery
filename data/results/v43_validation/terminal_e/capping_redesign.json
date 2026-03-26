@@ -1,0 +1,75 @@
+{
+  "terminal": "e",
+  "task": "v2_channel_capping_redesign",
+  "timestamp": "2026-03-25T10:59:21.326668+00:00",
+  "original_binder": {
+    "name": "n248_trim_c5_Y87A_Y89A",
+    "sequence": "DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+    "length": 92,
+    "capping_verdict": "INTERIOR_PLUG (14.8% entrance, 59.8% interior)"
+  },
+  "selectivity_constraint": {
+    "safe_targets": {
+      "north_rim": "353(P), 354(K), 363(W), 366(R)",
+      "south_rim": "401(L), 405(N), 406(A), 412(Q), 413(F), 414(D)"
+    },
+    "conserved_avoid": "356(S), 357(S), 365(T), 400(E), 410(E), 411(L)",
+    "note": "All loop contacts designed to hit ERAP2-unique residues only"
+  },
+  "variants": {
+    "v2_southcap": {
+      "sequence": "DIRHYFKSLEEYLKRNSFNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+      "length": 96,
+      "description": "South entrance cap: 4-residue loop at pos 14 targeting D414/Q412/N405/F413",
+      "loop_insert": "pos 14-15, loop=RNSF",
+      "targets_erap2_unique": [
+        "D414 (salt bridge via R)",
+        "Q412 (H-bond via N)",
+        "N405 (H-bond via S)",
+        "F413 (aromatic via F)"
+      ],
+      "avoids_conserved": [
+        "E400 (conserved)",
+        "E410 (conserved)",
+        "L411 (conserved)"
+      ]
+    },
+    "v2_northcap": {
+      "sequence": "DIRHYFKSLEEYLKNLPKVVDMLVDENYGSLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+      "length": 97,
+      "description": "North entrance cap: 5-residue loop at pos 25 targeting R366/W363/P353/K354",
+      "loop_insert": "pos 25-26, loop=ENYGS",
+      "targets_erap2_unique": [
+        "R366 (salt bridge via E)",
+        "W363 (aromatic via Y)",
+        "P353 (backbone H-bond via N)",
+        "K354 (backbone H-bond via S)"
+      ],
+      "avoids_conserved": [
+        "S356 (conserved)",
+        "S357 (conserved)",
+        "T365 (conserved)"
+      ]
+    },
+    "v2_dualcap": {
+      "sequence": "DIRHYFKSLEEYLKRNSFNLPKVVDMLVDENYGSLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+      "length": 101,
+      "description": "Dual cap: south loop at pos 14 + north loop at pos 29 (adjusted for south insertion)",
+      "loop_insert": "pos 14-15 (RNSF) + pos 29-30 (ENYGS, adjusted)",
+      "targets_erap2_unique": [
+        "D414 (salt bridge via R)",
+        "Q412 (H-bond via N)",
+        "R366 (salt bridge via E)",
+        "W363 (aromatic via Y)"
+      ],
+      "avoids_conserved": [
+        "E400",
+        "E410",
+        "L411",
+        "S356",
+        "S357",
+        "T365"
+      ]
+    }
+  }
+}

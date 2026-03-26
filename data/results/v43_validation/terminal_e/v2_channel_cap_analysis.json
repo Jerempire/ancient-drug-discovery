@@ -1,0 +1,157 @@
+{
+  "analysis": "V2 Protein Binder Channel-Capping Assessment",
+  "binder": "n248_trim_c5_Y87A_Y89A",
+  "binder_size_aa": 92,
+  "target": "ERAP2 (cropped 350-500)",
+  "timestamp": "2026-03-25T11:04:04.725215+00:00",
+  "contact_analysis": {
+    "total_erap2_contacts": 39,
+    "erap2_contact_residues_full": [
+      350,
+      351,
+      352,
+      361,
+      364,
+      365,
+      367,
+      368,
+      369,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      378,
+      379,
+      382,
+      383,
+      385,
+      386,
+      392,
+      399,
+      402,
+      403,
+      407,
+      408,
+      442,
+      443,
+      446,
+      447,
+      450,
+      475,
+      476,
+      478,
+      479,
+      482,
+      483,
+      489
+    ],
+    "divergent_patch_1_contacts": [
+      361,
+      364,
+      365,
+      367
+    ],
+    "divergent_patch_2_contacts": [
+      402,
+      403,
+      407,
+      408
+    ],
+    "zinc_coord_contacts": [
+      374
+    ],
+    "k392_region_contacts": [
+      392
+    ],
+    "entrance_contacts_count": 27,
+    "deep_contacts_440_500": [
+      442,
+      443,
+      446,
+      447,
+      450,
+      475,
+      476,
+      478,
+      479,
+      482,
+      483,
+      489
+    ],
+    "bridges_both_patches": true,
+    "extends_deep_into_channel": true,
+    "closest_approach_to_zinc": {
+      "370": 5.51,
+      "374": 2.66,
+      "393": 5.5
+    }
+  },
+  "sasa_analysis": {
+    "channel_entrance_350_419": {
+      "apo_sasa": 3786.3,
+      "holo_sasa": 2624.8,
+      "reduction_pct": 30.7,
+      "label": "Channel entrance (350-419)"
+    },
+    "divergent_patch_1": {
+      "apo_sasa": 1043.3,
+      "holo_sasa": 954.0,
+      "reduction_pct": 8.6,
+      "label": "Divergent patch 1 (353-367)"
+    },
+    "divergent_patch_2": {
+      "apo_sasa": 813.6,
+      "holo_sasa": 631.0,
+      "reduction_pct": 22.4,
+      "label": "Divergent patch 2 (400-414)"
+    },
+    "zinc_coordination": {
+      "apo_sasa": 29.5,
+      "holo_sasa": 16.3,
+      "reduction_pct": 44.5,
+      "label": "Zinc coord (H370, H374, E393)"
+    },
+    "k392_region": {
+      "apo_sasa": 31.7,
+      "holo_sasa": 6.4,
+      "reduction_pct": 79.7,
+      "label": "K392 selectivity (392, 398)"
+    },
+    "channel_floor": {
+      "apo_sasa": 31.7,
+      "holo_sasa": 6.4,
+      "reduction_pct": 79.7,
+      "label": "Floor (K392, Y398)"
+    },
+    "channel_wall": {
+      "apo_sasa": 106.3,
+      "holo_sasa": 61.9,
+      "reduction_pct": 41.7,
+      "label": "Wall (A403, A406)"
+    },
+    "channel_ceiling": {
+      "apo_sasa": 188.5,
+      "holo_sasa": 188.5,
+      "reduction_pct": 0.0,
+      "label": "Ceiling (Q412, D414)"
+    }
+  },
+  "spatial_coverage": {
+    "channel_radius_A": 7.2,
+    "binder_atoms_in_crosssection": 37,
+    "binder_atoms_total": 757,
+    "crosssection_fraction": 0.049,
+    "binder_atoms_near_entrance": 219,
+    "entrance_proximity_fraction": 0.289
+  },
+  "verdicts": {
+    "channel_capping": "BRIDGE_NOT_CAP",
+    "channel_capping_explanation": "Binder bridges both divergent patches (31% SASA reduction) but doesn't fully occlude the entrance. It spans across the channel mouth but leaves gaps.",
+    "functional_inhibition": "POSSIBLY_INHIBITORY",
+    "functional_explanation": "Binder contacts K392 selectivity handle and partially blocks entrance. May reduce activity.",
+    "redesign_needed": true,
+    "redesign_recommendation": "Binder does not adequately cap channel. Options:\n  1. Reposition binder to center over channel opening (re-dock with entrance hotspots)\n  2. Extend binder with loop insertions that reach across uncovered gaps\n  3. Add a channel-plugging peptide tail to the binder (hybrid V2+V4 approach)\n  Key gaps to fill: residues [388, 389, 390, 391, 393, 394, 395, 396, 397, 398]"
+  }
+}

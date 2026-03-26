@@ -1,0 +1,49 @@
+{
+  "parent": "DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+  "construct_b": {
+    "mutation": "V19W",
+    "sequence": "DIRHYFKSLEEYLKNLPKWVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+    "rationale": "Position 19: 13.7A to channel, facing=0.68, 3 contacts",
+    "top_candidates": [
+      {
+        "resnum": 19,
+        "aa": "V",
+        "contacts": 3,
+        "dist_channel": 13.7,
+        "dist_zinc": 14.6,
+        "facing": 0.68,
+        "vol_gain": 49,
+        "grade": "IDEAL"
+      },
+      {
+        "resnum": 41,
+        "aa": "V",
+        "contacts": 2,
+        "dist_channel": 15.6,
+        "dist_zinc": 14.3,
+        "facing": 0.33,
+        "vol_gain": 49,
+        "grade": "IDEAL"
+      },
+      {
+        "resnum": 49,
+        "aa": "I",
+        "contacts": 1,
+        "dist_channel": 15.5,
+        "dist_zinc": 11.9,
+        "facing": 0.35,
+        "vol_gain": 32,
+        "grade": "IDEAL"
+      }
+    ]
+  },
+  "construct_c": {
+    "architecture": "Parent \u2014 (GGGGS)x3 \u2014 VAGSAF",
+    "sequence": "VAGSAFGGGGSGGGGSGGGGSDIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN",
+    "linker": "GGGGSGGGGSGGGGS",
+    "cargo": "VAGSAF",
+    "attachment": "N-terminus",
+    "terminus_to_channel_A": 22.1,
+    "backup_sequence": "VAGSAFGGGGSGGGGSDIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "analysis": "Allosteric check: apo vs V2-bound ERAP2 zinc coordination",
+  "structures": {
+    "apo": "AlphaFold erap2_wt",
+    "holo": "Boltz-2 Y87A_Y89A complex"
+  },
+  "global_ca_rmsd": 0.723,
+  "n_aligned_residues": 151,
+  "zinc_triad_shifts": {
+    "370": 0.377,
+    "374": 0.526,
+    "393": 0.547
+  },
+  "zinc_triad_avg_shift": 0.483,
+  "zinc_triad_max_shift": 0.547,
+  "triad_distances": {
+    "H370-H374": {
+      "apo_A": 6.49,
+      "holo_A": 6.55,
+      "change_A": 0.06
+    },
+    "H370-E393": {
+      "apo_A": 8.64,
+      "holo_A": 8.66,
+      "change_A": 0.02
+    },
+    "H374-E393": {
+      "apo_A": 8.08,
+      "holo_A": 7.94,
+      "change_A": -0.14
+    }
+  },
+  "triad_triangle_area": {
+    "apo_A2": 24.9,
+    "holo_A2": 24.8,
+    "change_pct": -0.3
+  },
+  "per_residue_shifts": {
+    "368": {
+      "shift_A": 0.784,
+      "role": "entrance"
+    },
+    "369": {
+      "shift_A": 0.635,
+      "role": "entrance"
+    },
+    "370": {
+      "shift_A": 0.377,
+      "role": "H370 ZINC COORD"
+    },
+    "371": {
+      "shift_A": 0.623,
+      "role": "channel"
+    },
+    "372": {
+      "shift_A": 0.714,
+      "role": "channel"
+    },
+    "373": {
+      "shift_A": 0.552,
+      "role": "channel"
+    },
+    "374": {
+      "shift_A": 0.526,
+      "role": "H374 ZINC COORD"
+    },
+    "375": {
+      "shift_A": 0.568,
+      "role": "HEXXH"
+    },
+    "376": {
+      "shift_A": 0.572,
+      "role": "channel"
+    },
+    "377": {
+      "shift_A": 0.538,
+      "role": "channel"
+    },
+    "378": {
+      "shift_A": 0.624,
+      "role": "channel"
+    },
+    "379": {
+      "shift_A": 0.456,
+      "role": "channel"
+    },
+    "380": {
+      "shift_A": 0.145,
+      "role": "channel"
+    },
+    "381": {
+      "shift_A": 0.082,
+      "role": "channel"
+    },
+    "382": {
+      "shift_A": 0.401,
+      "role": "channel"
+    },
+    "383": {
+      "shift_A": 0.347,
+      "role": "channel"
+    },
+    "384": {
+      "shift_A": 0.678,
+      "role": "channel"
+    },
+    "385": {
+      "shift_A": 0.575,
+      "role": "channel"
+    },
+    "386": {
+      "shift_A": 0.578,
+      "role": "channel"
+    },
+    "387": {
+      "shift_A": 0.528,
+      "role": "near K392"
+    },
+    "388": {
+      "shift_A": 0.555,
+      "role": "near K392"
+    },
+    "389": {
+      "shift_A": 0.64,
+      "role": "near K392"
+    },
+    "390": {
+      "shift_A": 0.554,
+      "role": "near K392"
+    },
+    "391": {
+      "shift_A": 0.63,
+      "role": "adj K392"
+    },
+    "392": {
+      "shift_A": 0.687,
+      "role": "K392 SELECTIVITY"
+    },
+    "393": {
+      "shift_A": 0.547,
+      "role": "E393 ZINC COORD"
+    },
+    "394": {
+      "shift_A": 0.439,
+      "role": "post-zinc"
+    },
+    "395": {
+      "shift_A": 0.414,
+      "role": "post-zinc"
+    },
+    "396": {
+      "shift_A": 0.521,
+      "role": ""
+    },
+    "397": {
+      "shift_A": 0.397,
+      "role": ""
+    },
+    "398": {
+      "shift_A": 0.275,
+      "role": "Y398"
+    },
+    "399": {
+      "shift_A": 0.223,
+      "role": ""
+    }
+  },
+  "regional_rmsds": {
+    "Zinc triad (370,374,393)": {
+      "n": 3,
+      "rmsd": 0.489,
+      "max_shift": 0.547
+    },
+    "Catalytic zone (368-395)": {
+      "n": 28,
+      "rmsd": 0.549,
+      "max_shift": 0.784
+    },
+    "Divergent patch 1 (353-367)": {
+      "n": 15,
+      "rmsd": 1.053,
+      "max_shift": 1.84
+    },
+    "Divergent patch 2 (400-414)": {
+      "n": 15,
+      "rmsd": 0.632,
+      "max_shift": 1.06
+    },
+    "Channel ceiling (409-419)": {
+      "n": 11,
+      "rmsd": 0.434,
+      "max_shift": 0.608
+    },
+    "Deep channel (440-490)": {
+      "n": 51,
+      "rmsd": 0.475,
+      "max_shift": 0.877
+    },
+    "Far from binder (460-500)": {
+      "n": 41,
+      "rmsd": 0.708,
+      "max_shift": 2.79
+    }
+  },
+  "verdict": "WEAK_ALLOSTERIC_SIGNAL",
+  "explanation": "Avg zinc triad shift = 0.48 A. Within prediction noise for Boltz-2 vs AlphaFold comparison. Unlikely functional."
+}

@@ -1,0 +1,358 @@
+{
+  "sequence": "FKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNIL",
+  "ss_data": [
+    {
+      "pos": 1,
+      "resnum": 6,
+      "aa": "F",
+      "phi": 123.5,
+      "psi": -32.8,
+      "ss": "coil",
+      "contacts": 7,
+      "face": "BURIED"
+    },
+    {
+      "pos": 2,
+      "resnum": 7,
+      "aa": "K",
+      "phi": 91.3,
+      "psi": -3.3,
+      "ss": "coil",
+      "contacts": 3,
+      "face": "surface"
+    },
+    {
+      "pos": 3,
+      "resnum": 8,
+      "aa": "S",
+      "phi": 155.5,
+      "psi": -161.5,
+      "ss": "coil",
+      "contacts": 7,
+      "face": "BURIED"
+    },
+    {
+      "pos": 4,
+      "resnum": 9,
+      "aa": "L",
+      "phi": 63.8,
+      "psi": 39.6,
+      "ss": "coil",
+      "contacts": 19,
+      "face": "BURIED"
+    },
+    {
+      "pos": 5,
+      "resnum": 10,
+      "aa": "E",
+      "phi": 63.5,
+      "psi": 43.1,
+      "ss": "coil",
+      "contacts": 7,
+      "face": "BURIED"
+    },
+    {
+      "pos": 6,
+      "resnum": 11,
+      "aa": "E",
+      "phi": 67.4,
+      "psi": 36.0,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 7,
+      "resnum": 12,
+      "aa": "Y",
+      "phi": 60.1,
+      "psi": 47.7,
+      "ss": "coil",
+      "contacts": 23,
+      "face": "BURIED"
+    },
+    {
+      "pos": 8,
+      "resnum": 13,
+      "aa": "L",
+      "phi": 66.7,
+      "psi": 35.7,
+      "ss": "coil",
+      "contacts": 9,
+      "face": "BURIED"
+    },
+    {
+      "pos": 9,
+      "resnum": 14,
+      "aa": "K",
+      "phi": 69.6,
+      "psi": 32.8,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 10,
+      "resnum": 15,
+      "aa": "N",
+      "phi": 92.1,
+      "psi": 8.4,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 11,
+      "resnum": 16,
+      "aa": "L",
+      "phi": 62.5,
+      "psi": 36.0,
+      "ss": "coil",
+      "contacts": 10,
+      "face": "BURIED"
+    },
+    {
+      "pos": 12,
+      "resnum": 17,
+      "aa": "P",
+      "phi": 55.7,
+      "psi": 46.3,
+      "ss": "coil",
+      "contacts": 3,
+      "face": "surface"
+    },
+    {
+      "pos": 13,
+      "resnum": 18,
+      "aa": "K",
+      "phi": 69.1,
+      "psi": 41.1,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 14,
+      "resnum": 19,
+      "aa": "V",
+      "phi": 67.3,
+      "psi": 46.6,
+      "ss": "coil",
+      "contacts": 3,
+      "face": "surface"
+    },
+    {
+      "pos": 15,
+      "resnum": 20,
+      "aa": "V",
+      "phi": 65.7,
+      "psi": 40.7,
+      "ss": "coil",
+      "contacts": 14,
+      "face": "BURIED"
+    },
+    {
+      "pos": 16,
+      "resnum": 21,
+      "aa": "D",
+      "phi": 59.2,
+      "psi": 44.0,
+      "ss": "coil",
+      "contacts": 6,
+      "face": "BURIED"
+    },
+    {
+      "pos": 17,
+      "resnum": 22,
+      "aa": "M",
+      "phi": 68.5,
+      "psi": 43.3,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 18,
+      "resnum": 23,
+      "aa": "L",
+      "phi": 67.9,
+      "psi": 34.6,
+      "ss": "coil",
+      "contacts": 7,
+      "face": "BURIED"
+    },
+    {
+      "pos": 19,
+      "resnum": 24,
+      "aa": "V",
+      "phi": 63.5,
+      "psi": 41.0,
+      "ss": "coil",
+      "contacts": 15,
+      "face": "BURIED"
+    },
+    {
+      "pos": 20,
+      "resnum": 25,
+      "aa": "D",
+      "phi": 64.5,
+      "psi": 44.2,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 21,
+      "resnum": 26,
+      "aa": "L",
+      "phi": 65.8,
+      "psi": 40.4,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 22,
+      "resnum": 27,
+      "aa": "Y",
+      "phi": 65.0,
+      "psi": 39.5,
+      "ss": "coil",
+      "contacts": 12,
+      "face": "BURIED"
+    },
+    {
+      "pos": 23,
+      "resnum": 28,
+      "aa": "S",
+      "phi": 62.9,
+      "psi": 28.4,
+      "ss": "coil",
+      "contacts": 15,
+      "face": "BURIED"
+    },
+    {
+      "pos": 24,
+      "resnum": 29,
+      "aa": "K",
+      "phi": 88.3,
+      "psi": -3.0,
+      "ss": "coil",
+      "contacts": 1,
+      "face": "surface"
+    },
+    {
+      "pos": 25,
+      "resnum": 30,
+      "aa": "G",
+      "phi": -73.5,
+      "psi": -21.6,
+      "ss": "helix",
+      "contacts": 3,
+      "face": "surface"
+    },
+    {
+      "pos": 26,
+      "resnum": 31,
+      "aa": "I",
+      "phi": 74.7,
+      "psi": 29.1,
+      "ss": "coil",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 27,
+      "resnum": 32,
+      "aa": "F",
+      "phi": 150.0,
+      "psi": -163.1,
+      "ss": "coil",
+      "contacts": 2,
+      "face": "surface"
+    },
+    {
+      "pos": 28,
+      "resnum": 33,
+      "aa": "H",
+      "phi": 130.1,
+      "psi": -145.4,
+      "ss": "coil",
+      "contacts": 1,
+      "face": "surface"
+    },
+    {
+      "pos": 29,
+      "resnum": 34,
+      "aa": "L",
+      "phi": 83.2,
+      "psi": 45.1,
+      "ss": "coil",
+      "contacts": 13,
+      "face": "BURIED"
+    },
+    {
+      "pos": 30,
+      "resnum": 35,
+      "aa": "D",
+      "phi": -52.0,
+      "psi": -49.8,
+      "ss": "helix",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 31,
+      "resnum": 36,
+      "aa": "N",
+      "phi": -59.6,
+      "psi": -26.3,
+      "ss": "helix",
+      "contacts": 0,
+      "face": "solvent"
+    },
+    {
+      "pos": 32,
+      "resnum": 37,
+      "aa": "T",
+      "phi": 115.2,
+      "psi": -156.1,
+      "ss": "coil",
+      "contacts": 5,
+      "face": "BURIED"
+    },
+    {
+      "pos": 33,
+      "resnum": 38,
+      "aa": "N",
+      "phi": 87.8,
+      "psi": -137.1,
+      "ss": "coil",
+      "contacts": 19,
+      "face": "BURIED"
+    },
+    {
+      "pos": 34,
+      "resnum": 39,
+      "aa": "I",
+      "phi": 90.7,
+      "psi": -124.1,
+      "ss": "coil",
+      "contacts": 13,
+      "face": "BURIED"
+    },
+    {
+      "pos": 35,
+      "resnum": 40,
+      "aa": "L",
+      "phi": 115.8,
+      "psi": -121.7,
+      "ss": "coil",
+      "contacts": 6,
+      "face": "BURIED"
+    }
+  ],
+  "helix_segments": [],
+  "staple_candidates": [],
+  "best_staple": null
+}
