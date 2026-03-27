@@ -1,0 +1,3 @@
+[submodule "foldism"]
+	path = foldism
+	url = https://github.com/hgbrian/foldism.git
