@@ -1,0 +1,72 @@
+n248_trim_c5_Y87A_Y89A:
+  sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN
+  length: 92
+  esmfold:
+    plddt: 62.0
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
+  chai1:
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
+  alphafold3:
+    plddt: null
+    ptm: null
+    source: alphafoldserver.com
+n248_trim_c5:
+  sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKN
+  length: 92
+  esmfold:
+    plddt: 62.0
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
+  chai1:
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
+  alphafold3:
+    plddt: null
+    ptm: null
+    source: alphafoldserver.com
+n248_wt:
+  sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKNYFFEK
+  length: 97
+  esmfold:
+    plddt: 58.0
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
+  chai1:
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
+  alphafold3:
+    plddt: null
+    ptm: null
+    source: alphafoldserver.com
+n248_ko_all_aromatics:
+  sequence: DIRHAAKSLEEALKNLPKVVDMLVDLASKGIAHLDNTNILVKDDKAAAIDAGSAAINEKKSTDATLKIKNDQISSEEAVKSVSEKIANALKNAAAEK
+  length: 97
+  esmfold:
+    plddt: null
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
+  chai1:
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
+  alphafold3:
+    plddt: null
+    ptm: null
+    source: alphafoldserver.com
