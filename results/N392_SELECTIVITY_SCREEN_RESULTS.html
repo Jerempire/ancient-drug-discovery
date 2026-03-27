@@ -1,0 +1,113 @@
+<html><head><style>
+body{font-family:'Segoe UI',Arial,sans-serif;max-width:800px;margin:0 auto;padding:20px;color:#1a1a1a;background:#f8f9fa}
+h1{color:#1a365d;border-bottom:3px solid #2b6cb0;padding-bottom:8px;font-size:22px}
+h2{color:#2b6cb0;margin-top:28px;font-size:18px}
+h3{color:#4a5568;font-size:15px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px}
+th{background:#2b6cb0;color:#fff;padding:8px 10px;text-align:left}
+td{padding:6px 10px;border-bottom:1px solid #e2e8f0}
+tr:nth-child(even){background:#edf2f7}
+.hit{background:#c6f6d5;font-weight:bold}
+.near{background:#fefcbf}
+.neg{background:#fed7d7}
+.verdict{background:#fff5f5;border-left:4px solid #e53e3e;padding:12px 16px;margin:16px 0;font-size:15px}
+.insight{background:#ebf8ff;border-left:4px solid #3182ce;padding:12px 16px;margin:12px 0}
+code{background:#edf2f7;padding:2px 6px;border-radius:3px;font-size:12px}
+.footer{margin-top:30px;padding-top:12px;border-top:1px solid #cbd5e0;color:#718096;font-size:12px}
+.metric{font-size:24px;font-weight:bold;color:#2b6cb0}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0}
+.stat-box{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px;text-align:center}
+.stat-label{font-size:11px;color:#718096;text-transform:uppercase}
+</style></head><body>
+
+<h1>N392 Selectivity Mutation Screen</h1>
+<p><strong>Date:</strong> 2026-03-26 &nbsp;|&nbsp; <strong>Instance:</strong> 33489714 (RTX 4090) &nbsp;|&nbsp; <strong>Cost:</strong> ~$0.20</p>
+
+<div class="stat-grid">
+<div class="stat-box"><div class="metric">68</div><div class="stat-label">Boltz-2 Predictions</div></div>
+<div class="stat-box"><div class="metric">17</div><div class="stat-label">Constructs Tested</div></div>
+<div class="stat-box"><div class="metric" style="color:#e53e3e">0</div><div class="stat-label">Full Hits</div></div>
+</div>
+
+<div class="verdict">
+<strong>VERDICT: NO HITS</strong> &mdash; N392 allele selectivity and ERAP1 counter-selectivity are geometrically incompatible at this binding site. ERAP1 has Asn (N375) at the equivalent position &mdash; any mutation favoring N392 also favors ERAP1.
+</div>
+
+<h2>Wildtype Baseline (Y87A_Y89A)</h2>
+<table>
+<tr><th>Target</th><th>ipTM</th></tr>
+<tr><td>ERAP2-K392</td><td><strong>0.800</strong></td></tr>
+<tr><td>ERAP2-N392</td><td><strong>0.733</strong></td></tr>
+<tr><td>ERAP1</td><td>0.523</td></tr>
+<tr><td>IRAP</td><td>0.416</td></tr>
+<tr><td><strong>N392&minus;K392 delta</strong></td><td><strong>&minus;0.067</strong></td></tr>
+</table>
+
+<h2>Full Results (Ranked by N392 Delta)</h2>
+<table>
+<tr><th>#</th><th>Mutation</th><th>K392</th><th>N392</th><th>Delta</th><th>ERAP1</th><th>IRAP</th><th>Note</th></tr>
+<tr class="near"><td>1</td><td>F51A</td><td>0.329</td><td>0.641</td><td><strong>+0.311</strong></td><td>0.546</td><td>0.434</td><td>Huge delta, ERAP1 too high</td></tr>
+<tr class="near"><td>2</td><td>F51Q</td><td>0.431</td><td>0.704</td><td><strong>+0.273</strong></td><td>0.752</td><td>0.352</td><td>N392 hits 0.70, ERAP1=0.752</td></tr>
+<tr class="near"><td>3</td><td>F51W</td><td>0.328</td><td>0.597</td><td><strong>+0.270</strong></td><td>0.653</td><td>0.441</td><td>ERAP2 low, ERAP1 high</td></tr>
+<tr><td>4</td><td>F51N</td><td>0.396</td><td>0.580</td><td>+0.184</td><td>0.616</td><td>0.401</td><td>Same pattern</td></tr>
+<tr><td>5</td><td>N38Q</td><td>0.414</td><td>0.583</td><td>+0.168</td><td>0.634</td><td>0.357</td><td>Best pos37 single</td></tr>
+<tr><td>6</td><td>N38K</td><td>0.438</td><td>0.490</td><td>+0.053</td><td>0.490</td><td>0.330</td><td>Marginal</td></tr>
+<tr><td>7</td><td>N38R_F51W</td><td>0.394</td><td>0.409</td><td>+0.016</td><td>0.649</td><td>0.448</td><td>Negligible</td></tr>
+<tr><td>8</td><td>N38A</td><td>0.445</td><td>0.426</td><td>&minus;0.019</td><td>0.677</td><td>0.346</td><td>Neutral</td></tr>
+<tr style="background:#d4edda"><td>9</td><td><strong>wt</strong></td><td><strong>0.800</strong></td><td><strong>0.733</strong></td><td><strong>&minus;0.067</strong></td><td><strong>0.523</strong></td><td><strong>0.416</strong></td><td><strong>Baseline</strong></td></tr>
+<tr><td>10</td><td>N38W</td><td>0.414</td><td>0.337</td><td>&minus;0.078</td><td>0.459</td><td>0.453</td><td>Wrong direction</td></tr>
+<tr><td>11</td><td>N38R</td><td>0.447</td><td>0.363</td><td>&minus;0.083</td><td>0.416</td><td>0.360</td><td>Wrong direction</td></tr>
+<tr class="neg"><td>12</td><td>N38K_F51K</td><td>0.513</td><td>0.391</td><td>&minus;0.121</td><td>0.729</td><td>0.377</td><td>Double &mdash; cancels</td></tr>
+<tr class="neg"><td>13</td><td>F51R</td><td>0.616</td><td>0.459</td><td>&minus;0.157</td><td>0.422</td><td>0.361</td><td>K392-selective</td></tr>
+<tr class="neg"><td>14</td><td>N38K_F51W</td><td>0.677</td><td>0.511</td><td>&minus;0.166</td><td>0.433</td><td>0.385</td><td>K392-selective</td></tr>
+<tr class="neg"><td>15</td><td>N38Q_F51N</td><td>0.642</td><td>0.466</td><td>&minus;0.176</td><td>0.711</td><td>0.355</td><td>Double &mdash; cancels</td></tr>
+<tr class="neg"><td>16</td><td>N38D</td><td>0.592</td><td>0.370</td><td>&minus;0.223</td><td>0.766</td><td>0.413</td><td>Neg control (Asp&minus; attracts K+)</td></tr>
+<tr class="neg"><td>17</td><td>F51K</td><td>0.674</td><td>0.449</td><td>&minus;0.225</td><td>0.523</td><td>0.478</td><td>K392-selective</td></tr>
+</table>
+
+<h2>Key Mechanistic Insights</h2>
+
+<div class="insight">
+<strong>1. Phe50 is the allele discrimination switch.</strong><br>
+Removing Phe50 (F51A) swings the delta from &minus;0.067 to +0.311 &mdash; a +0.378 shift. The aromatic ring makes van der Waals contacts with K392's aliphatic chain at 3.84&Aring;. Without it, K392's longer side chain has no advantage.
+</div>
+
+<div class="insight">
+<strong>2. N392 selectivity and ERAP1 selectivity are anti-correlated.</strong><br>
+Every N392-favoring mutation also increases ERAP1 binding, because ERAP1 has Asn (N375) at the equivalent position. The binder contacts residue 392 directly &mdash; it cannot distinguish ERAP2-N392 from ERAP1-N375.
+</div>
+
+<div class="insight">
+<strong>3. Electrostatic repulsion hypothesis disproven.</strong><br>
+F51K and F51R were predicted to repel K392 (+/+ repulsion), but instead they <em>prefer</em> K392 (delta &minus;0.225 and &minus;0.157). Long flexible side chains find favorable hydrophobic packing with K392's aliphatic chain.
+</div>
+
+<div class="insight">
+<strong>4. Negative control confirmed mechanism.</strong><br>
+N38D (Asp&minus;) shows delta = &minus;0.223, confirming that negative charge at position 37 attracts K392's positive Lys &mdash; the electrostatic model works at the H-bond position.
+</div>
+
+<div class="insight">
+<strong>5. Double mutations cancel rather than combine.</strong><br>
+All 4 double mutants performed worse than expected. Combining two interface mutations destabilizes the binding mode cooperatively, causing Boltz-2 re-docking artifacts.
+</div>
+
+<h2>Why This Can't Work (Structural)</h2>
+<p>The V2 binder contacts position 392 through exactly 2 residues: <strong>Asn37</strong> (H-bond at 4.36&Aring;) and <strong>Phe50</strong> (vdW at 3.84&Aring;). The adjacent ERAP2-unique divergent residues (Y398, A403, D414) are all <strong>&gt;6&Aring; from any binder residue</strong> &mdash; the binder doesn't contact them.</p>
+<p>To prefer N392 over K392, a mutation must better accommodate <strong>Asparagine</strong> at position 392. But ERAP1 has <strong>N375 (also Asparagine)</strong> at the structurally equivalent position. There is no way to distinguish ERAP2-N392 from ERAP1-N375 when the contact residue itself is identical.</p>
+
+<h2>Remaining Options</h2>
+<table>
+<tr><th>Option</th><th>Approach</th><th>Feasibility</th></tr>
+<tr><td>Accept allele-agnostic</td><td>WT already binds both alleles well (K=0.800, N=0.733)</td><td>Ready now</td></tr>
+<tr><td>ProteinMPNN on N392</td><td>Multi-site redesign may find novel binding mode that contacts Y398/D414</td><td>1 Vast.ai run</td></tr>
+<tr><td>V4 peptide P1 scan</td><td>Allele-specific P1 residues in 6-mer peptides</td><td>Existing pipeline</td></tr>
+</table>
+
+<div class="footer">
+<p>Ancient Drug Discovery Pipeline &mdash; ERAP2 Selective Inhibitor Campaign<br>
+68 Boltz-2 predictions | RTX 4090 instance 33489714 | ~$0.20 compute<br>
+Generated by Claude Code (Opus 4.6)</p>
+</div>
+
+</body></html>

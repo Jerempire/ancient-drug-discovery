@@ -17,7 +17,7 @@ Small Entity
 ERAP2-PROV-001
 
 ### PRIORITY DATE
-[Filing date — 2026-03-26]
+[Filing date -- 2026-03-26]
 
 ---
 
@@ -319,7 +319,7 @@ The protein binders may further be used as:
 (c) screening candidates against a selectivity panel of paralogous enzymes; and
 (d) optimizing selectivity by mutating binder residues that contribute to paralog cross-reactivity.
 
-### Dependent Claims — Composition of Matter
+### Dependent Claims -- Composition of Matter
 
 **Claim 5.** The protein binder of claim 1, comprising the amino acid sequence set forth in SEQ ID NO: 1 (DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN) or a variant thereof having at least 85% sequence identity and retaining ERAP2 selectivity.
 
@@ -331,17 +331,17 @@ The protein binders may further be used as:
 
 **Claim 9.** The protein binder of claim 1, conjugated to a detectable label selected from fluorescent dyes, radioactive isotopes, and biotin.
 
-### Dependent Claims — Mechanism
+### Dependent Claims -- Mechanism
 
 **Claim 10.** The protein binder of claim 1, wherein the binder adopts a bridge topology spanning across the channel entrance and extending into the deep channel (residues 440-489), contacting at least 30 ERAP2 residues.
 
 **Claim 11.** The protein binder of claim 1, wherein the binder contacts ERAP2 channel mouth residues Q375 and Y408 at distances of less than 4 angstroms.
 
-### Dependent Claims — Formulation
+### Dependent Claims -- Formulation
 
 **Claim 12.** A pharmaceutical composition comprising the protein binder of claim 1 and a pharmaceutically acceptable carrier.
 
-### Dependent Claims — Method of Treatment
+### Dependent Claims -- Method of Treatment
 
 **Claim 13.** A method of treating cancer characterized by ERAP2-mediated immune evasion, comprising administering to a subject in need thereof a therapeutically effective amount of the composition of claim 12.
 
@@ -349,7 +349,7 @@ The protein binders may further be used as:
 
 **Claim 15.** The method of claim 13, wherein the protein binder is administered in combination with an immune checkpoint inhibitor.
 
-### Dependent Claims — Specific Sequences
+### Dependent Claims -- Specific Sequences
 
 **Claim 16.** The protein binder of claim 1, selected from the group consisting of:
 - SEQ ID NO: 1 (n248_trim_c5_Y87A_Y89A, 92 aa)
