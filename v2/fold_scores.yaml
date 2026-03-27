@@ -2,7 +2,7 @@ n248_trim_c5_Y87A_Y89A:
   sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIANALKN
   length: 92
   esmfold:
-    plddt: 62.0
+    plddt: 61.0
   boltz2:
     plddt: null
     ptm: null
@@ -20,7 +20,7 @@ n248_trim_c5:
   sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKN
   length: 92
   esmfold:
-    plddt: 62.0
+    plddt: 60.3
   boltz2:
     plddt: null
     ptm: null
@@ -38,7 +38,7 @@ n248_wt:
   sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKNYFFEK
   length: 97
   esmfold:
-    plddt: 58.0
+    plddt: 64.3
   boltz2:
     plddt: null
     ptm: null
@@ -56,7 +56,7 @@ n248_ko_all_aromatics:
   sequence: DIRHAAKSLEEALKNLPKVVDMLVDLASKGIAHLDNTNILVKDDKAAAIDAGSAAINEKKSTDATLKIKNDQISSEEAVKSVSEKIANALKNAAAEK
   length: 97
   esmfold:
-    plddt: null
+    plddt: 51.6
   boltz2:
     plddt: null
     ptm: null
