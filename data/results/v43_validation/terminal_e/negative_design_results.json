@@ -1,0 +1,32 @@
+{
+  "analysis": "Negative Design: L40A and L40A+K60A to reduce ERAP1/IRAP cross-reactivity",
+  "timestamp": "2026-03-27T00:31:04Z",
+  "instance": 33618599,
+  "method": "Boltz-2 with MSA server, 151aa crops, 3 diffusion samples, seed 42",
+  "baseline_wildtype_msa": {
+    "erap2_k392": 0.699,
+    "erap2_n392": 0.812,
+    "erap1": 0.700,
+    "irap": 0.600
+  },
+  "results": {
+    "L40A": {
+      "description": "Leu40->Ala: removes 2 conserved contacts (375, 379)",
+      "sequence": "DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNIAVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKNYFFEK",
+      "erap2_k392": {"samples": [0.869, 0.647, 0.778], "avg": 0.765},
+      "erap2_n392": {"samples": [0.522, 0.659, 0.776], "avg": 0.652},
+      "erap1": {"samples": [0.842, 0.557, 0.470], "avg": 0.623},
+      "irap": {"samples": [0.879, 0.769, 0.490], "avg": 0.713}
+    },
+    "L40A_K60A": {
+      "description": "Leu40->Ala + Lys60->Ala: removes 4 conserved contacts (375, 379, 382, 489)",
+      "sequence": "DIRHYFKSLEEYLKNLPKVVDLYSKGIFHLDNTNIAVKDDKFYAIDFGSAYINEAKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKNYFFEK",
+      "erap2_k392": {"samples": [0.817, 0.536, 0.818], "avg": 0.724},
+      "erap2_n392": {"samples": [0.693, 0.787, 0.864], "avg": 0.781},
+      "erap1": {"samples": [0.888, 0.552, 0.838], "avg": 0.759},
+      "irap": {"samples": [0.870, 0.727, 0.811], "avg": 0.803}
+    }
+  },
+  "verdict": "NEITHER_IMPROVES_SELECTIVITY",
+  "conclusion": "Removing conserved contacts shifts the binding mode rather than cleanly weakening ERAP1/IRAP. The binder is a cooperative folded structure — individual contact removal changes the entire docking geometry. Wildtype n248 (97aa) remains the best candidate."
+}
