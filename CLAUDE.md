@@ -41,35 +41,38 @@ All targets defined in `targets.yaml`. Three immune defense steps:
 ### GPU Compute (Vast.ai)
 Replaces Colab for GPU inference. Claude Code SSHs directly — no browser needed.
 
-**CRITICAL:** Always use Docker image `rosettacommons/rfdiffusion:latest` — ships with RFdiffusion, DGL, SE3-Transformer, and all 9 model weights pre-installed. Do NOT use generic PyTorch images (DGL/PyTorch version mismatches are unsolvable without building from source).
+**Two workflows:**
 
-**Workflow:**
+#### Boltz-2 Predictions (primary) — `boltz_runner.py`
+Uses custom Docker image (`jerempire/boltz2-ancient:latest`) with pre-baked PyTorch, Boltz-2, CCD, and model weights. Zero setup time.
+
 ```bash
-# 1. Search + launch RTX 4090 with RFdiffusion image
-python scripts/vast_launch.py search
-vastai create instance <ID> --image rosettacommons/rfdiffusion:latest --disk 40
+# End-to-end (launch → run → download → stop)
+python scripts/boltz_runner.py full --yamls path/to/yamls/ --samples 3 --keep
 
-# 2. Upload data, run setup (installs BioPython, ProteinMPNN)
-python scripts/vast_launch.py upload
-ssh -p <PORT> root@<HOST> "cd /workspace && bash scripts/gpu_setup.sh"
-
-# 3. Run RFdiffusion (from /app/RFdiffusion, weights at models/)
-ssh -p <PORT> root@<HOST> "cd /app/RFdiffusion && python scripts/run_inference.py ..."
-
-# 4. Run selectivity screen
-ssh -p <PORT> root@<HOST> "python3 /workspace/scripts/selectivity_screen.py"
-
-# 5. Download results + CIF files + destroy
-python scripts/vast_launch.py download
-python scripts/vast_launch.py destroy
+# Or step-by-step:
+python scripts/boltz_runner.py warm                    # reuse/restart/launch
+python scripts/boltz_runner.py run --yamls path/       # upload + predict
+python scripts/boltz_runner.py download                # CIF + JSON (enforced)
+python scripts/boltz_runner.py stop                    # pause billing (keep disk)
+python scripts/boltz_runner.py start                   # resume later
+python scripts/boltz_runner.py destroy                 # full teardown
 ```
+
+**Instance state:** `.vast_instance_boltz.json` (gitignored). Supports stop/start (disk preserved).
+**GPU tiers:** `--tier small` (RTX 4090, <$0.80/hr) for <30 YAMLs; `--tier large` (A100/H100) for big campaigns.
+**Docker image source:** `docker/Dockerfile.boltz2`
+
+#### RFdiffusion — `vast_launch.py` (legacy)
+**CRITICAL:** Always use Docker image `rosettacommons/rfdiffusion:latest` for RFdiffusion jobs. Do NOT use for Boltz-2.
+
+**Scripts:** `vast_launch.py`, `gpu_setup.sh`, `run_pipeline_gpu.py`, `selectivity_screen.py`
+**Instance state:** `.vast_instance.json` (separate from Boltz runner).
 
 **MANDATORY: Always download CIF files** from Boltz-2 predictions (not just JSON scores). CIF files are needed for PyRosetta interface analysis. Save to `data/results/boltz2_complexes/`.
 
-**Cost:** First full run (40 binders + selectivity): $0.50 total (18 min on RTX 4090 at $0.37/hr).
-**Instance state:** saved to `.vast_instance.json` (gitignored).
-**Scripts:** `vast_launch.py`, `gpu_setup.sh`, `run_pipeline_gpu.py`, `selectivity_screen.py`
-**Results:** `data/results/rfdiffusion/` (PDBs), `data/results/selectivity/` (CSV/JSON)
+**Cost:** Boltz-2 run (12 complexes x 3 samples): ~$0.10 on RTX 4090. RFdiffusion (40 binders): ~$0.50.
+**Results:** `data/results/boltz2_complexes/` (CIF+JSON), `data/results/rfdiffusion/` (PDBs)
 
 ## BioReason-Pro (Protein Function Reasoning)
 
