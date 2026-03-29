@@ -3,56 +3,70 @@ n248_trim_c5_Y87A_Y89A:
   length: 92
   esmfold:
     plddt: 61.0
-    source: api.esmatlas.com (REST API, 2026-03-27)
-  boltz1:
-    plddt: 68.4
-    min_plddt: 42.9
-    max_plddt: 80.9
-    confident_residues: 56
-    disordered_residues: 11
-    source: HF Space simonduerr/boltz-1 (gradio_client, 2026-03-27)
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
   chai1:
-    plddt: 69.9
-    ptm: 0.560
-    aggregate_score: 0.112
-    disordered_residues: 0
-    n_models: 5
-    source: Vast.ai RTX 4080, chai_lab 0.6.1 (2026-03-27)
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
   alphafold3:
     plddt: null
     ptm: null
-    source: alphafoldserver.com (not tested)
+    source: alphafoldserver.com
 n248_trim_c5:
   sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKN
   length: 92
   esmfold:
     plddt: 60.3
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
+  chai1:
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
+  alphafold3:
+    plddt: null
+    ptm: null
+    source: alphafoldserver.com
 n248_wt:
   sequence: DIRHYFKSLEEYLKNLPKVVDMLVDLYSKGIFHLDNTNILVKDDKFYAIDFGSAYINEKKSTDYTLKIKNDQISSEEYVKSVSEKIYNYLKNYFFEK
   length: 97
   esmfold:
     plddt: 64.3
-n248_ko_all_aromatics:
-  sequence: DIRHAFKSLEEALKNNLPKVVDMLVDLASKGIAHLDNTNILVKDDKAAAIDFGSAAINEKKSSDATLKIKNDQISSEEYVKSVSEKIANALKN
-  length: 93
-  esmfold:
-    plddt: 53.5
-    source: api.esmatlas.com (REST API, 2026-03-27)
-  boltz1:
-    plddt: 55.9
-    min_plddt: 32.2
-    max_plddt: 70.0
-    confident_residues: 1
-    disordered_residues: 25
-    source: HF Space simonduerr/boltz-1 (gradio_client, 2026-03-27)
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
   chai1:
-    plddt: 70.8
-    ptm: 0.543
-    aggregate_score: 0.109
-    disordered_residues: 0
-    n_models: 5
-    source: Vast.ai RTX 4080, chai_lab 0.6.1 (2026-03-27)
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
   alphafold3:
     plddt: null
     ptm: null
-    source: alphafoldserver.com (not tested)
+    source: alphafoldserver.com
+n248_ko_all_aromatics:
+  sequence: DIRHAAKSLEEALKNLPKVVDMLVDLASKGIAHLDNTNILVKDDKAAAIDAGSAAINEKKSTDATLKIKNDQISSEEAVKSVSEKIANALKNAAAEK
+  length: 97
+  esmfold:
+    plddt: 51.6
+  boltz2:
+    plddt: null
+    ptm: null
+    confidence: null
+    source: tamarind / neurosnap / rowan
+  chai1:
+    aggregate_score: null
+    ptm: null
+    source: lab.chaidiscovery.com
+  alphafold3:
+    plddt: null
+    ptm: null
+    source: alphafoldserver.com
