@@ -1,0 +1,30 @@
+{
+  "target_pdb": "/workspace/structures/erap2_3SE6_experimental.pdb",
+  "target_chain": "A",
+  "target_residues": [
+    215,
+    308,
+    317,
+    347,
+    363,
+    414,
+    423,
+    438,
+    488,
+    857,
+    888,
+    896
+  ],
+  "design_chain": "B",
+  "design_length_min": 25,
+  "design_length_max": 50,
+  "num_designs": 20,
+  "hotspot_residues": [
+    363,
+    317,
+    414,
+    438,
+    488
+  ],
+  "notes": "ERAP2 channel mouth capping binder. 12 ERAP2-unique surface residues."
+}
