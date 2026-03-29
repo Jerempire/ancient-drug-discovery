@@ -1,0 +1,13 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: LFDPKTSSASDKLWVTRVIAHELAHQWFGNLVTMEWWNDIWLKEGFAKYMELIAVNATYPELQFDDYFLNVCFEVITKDSLNSSRPISKPAETPTQIQEMF
+      msa: empty
+  - protein:
+      id: B
+      sequence: VAGSAF
+      modifications:
+        - position: 1
+          ccd: DVA
+      msa: empty

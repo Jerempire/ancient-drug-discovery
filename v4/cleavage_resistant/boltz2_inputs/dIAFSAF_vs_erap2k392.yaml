@@ -1,0 +1,13 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: LFDPKTSSASDKLWVTRVIAHELAHQWFGNLVTMEWWNDIWLKEGFAKYMELIAVNATYPELQFDDYFLNVCFEVITKDSLNSSRPISKPAETPTQIQEMF
+      msa: empty
+  - protein:
+      id: B
+      sequence: IAFSAF
+      modifications:
+        - position: 1
+          ccd: DIL
+      msa: empty

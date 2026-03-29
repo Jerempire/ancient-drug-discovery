@@ -1,0 +1,21 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: YLSWRRPDMCFTFNCNHSHAIEQWYQRKFEMNSRLLEFSAEPNKSFVTKFDLEIKPNYTPMKNHPHDMYFFYSYANWKDDPLQCFTYNCNKQGTAILKWYR
+      msa: empty
+  - protein:
+      id: B
+      sequence: FASGAV
+      modifications:
+        - position: 1
+          ccd: DPN
+        - position: 2
+          ccd: DAL
+        - position: 3
+          ccd: DSN
+        - position: 5
+          ccd: DAL
+        - position: 6
+          ccd: DVA
+      msa: empty
