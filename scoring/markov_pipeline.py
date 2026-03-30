@@ -20,6 +20,7 @@ import math
 from dataclasses import dataclass, field
 from typing import Any
 
+import numpy as np
 import yaml
 
 
@@ -151,6 +152,85 @@ class CandidateState:
 
         return round(prob, 4)
 
+    def p_approval_mc(self, n_sims: int = 10_000, seed: int = 42) -> dict[str, Any]:
+        """Monte Carlo estimate of P(approval) with confidence intervals.
+
+        Instead of multiplying point-estimate transition probabilities, samples
+        each phase transition from a Beta distribution centered on the adjusted
+        base rate. Returns median, mean, and 90% CI.
+
+        The Beta shape parameters are derived from an effective sample size of 50
+        (moderate confidence in BIO/Informa base rates). Higher N = tighter prior.
+        """
+        rng = np.random.default_rng(seed)
+        effective_n = 50  # pseudo-observations backing each base rate
+
+        # Build the ordered forward path from current state
+        forward_states = []
+        state = self.current_state
+        while state not in ("approved", "rejected"):
+            transitions = dict(BASE_TRANSITIONS.get(state, {}))
+            adj = self.transition_adjustments.get(state, {})
+            for ns, delta in adj.items():
+                if ns in transitions:
+                    transitions[ns] = max(0.01, min(0.99, transitions[ns] + delta))
+            total = sum(transitions.values())
+            transitions = {k: v / total for k, v in transitions.items()} if total > 0 else transitions
+
+            advance_prob = sum(v for k, v in transitions.items() if k != "rejected")
+            forward_states.append((state, advance_prob))
+
+            next_states = [k for k in transitions if k != "rejected" and transitions[k] > 0]
+            if not next_states:
+                break
+            state = next_states[0]
+
+        if not forward_states:
+            return {
+                "mean": 1.0 if self.current_state == "approved" else 0.0,
+                "median": 1.0 if self.current_state == "approved" else 0.0,
+                "ci_5": 1.0 if self.current_state == "approved" else 0.0,
+                "ci_95": 1.0 if self.current_state == "approved" else 0.0,
+                "n_sims": n_sims,
+                "per_phase": {},
+            }
+
+        # Sample each phase transition independently from Beta(alpha, beta)
+        # where alpha = p * N, beta = (1-p) * N
+        phase_samples = {}
+        for state_name, p in forward_states:
+            alpha = p * effective_n
+            beta = (1.0 - p) * effective_n
+            samples = rng.beta(alpha, beta, size=n_sims)
+            phase_samples[state_name] = samples
+
+        # Cumulative P(approval) = product of all phase advances
+        cumulative = np.ones(n_sims)
+        for state_name, _ in forward_states:
+            cumulative *= phase_samples[state_name]
+
+        # Per-phase summary stats
+        per_phase = {}
+        for state_name, p in forward_states:
+            s = phase_samples[state_name]
+            per_phase[state_name] = {
+                "point_estimate": round(p, 4),
+                "mc_mean": round(float(np.mean(s)), 4),
+                "mc_ci_5": round(float(np.percentile(s, 5)), 4),
+                "mc_ci_95": round(float(np.percentile(s, 95)), 4),
+            }
+
+        return {
+            "mean": round(float(np.mean(cumulative)), 6),
+            "median": round(float(np.median(cumulative)), 6),
+            "ci_5": round(float(np.percentile(cumulative, 5)), 6),
+            "ci_95": round(float(np.percentile(cumulative, 95)), 6),
+            "std": round(float(np.std(cumulative)), 6),
+            "n_sims": n_sims,
+            "point_estimate": self.p_approval(),
+            "per_phase": per_phase,
+        }
+
     def expected_timeline_years(self) -> float:
         """Estimate years to approval from current state."""
         total = 0.0
@@ -161,8 +241,8 @@ class CandidateState:
             total += STATE_DURATIONS.get(state, 1.0)
         return round(total, 1)
 
-    def to_dict(self) -> dict[str, Any]:
-        return {
+    def to_dict(self, include_mc: bool = True) -> dict[str, Any]:
+        result = {
             "target": self.target,
             "candidate": self.candidate_name,
             "current_state": self.current_state,
@@ -171,6 +251,9 @@ class CandidateState:
             "transitions": self.get_transitions(),
             "adjustments": self.transition_adjustments,
         }
+        if include_mc:
+            result["p_approval_mc"] = self.p_approval_mc()
+        return result
 
 
 def create_candidates_from_targets(targets: dict) -> list[CandidateState]:
