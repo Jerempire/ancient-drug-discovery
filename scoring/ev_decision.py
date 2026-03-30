@@ -10,6 +10,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
+import numpy as np
+
 from .bayes_target import TargetScorer
 from .commercial import CommercialScore
 from .markov_pipeline import CandidateState
@@ -46,6 +48,8 @@ class EVEstimate:
     roi: float
     risk_tier: str
     components: dict[str, Any] = field(default_factory=dict)
+    # Monte Carlo uncertainty bands (populated when use_mc=True)
+    ev_mc: dict[str, Any] | None = None
 
 
 @dataclass
@@ -86,6 +90,8 @@ def compute_ev(
     commercial: CommercialScore,
     market_type: str = "medium_oncology",
     market_estimates: dict[str, int] | None = None,
+    use_mc: bool = False,
+    n_sims: int = 10_000,
 ) -> EVEstimate:
     """Compute expected value for a single candidate.
 
@@ -95,6 +101,8 @@ def compute_ev(
         commercial: CommercialScore with composite payoff proxy
         market_type: Key into MARKET_CAP_ESTIMATES
         market_estimates: Override default market cap dict
+        use_mc: If True, also compute EV distribution via Monte Carlo
+        n_sims: Number of MC simulations (default 10K)
     """
     estimates = market_estimates or MARKET_CAP_ESTIMATES
     market_cap = estimates.get(market_type, 500_000_000)
@@ -107,6 +115,54 @@ def compute_ev(
     has_compounds = candidate.current_state not in ("discovery",)
     risk_tier = _assign_risk_tier(p_approval, has_compounds)
     roi = ev_usd / total_cost if total_cost > 0 else 0.0
+
+    # Monte Carlo EV distribution
+    ev_mc = None
+    if use_mc:
+        mc = candidate.p_approval_mc(n_sims=n_sims)
+        # Recompute EV for each simulated P(approval)
+        # Reconstruct the approval probability samples from per-phase data
+        rng = np.random.default_rng(42)
+        effective_n = 50
+        forward_states = []
+        state = candidate.current_state
+        from .markov_pipeline import BASE_TRANSITIONS
+        while state not in ("approved", "rejected"):
+            transitions = dict(BASE_TRANSITIONS.get(state, {}))
+            adj = candidate.transition_adjustments.get(state, {})
+            for ns, delta in adj.items():
+                if ns in transitions:
+                    transitions[ns] = max(0.01, min(0.99, transitions[ns] + delta))
+            total = sum(transitions.values())
+            transitions = {k: v / total for k, v in transitions.items()} if total > 0 else transitions
+            advance_prob = sum(v for k, v in transitions.items() if k != "rejected")
+            forward_states.append((state, advance_prob))
+            next_states = [k for k in transitions if k != "rejected" and transitions[k] > 0]
+            if not next_states:
+                break
+            state = next_states[0]
+
+        # Sample cumulative P(approval)
+        cumulative = np.ones(n_sims)
+        for _, p in forward_states:
+            alpha = p * effective_n
+            beta = (1.0 - p) * effective_n
+            cumulative *= rng.beta(alpha, beta, size=n_sims)
+
+        ev_samples = cumulative * payoff_usd - total_cost
+        roi_samples = ev_samples / total_cost if total_cost > 0 else ev_samples
+
+        ev_mc = {
+            "ev_mean": round(float(np.mean(ev_samples)), 2),
+            "ev_median": round(float(np.median(ev_samples)), 2),
+            "ev_ci_5": round(float(np.percentile(ev_samples, 5)), 2),
+            "ev_ci_95": round(float(np.percentile(ev_samples, 95)), 2),
+            "roi_mean": round(float(np.mean(roi_samples)), 4),
+            "roi_ci_5": round(float(np.percentile(roi_samples, 5)), 4),
+            "roi_ci_95": round(float(np.percentile(roi_samples, 95)), 4),
+            "p_positive_ev": round(float(np.mean(ev_samples > 0)), 4),
+            "p_approval_mc": mc,
+        }
 
     return EVEstimate(
         target=candidate.target,
@@ -123,6 +179,7 @@ def compute_ev(
             "market_cap": market_cap,
             "commercial_composite": commercial.composite,
         },
+        ev_mc=ev_mc,
     )
 
 
