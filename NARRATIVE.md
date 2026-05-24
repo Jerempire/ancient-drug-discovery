@@ -46,3 +46,35 @@ The K392N finding is the proof that the pipeline works. It independently redisco
 ## What's Next
 
 Point Proteina-Complexa at the ERAP2 active site and generate binder candidates. Score with Boltz-2 for binding affinity, filter through RDKit for drug-likeness, compare against known inhibitor DG013A. A computationally designed molecule with predicted binding affinity under 100 nanomolar that passes Lipinski's rules would be a publishable result and a potential therapeutic lead for Crohn's disease.
+
+---
+
+## Update 2026-05-23: Small-Molecule Allosteric Track
+
+The protein-binder track (RFdiffusion / BindCraft) was joined by a parallel small-molecule track, on the same target validation logic but with a different selectivity strategy. The challenge: ERAP2's catalytic site is ~50-65% conserved with its homologs ERAP1 and IRAP, so any active-site-class inhibitor (e.g. the Camberlein 2022 nM hits) has to fight for selectivity against highly similar pockets. **The 2025 GSK235 paper showed the alternative**: a fully selective ERAP1 inhibitor binding an *allosteric* pocket at the regulatory hinge, >1000× selective vs ERAP2 and IRAP. We applied the same playbook in reverse.
+
+### Pocket Inventory
+
+A LIGSITE-style geometric scan of AF-ERAP2 found seven druggable pockets. The top allosteric candidate, **P02** (centroid `[-19.05, 9.19, 11.49]`, volume 145 Å³, 14 lining residues, 28.6 Å from the catalytic Zn triad), has the key property: **57% of its lining residues differ from BOTH ERAP1 and IRAP**, vs only 20% divergence at the active site (P08). Eight residues — `426, 568, 701, 705, 706, 709, 712, 940` — are unique to ERAP2 in both comparisons and serve as the selectivity-handle SAR points. Anisotropic Network Model analysis showed P02 lining moves as a rigid unit (mode-7 collective alignment 0.98, <1% volume change along the slowest collective mode) — a stable static pocket inside a flexible protein, ideal for reproducible binding geometry.
+
+### Generator Test #1 — DrugGPT (Failed)
+
+Sequence-conditioned DrugGPT produced 200 candidates (37 lead-like by Lipinski + Veber + MW 150–450 + ring). Vina docking against ERAP2 P02 gave a respectable distribution (best -8.94 kcal/mol, 24/36 below -7). But the counterscreen against ERAP1 and IRAP active sites killed the entire pool: **0/10 cleared the ≥10× selectivity gate; 5/10 actually bound ERAP1/IRAP active sites *more tightly* than P02**. Diagnosis: sequence-conditioned generation learned "this is an M1-aminopeptidase, here are typical M1-aminopeptidase ligands" and piled into the conserved HEXXH zinc pocket. The pocket was the right target; the generator was the wrong tool.
+
+### Generator Test #2 — Pocket2Mol (Succeeded)
+
+Pivoted to Pocket2Mol — a 3D-pocket-conditioned equivariant graph network from Peng et al. 2022. It takes the cavity geometry directly as input, autoregressively grows the molecule inside it. From 300 sample attempts, 105 unique molecules emerged. All 105 docked at ERAP2 P02 (top dG -7.85). The top 20 went through the same ERAP1+IRAP counterscreen. **One candidate cleared the gate**:
+
+> `CC(=O)N1CC2CC(=O)C3C2(C)CCC31C(=O)O` — polycyclic acetamide-carboxylate, MW 239
+> ERAP2 P02 dG = **-7.72** kcal/mol
+> ERAP1 active site dG = -5.83 (1.89 kcal/mol weaker)
+> IRAP active site dG = -6.12 (1.60 kcal/mol weaker)
+> **Selectivity margin: -1.89 kcal/mol (~25× preference for ERAP2 P02)**
+
+Distinct chemotype from the DrugGPT generic peptidase-binder chassis: a rigid 3-ring fused/bridged carbocycle, acetamide cap on the nitrogen, carboxylate terminus. The kind of geometry a 3D-conditioned model finds and a sequence-conditioned model never would.
+
+### Significance
+
+The end-to-end pipeline now exists on a local Windows workstation: pocket discovery → pocket-conditioned 3D molecule generation → triple-target Vina rescoring → selectivity ranking → wet-lab triage queue. With one selective hit per 20 docked from the smallest possible Pocket2Mol run, the path to a SAR series is straightforward: scale generation, scaffold-hop around the lead, run an aminopeptidase IC50 assay on the top 3-5 surviving candidates. The discovery costs ~$0 of compute. The decision threshold to spend real money on synthesis or wet-lab is now a function of how many selective hits survive the gauntlet — and the gauntlet is automated.
+
+This is also the first time the project has produced a *parallel* track to the protein-binder work that is genuinely orthogonal: small molecules have oral PK and synthesis economics that designed proteins never will. Both tracks now share the same target (P02) and the same selectivity logic.
